@@ -27,9 +27,9 @@ export const routes: Routes = [
         path: 'talk-to-secretary-cmpny',
         component: TalkToCmpnySecrataryComponent
     },
-    {
-        path: 'talk-to-trademark',
-        component: TalkToTrademarkComponent
-    }
+    // {
+    //     path: 'talk-to-trademark',
+    //     component: TalkToTrademarkComponent
+    // }
 ];
 
