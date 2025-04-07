@@ -28,7 +28,7 @@ export const routes: Routes = [
         component: TalkToCmpnySecrataryComponent
     },
     {
-        path: 'talk-to-ip-trademark',
+        path: 'talk-to-trademark',
         component: TalkToTrademarkComponent
     }
 ];
