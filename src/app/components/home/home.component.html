@@ -1,0 +1,548 @@
+<!-- 1st section  -->
+
+<div class="home-wrapper">
+  <a target="_blank" href="https://g.co/kgs/Aro7t3m">
+      <div class="rating-section">
+          <img alt="user-image" src="https://assets.vakilsearch.com/ic-user-grp.svg" class="user-img" />
+          <img alt="rating-image" src="https://assets.vakilsearch.com/live-images/ic-rating-star.svg"
+              class="rating-img" />
+          <p class="rating-text">4.5/5</p>
+          <p class="review-text">(18k+ Reviews)</p>
+      </div>
+  </a>
+
+  <div class="heading-wrapper">
+      <h1 class="main-heading">
+          India's <span class="highlight">Top Rated </span>Professional Services Platform
+      </h1>
+      <p class="sub-heading">
+          Connecting you with experts to simplify your legal, tax & compliance.
+      </p>
+  </div>
+
+  <div class="search-box-container">
+      <div class="search-box">
+          <input id="autosuggestfor" class="search-input" type="text" placeholder="Enter something here" />
+          <img alt="searchIcon" src="https://assets.vakilsearch.com/live-images/ic-search-blue.svg" />
+      </div>
+  </div>
+
+  <div class="service-links">
+      <a href="http/gst-registration">
+          <p>GST Registration</p>
+      </a>
+      <a href="htt/company-registration">
+          <p>Company Registration</p>
+      </a>
+      <a href="http-accounting-compliance-service">
+          <p>Accounting & Business Compliance</p>
+      </a>
+      <a href="httptrademark-registration">
+          <p>Trademark</p>
+      </a>
+  </div>
+
+  <img alt="logo-banner" src="https://assets.vakilsearch.com/live-images/ic-zolvit-logo-gray.png"
+      class="logo-banner" />
+</div>
+
+
+
+
+<!-- 2nd section  -->
+
+
+
+
+<div class="services-container">
+  <div class="service-card" *ngFor="let service of services">
+      <div class="header">
+          <div>
+              <h3>{{ service.title }}</h3>
+              <p class="price">{{ service.price }}</p>
+              <img [src]="service.icon" alt="icon" class="icon" />
+          </div>
+      </div>
+
+      <div class="categories">
+          <div class="category" *ngFor="let category of service.categories">
+              <h4>{{ category.title }}</h4>
+              <ul>
+                  <li *ngFor="let link of category.links">
+                      <a [href]="link.link" target="_blank">
+                          <span>{{ link.name }}</span>
+                          <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow"
+                              class="arrow-icon" />
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+<!-- 3rd section  -->
+
+
+
+<div class="experts-container">
+  <h2 class="experts-heading">
+    350+ Verified CA, CS, and Legal Experts Ready to Streamline Your Business Operations.
+  </h2>
+
+  <div class="experts-content">
+    <img
+      alt="logo-banner"
+      loading="lazy"
+      width="500"
+      height="500"
+      decoding="async"
+      class="experts-image"
+      src="https://assets.vakilsearch.com/ic-experts_man.svg"
+    />
+
+    <div class="experts-cards">
+      <!-- Talk to Lawyer -->
+      <a href="httptalk-to-a-lawyer" class="expert-card">
+        <img src="https://assets.vakilsearch.com/ic-ttl.svg" alt="talk to lawyer" class="expert-icon" />
+        <div class="expert-info">
+          <div class="expert-text">
+            <p class="expert-title">Talk to Lawyer</p>
+            <p class="expert-desc">
+              Provide legal advice, draft contracts, handle litigation, and offer legal representation.
+            </p>
+          </div>
+          <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow" class="arrow-icon" />
+        </div>
+      </a>
+
+      <!-- CA -->
+      <a href="http/chartered-accountant-services" class="expert-card inactive">
+        <img src="https://assets.vakilsearch.com/ic-calc.svg" alt="CA" class="expert-icon" />
+        <div class="expert-info">
+          <div class="expert-text">
+            <p class="expert-title">Talk to Chartered Accountant</p>
+            <p class="expert-desc">
+              Provide financial auditing, taxation advice, and financial planning services.
+            </p>
+          </div>
+          <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow" class="arrow-icon" />
+        </div>
+      </a>
+
+      <!-- CS -->
+      <a href="htt/company-secretary" class="expert-card inactive">
+        <img src="https://assets.vakilsearch.com/ic-at.svg" alt="CS" class="expert-icon" />
+        <div class="expert-info">
+          <div class="expert-text">
+            <p class="expert-title">Talk to Company Secretary</p>
+            <p class="expert-desc">
+              Advisory on corporate governance, regulatory compliance, and secretarial services for businesses and enterprises.
+            </p>
+          </div>
+          <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow" class="arrow-icon" />
+        </div>
+      </a>
+
+      <!-- IP Lawyer -->
+      <a href="https:intellectual-property-lawyer-services-in-india" class="expert-card inactive">
+        <img src="https://assets.vakilsearch.com/ic-court.svg" alt="IP Lawyer" class="expert-icon" />
+        <div class="expert-info">
+          <div class="expert-text">
+            <p class="expert-title">Talk to Intellectual Property Lawyer</p>
+            <p class="expert-desc">
+              Assist with trademarks, copyrights, patents, and intellectual property rights enforcement and protection.
+            </p>
+          </div>
+          <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow" class="arrow-icon" />
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 4rth section  -->
+
+
+
+
+<div class="customers-section">
+  <h2 class="customers-heading">Our Customers</h2>
+
+  <div class="customers-logos">
+    <div class="logo-card">
+      <img src="https://assets.vakilsearch.com/live-images/ic-oyo.svg" alt="OYO Logo" width="78" height="27" />
+    </div>
+    <div class="logo-card">
+      <img src="https://assets.vakilsearch.com/live-images/ic-small-swiggy.svg" alt="Swiggy Logo" width="91" height="27" />
+    </div>
+    <div class="logo-card">
+      <img src="https://assets.vakilsearch.com/live-images/ic-bigbasket.svg" alt="BigBasket Logo" width="124" height="27" />
+    </div>
+    <div class="logo-card">
+      <img src="https://assets.vakilsearch.com/live-images/ic-hdfc.svg" alt="HDFC Logo" width="162" height="27" />
+    </div>
+    <div class="logo-card">
+      <img src="https://assets.vakilsearch.com/live-images/ic-amazon.svg" alt="Amazon Logo" width="90" height="27" />
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 5th section  -->
+
+
+
+<div class="product-suite-wrapper">
+  <h2 class="product-suite-heading">Our Free Product Suite Trial</h2>
+  <p class="product-suite-subheading">
+    Increase efficiency and productivity with our scalable solutions
+  </p>
+
+  <div class="product-suite-cards">
+    <!-- Libra Card -->
+    <div class="card card-libra">
+      <img src="https://assets.vakilsearch.com/live-images/ic-libra-logo.svg" alt="Libra Logo" width="148" height="26" />
+      <div class="card-title">AI-powered case alerts & research for your legal practice</div>
+      <div class="feature">
+        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24" height="24" />
+        <p><b>Hearings:</b> Get instant court notifications, including case number and room details, with just one click.</p>
+      </div>
+      <div class="feature">
+        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24" height="24" />
+        <p><b>Judgements:</b> Access over 5 million judgments quickly by searching keywords, citations, parties, or judges.</p>
+      </div>
+      <div class="feature">
+        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24" height="24" />
+        <p><b>Display Board:</b> Stay updated on daily item numbers with our live display board.</p>
+      </div>
+      <div class="feature">
+        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24" height="24" />
+        <p><b>Case Alerts:</b> Stay ahead in your legal strategy with real-time case updates from India's largest case directory.</p>
+      </div>
+      <div class="card-image">
+        <img src="https://assets.vakilsearch.com/live-images/libra-demo-banner.png" alt="Libra Demo Banner" />
+      </div>
+    </div>
+
+    <!-- Zolvit Card -->
+    <div class="card card-zolvit">
+      <img src="https://assets.vakilsearch.com/live-images/ic-zolvit-logo.svg" alt="Zolvit Logo" width="148" height="26" />
+      <div class="card-title white-text">A complete overview of your business</div>
+      <div class="feature">
+        <img src="https://assets.vakilsearch.com/live-images/ic-white-round-tick.svg" alt="tick" width="24" height="24" />
+        <p><b>Unified Dashboard:</b> Compliance to legal, all in one place.</p>
+      </div>
+      <div class="feature">
+        <img src="https://assets.vakilsearch.com/live-images/ic-white-round-tick.svg" alt="tick" width="24" height="24" />
+        <p>Expert lawyer + CA + CS in your pocket!</p>
+      </div>
+      <div class="feature">
+        <img src="https://assets.vakilsearch.com/live-images/ic-white-round-tick.svg" alt="tick" width="24" height="24" />
+        <p><b>Automatic Compliance Reminder:</b> Stay aligned with regulations.</p>
+      </div>
+      <div class="feature">
+        <img src="https://assets.vakilsearch.com/live-images/ic-white-round-tick.svg" alt="tick" width="24" height="24" />
+        <p><b>Efficient Compliance Tracking:</b> Automated monitoring and reminders for regulatory alignment.</p>
+      </div>
+      <div class="explore-now">
+        <p>EXPLORE NOW</p>
+        <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow" width="8" height="4" />
+      </div>
+      <div class="card-image">
+        <img src="https://assets.vakilsearch.com/live-images/zolvit-demo-banner.png" alt="Zolvit Demo Banner" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 6th section  -->
+
+
+
+<div class="security-wrapper">
+  <div class="security-card">
+    <div class="security-content">
+      <p class="security-heading">
+        Security, Confidentiality &amp; Results
+      </p>
+      <div class="security-icon">
+        <img
+          src="https://assets.vakilsearch.com/ic-security-shield.svg"
+          alt="Security, Confidentiality & Results"
+          width="151"
+          height="157"
+        />
+      </div>
+      <div class="security-features">
+        <div class="feature-item">
+          <img
+            src="https://assets.vakilsearch.com/live-images/ic-yellow-round-tick.svg"
+            alt="tick"
+            width="26"
+            height="26"
+          />
+          <p>Operate with discretion and professionalism.</p>
+        </div>
+        <div class="feature-item">
+          <img
+            src="https://assets.vakilsearch.com/live-images/ic-yellow-round-tick.svg"
+            alt="tick"
+            width="26"
+            height="26"
+          />
+          <p>Ensure timely delivery with quick turnaround.</p>
+        </div>
+        <div class="feature-item">
+          <img
+            src="https://assets.vakilsearch.com/live-images/ic-yellow-round-tick.svg"
+            alt="tick"
+            width="26"
+            height="26"
+          />
+          <p>Deliver accurate and reliable results consistently.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 7th section  -->
+
+
+
+<!-- <section class="testimonial-section">
+  <h2 class="{{ designs.headingClass }}">
+    {{ name }}
+  </h2>
+
+  <div class="{{ designs.sliderWrapperClass }}">
+    <div class="slider-container" [style.transform]="'translateX(-' + currentSlide * 50 + '%)'">
+      <div class="testimonial-card" *ngFor="let field of fields">
+        <div class="{{ designs.testimonialCardClass }}">
+          <div class="{{ designs.quoteBoxClass }}">
+            <p class="tw-text-white tw-text-sm md:tw-text-lg">“{{ field.testimonial }}”</p>
+            <p class="tw-text-white tw-font-semibold md:tw-pt-4">{{ field.name }}</p>
+          </div>
+          <div class="{{ designs.imageBoxClass }}">
+            <img [src]="field.image" alt="{{ field.name }}" class="tw-w-[80px] tw-h-[80px] md:tw-w-[100px] md:tw-h-[100px]" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<div class="success-stories-container">
+  <h2 class="heading">Success Stories & Reviews</h2>
+  <div class="reviews-container">
+    <div class="slick-slider">
+      <div class="slick-list">
+        <div class="slick-track">
+          <!-- Review Item 1 -->
+          <div class="review-item">
+            <div class="quote-container">
+              <img class="quote-icon" src="https://assets.vakilsearch.com/live-images/ic-white-quote.svg" alt="quote">
+              <p class="review-text">Registered our company with Vakilsearch, the best online legal agency in India. Quick registration, highly recommend.</p>
+            </div>
+            <div class="customer-info">
+              <img class="customer-image" src="https://assets.vakilsearch.com/our-customer_5.svg" alt="customer">
+              <div class="customer-details">
+                <p class="customer-name">Mayukh Chatterjee</p>
+              </div>
+            </div>
+          </div>
+          <!-- Review Item 2 -->
+          <div class="review-item">
+            <div class="quote-container">
+              <img class="quote-icon" src="https://assets.vakilsearch.com/live-images/ic-white-quote.svg" alt="quote">
+              <p class="review-text">Prakash from Vakilsearch ensured seamless compliance handling for Kartisoft. Highly recommend their reliable services and expert support.</p>
+            </div>
+            <div class="customer-info">
+              <img class="customer-image" src="https://assets.vakilsearch.com/our-customer_1.svg" alt="customer">
+              <div class="customer-details">
+                <p class="customer-name">Sandeep Sangam</p>
+              </div>
+            </div>
+          </div>
+          <!-- Add more reviews here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 8th section  -->
+
+
+
+<div class="feature-section">
+  <div class="image-container">
+    <img alt="feature_image" class="image-large" src="https://assets.vakilsearch.com/mob_metrics.svg" loading="lazy" width="600" height="600" decoding="async">
+    <!-- <img alt="feature_image" class="image-small" src="https://assets.vakilsearch.com/live-images/web-metrics.svg" loading="lazy" width="300" height="300" decoding="async"> -->
+  </div>
+
+  <div class="content-container">
+    <p class="heading">Why Do Customers Love Us?</p>
+
+    <div class="features">
+      <div class="feature-item">
+        <div class="icon">
+          <img alt="feature_image" class="feature-icon" src="https://assets.vakilsearch.com/live-images/ic-feature-2.svg" loading="lazy" width="30" height="30" decoding="async">
+        </div>
+        <div class="feature-text">
+          <p class="feature-title">Affordable Professional Services</p>
+          <p class="feature-description">Proven legal and financial solutions with senior experts.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon">
+          <img alt="feature_image" class="feature-icon" src="https://assets.vakilsearch.com/live-images/ic-feature-1.svg" loading="lazy" width="30" height="30" decoding="async">
+        </div>
+        <div class="feature-text">
+          <p class="feature-title">Diverse Expert Network</p>
+          <p class="feature-description">Talk to lawyers, chartered accountants (CAs), and company secretaries (CSs) to meet your legal and financial needs.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon">
+          <img alt="feature_image" class="feature-icon" src="https://assets.vakilsearch.com/live-images/ic-feature-3.svg" loading="lazy" width="30" height="30" decoding="async">
+        </div>
+        <div class="feature-text">
+          <p class="feature-title">Easy-to-use dashboard</p>
+          <p class="feature-description">Streamlined navigation for service requests and tracking.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="icon">
+          <img alt="feature_image" class="feature-icon" src="https://assets.vakilsearch.com/live-images/ic-feature-4.svg" loading="lazy" width="30" height="30" decoding="async">
+        </div>
+        <div class="feature-text">
+          <p class="feature-title">Quick Customer Support</p>
+          <p class="feature-description">Queries are responded within 24 hours*</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 9th section  -->
+
+
+
+<div class="business-start-container">
+  <div class="content-wrapper">
+    <div class="text-content">
+      <p class="heading">Starting a Business and Confused Where to Begin?</p>
+      <p class="sub-heading">At Vakilsearch, we take care of <b>A</b>ccounting, <b>B</b>usiness, <b>C</b>ompliance, and handle end-to-end solutions.</p>
+      <a class="get-started-button" href="https://vakilsearch.com/company-registration/private-limited">
+        <p class="button-text">Get Started</p>
+      </a>
+    </div>
+    <img alt="icon" class="icon-image" src="https://assets.vakilsearch.com/ic-women.svg" />
+  </div>
+</div>
+
+
+
+<!-- 10th section  -->
+
+
+
+<div class="vision-container">
+  <p class="heading">Validated Vision, Exceptional Results</p>
+  <p class="subheading">
+    Pioneering the industry for over a decade, we equip businesses with affordable resources and expert guidance to meet their goals. Backed by visionary investors, we have the foundation to continuously innovate and deliver exactly what businesses need to succeed.
+  </p>
+  <div class="image-wrapper">
+    <div class="image-item">
+      <img alt="vision icon" loading="lazy" width="72" height="36" src="https://assets.vakilsearch.com/live-images/ic-incorpp.svg">
+    </div>
+    <div class="image-item">
+      <img alt="vision icon" loading="lazy" width="70" height="36" src="https://assets.vakilsearch.com/live-images/ic-m2.svg">
+    </div>
+    <div class="image-item">
+      <img alt="vision icon" loading="lazy" width="77" height="42" src="https://assets.vakilsearch.com/live-images/ic-kalaari-capital.svg">
+    </div>
+    <div class="image-item">
+      <img alt="vision icon" loading="lazy" width="143" height="36" src="https://assets.vakilsearch.com/live-images/ic-maatrum.svg">
+    </div>
+    <div class="image-item">
+      <img alt="vision icon" loading="lazy" width="98" height="36" src="https://assets.vakilsearch.com/live-images/ic-chugh.svg">
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 11th section  -->
+
+
+
+<div class="vakilsearch-container">
+  <h2 class="vakilsearch-title">Vakilsearch in News</h2>
+  <div class="vakilsearch-logos">
+    <div><img alt="vision icon" src="https://assets.vakilsearch.com/ic-et.svg" width="72" height="36"></div>
+    <div><img alt="vision icon" src="https://assets.vakilsearch.com/ic-forbes.svg" width="100" height="36"></div>
+    <div><img alt="vision icon" src="https://assets.vakilsearch.com/ic-the-financial.svg" width="98" height="42"></div>
+    <div><img alt="vision icon" src="https://assets.vakilsearch.com/ic-business-line.svg" width="143" height="36"></div>
+    <div><img alt="vision icon" src="https://assets.vakilsearch.com/live-images/ic-your-story.svg" width="98" height="36"></div>
+  </div>
+</div>
+
+
+
+
+<!-- 12th section  -->
+
+
+
+<div class="blog-list-container">
+  <div class="blog-item">
+    <div class="blog-image-container">
+      <img src="https://vakilsearch.com/blog/wp-content/uploads/2024/03/impact-of-gst-on-e-commerce.webp" loading="lazy" alt="blogs icon">
+    </div>
+    <div class="blog-content">
+      <p class="blog-title">GST Impact on E-Commerce Marketplace Sellers</p>
+      <div class="blog-description">
+        <p>In the dynamic world of e-commerce, GST (Goods and Services Tax) has …</p>
+      </div>
+      <a class="read-more-link" href="https://vakilsearch.com/blog/impact-of-gst-on-e-commerce-marketplace-sellers/">Read More</a>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="blog-image-container">
+      <img src="https://vakilsearch.com/blog/wp-content/uploads/2025/03/gst-on-used-cars-electic-commercial-vehicles.webp" loading="lazy" alt="blogs icon">
+    </div>
+    <div class="blog-content">
+      <p class="blog-title">GST on Used Cars & Electric Vehicles (EVs), Commercial Vehicles in India</p>
+      <div class="blog-description">
+        <p>Navigating the Goods and Services Tax (GST) landscape can be daunting, especially …</p>
+      </div>
+      <a class="read-more-link" href="https://vakilsearch.com/blog/gst-on-cars-electric-commercial-vehicles/">Read More</a>
+    </div>
+  </div>
+</div>

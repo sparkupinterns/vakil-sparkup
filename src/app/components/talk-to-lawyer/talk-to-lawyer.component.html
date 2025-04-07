@@ -1,0 +1,741 @@
+<!-- 1st section  -->
+
+<div class="consultation-container">
+    <!-- Left: Lawyer Consultation -->
+    <div class="consultation-wrapper">
+        <div class="heading">
+            <h1>Online Lawyer Consultation</h1>
+            <ul class="features">
+                <li>
+                    <i class="far fa-check-circle icon"></i>
+                    <p>Affordable legal solutions from expert lawyers. Full litigation, documentation and support</p>
+                </li>
+                <li>
+                    <i class="far fa-check-circle icon"></i>
+                    <p>Guaranteed satisfaction or your money back</p>
+                </li>
+            </ul>
+
+            <div class="status-bar">
+                <div class="status-box">
+                    <img src="https://assets.vakilsearch.com/live-images/available-lawyers-ttl.svg"
+                        alt="lawyers online" />
+                    <div class="status-text">
+                        <span>191+ lawyers are online</span>
+                        <div class="dot green"></div>
+                    </div>
+                </div>
+
+                <div class="status-box">
+                    <img src="https://assets.vakilsearch.com/live-images/whatsapp-icon-calls.svg" alt="calls" />
+                    <div class="status-text">
+                        <span>35+ live ongoing calls</span>
+                        <div class="dot orange"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="expertise-section">
+            <p class="title">Our Legal Expertise</p>
+            <div class="slider-wrapper">
+                <div class="arrow">
+                    <img src="https://assets.vakilsearch.com/live-images/left-blue-icon.svg" alt="left arrow" />
+                </div>
+
+                <div class="slider">
+                    <div *ngFor="let item of expertiseList" class="slider-item">
+                        <div class="icon-container">
+                            <img [src]="item.icon" [alt]="item.label" />
+                        </div>
+                        <h3>{{ item.label }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right: Lead Form -->
+    <div class="form-wrapper">
+        <div class="form-container">
+            <img class="offer-banner" src="https://assets.vakilsearch.com/50off-AprilSale.svg" alt="Offer Banner" />
+            <form>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email" />
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" maxlength="10" placeholder="Enter your number" />
+                </div>
+                <div class="form-group">
+                    <label>City / Pincode</label>
+                    <input type="text" placeholder="Enter city or pincode" />
+                </div>
+                <div class="form-group">
+                    <label>Language</label>
+                    <input type="text" placeholder="Select language" />
+                </div>
+                <div class="form-group">
+                    <label>Problem Type</label>
+                    <input type="text" placeholder="Describe your issue" />
+                </div>
+                <button type="submit" class="submit-btn">Get Free Consultation</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 2nd section  -->
+
+
+
+<div class="expert-container">
+    <img alt="star" loading="lazy" width="60" height="60" decoding="async" class="star-img"
+        src="https://assets.vakilsearch.com/live-images/talk-to-expert/bg-star.svg" />
+
+    <div class="stats-flex">
+        <div class="stats-grid">
+            <div class="stat-block border-md-r">
+                <div class="ml-fix">
+                    <p class="stat-number">5,00,000+</p>
+                    <p class="stat-title">Happy Users</p>
+                </div>
+            </div>
+            <div class="stat-block border-md-l">
+                <div class="ml-fix">
+                    <p class="stat-number">1,00,000+</p>
+                    <p class="stat-title">Cases Resolved</p>
+                </div>
+            </div>
+            <div class="stat-block border-md-l border-md-r">
+                <div class="ml-fix">
+                    <p class="stat-number">300+</p>
+                    <p class="stat-title">Expert Lawyers</p>
+                </div>
+            </div>
+            <div class="stat-block border-md-l border-md-r">
+                <div class="ml-fix">
+                    <p class="stat-number">50+</p>
+                    <p class="stat-title">Specialities</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-block">
+            <a href="https://g.co/kgs/Aro7t3m" target="_blank">
+                <div class="review-container">
+                    <img alt="google-logo" width="75" height="75"
+                        src="https://assets.vakilsearch.com/live-images/talk-to-expert/google-review-logo.svg" />
+                    <div class="review-content">
+                        <p class="review-title">Google Reviews</p>
+                        <div class="stars-row">
+                            <ng-container *ngFor="let i of [1, 2, 3, 4]">
+                                <img alt="full-star" width="20" height="20"
+                                    src="https://assets.vakilsearch.com/live-images/talk-to-expert/rating-star-full.svg" />
+                            </ng-container>
+                            <img alt="half-star" width="20" height="20"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/rating-star-half.svg" />
+                            <p class="rating-text">
+                                4.5/5
+                                <span class="review-extra">18k+ Happy Reviews</span>
+                            </p>
+                        </div>
+                        <p class="review-mobile">18k+ Happy Reviews</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 3rd section  -->
+
+
+
+<div class="steps-container">
+    <h2 class="steps-heading">
+        Steps to Get an Online Legal Consultation
+        <span class="highlight"></span>
+    </h2>
+
+    <div class="steps-list">
+        <div class="step-item">
+            <img src="https://assets.vakilsearch.com/live-images/talk-to-services/fill-form.svg" alt="Fill Form"
+                class="step-icon" />
+            <div class="step-text">
+                <p class="step-title">Fill Out the Form</p>
+                <p class="step-desc"></p>
+            </div>
+            <div class="step-border"></div>
+            <img src="https://assets.vakilsearch.com/Polygon.svg" alt="arrow" class="arrow" />
+        </div>
+
+        <div class="step-item">
+            <img src="https://assets.vakilsearch.com/live-images/talk-to-services/schedule.svg" alt="Schedule"
+                class="step-icon" />
+            <div class="step-text">
+                <p class="step-title">Schedule an Appointment</p>
+                <p class="step-desc"></p>
+            </div>
+            <div class="step-border"></div>
+            <img src="https://assets.vakilsearch.com/Polygon.svg" alt="arrow" class="arrow" />
+        </div>
+
+        <div class="step-item">
+            <img src="https://assets.vakilsearch.com/live-images/talk-to-services/make-payment.svg" alt="Payment"
+                class="step-icon" />
+            <div class="step-text">
+                <p class="step-title">Make Payment</p>
+                <p class="step-desc"></p>
+            </div>
+            <div class="step-border"></div>
+            <img src="https://assets.vakilsearch.com/Polygon.svg" alt="arrow" class="arrow" />
+        </div>
+
+        <div class="step-item">
+            <img src="https://assets.vakilsearch.com/live-images/talk-to-services/lawyer.svg" alt="Lawyer Call"
+                class="step-icon" />
+            <div class="step-text">
+                <p class="step-title">Lawyer Will Call You</p>
+                <p class="step-desc"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 4rth section  -->
+
+
+
+<h2 class="title">Scholarly Work by Our Panel of Consultants</h2>
+<div class="container">
+    <!-- <h2 class="title">Scholarly Work by Our Panel of Consultants</h2> -->
+
+    <div class="slider-wrapper">
+        <div class="arrow left" (click)="prevSlide()">
+            <img src="https://assets.vakilsearch.com/live-images/talk-to-expert/left-arrow.svg" alt="left arrow" />
+        </div>
+
+        <div class="slider">
+            <div class="slide" *ngFor="let lawyer of visibleLawyers">
+                <div class="card">
+                    <div class="profile-box">
+                        <img [src]="lawyer.image" alt="lawyer-profile-picture" />
+                        <div class="details">
+                            <h3>{{ lawyer.name }}</h3>
+                            <ul>
+                                <li *ngFor="let point of lawyer.points">{{ point }}</li>
+                            </ul>
+                            <p class="experience">{{ lawyer.experience }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow right" (click)="nextSlide()">
+            <img src="https://assets.vakilsearch.com/live-images/talk-to-expert/right-arrow.svg" alt="right arrow" />
+        </div>
+    </div>
+</div>
+
+
+<!-- pop-up  -->
+
+<!-- time-widget.component.html -->
+<div class="time-widget">
+    <div>
+        <img loading="lazy" width="24" height="24" decoding="async"
+            src="https://assets.vakilsearch.com/live-images/time-clock-widget.svg" style="color: transparent;">
+    </div>
+    <div class="flex gap-2">
+        <p class="font-semibold text-[#171717] flex gap-2 first-letter:font-semibold text-[16px]">
+            Talk to Our Experienced Lawyers at an Affordable Price -
+        </p>
+        <div class="font-semibold text-[16px] text-[#e83e3e] underline cursor-pointer">Book Your Slot Now just 399/-
+        </div>
+    </div>
+</div>
+
+
+<!-- pop-up  -->
+
+<!-- 5th section  -->
+
+
+<div class="center-container">
+    <div class="content-container">
+        <img alt="bulb" loading="lazy" width="40" height="40" decoding="async" class="bg-[#e6f2ff] rounded-full p-1"
+            style="color:transparent" src="https://assets.vakilsearch.com/bulb.svg" />
+        <div class="flex flex-col text-[18px] leading-6 w-full">
+            <div class="border border-[#caced1] m-2 p-2 rounded text-flicker">
+                Let us address the different duties of lawyers, areas where our legal experts provide support,
+            </div>
+            <div class="border border-[#caced1] m-2 p-2 rounded text-flicker">
+                the benefits of hiring a lawyer and legal consultations online.
+            </div>
+            <div class="border border-[#caced1] m-2 p-2 rounded text-flicker">
+                We offer expert legal advice on a wide range of legal matters, including legal notices,
+            </div>
+            <div class="border border-[#caced1] m-2 p-2 rounded text-flicker">
+                employment issues, property succession, disputes, cheque bounce, mutual divorce, and more.
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 6th section  -->
+
+
+
+<div class="expertise-section">
+    <!-- Section Heading -->
+    <h2 class="section-heading">Areas of Expertise</h2>
+    <div class="container">
+        <!-- Left section for scrolling list -->
+        <div class="left-section">
+            <div class="expertise-list">
+                <div class="expertise-item">
+                    <h3>Legal Notices</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>Employment Issues</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>Property Succession</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>Property Registration</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>Property Verification</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>Cheque Bounce Cases</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>Money Recovery Issues</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>Mutual Divorce</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>Divorce & Matrimonial Consultation</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>File a Consumer Case</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>Will Drafting and Registration</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>File a Criminal Complaint</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>Debt Recovery Tribunal</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>National Green Tribunal Cases</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>Motor Accident Claims</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>Setting up of a Business</h3>
+                </div>
+                <div class="expertise-item">
+                    <h3>Fundraising for Businesses</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right section for detailed information -->
+        <div class="right-section">
+            <h2 class="section-heading">Why Choose Our Legal Services?</h2>
+            <div class="details-description">
+                Our lawyers assist in drafting and sending legal notices to resolve disputes, breach of contract issues,
+                or other legal concerns.
+            </div>
+            <ul class="features">
+                <li>
+                    <img src="https://assets.vakilsearch.com/live-images/talk-to-expert/check.svg" alt="check"
+                        width="24" height="24" />
+                    <p>Clear and concise drafting</p>
+                </li>
+                <li>
+                    <img src="https://assets.vakilsearch.com/live-images/talk-to-expert/check.svg" alt="check"
+                        width="24" height="24" />
+                    <p>Tailor made notices</p>
+                </li>
+                <li>
+                    <img src="https://assets.vakilsearch.com/live-images/talk-to-expert/check.svg" alt="check"
+                        width="24" height="24" />
+                    <p>Quick filing</p>
+                </li>
+                <li>
+                    <img src="https://assets.vakilsearch.com/live-images/talk-to-expert/check.svg" alt="check"
+                        width="24" height="24" />
+                    <p>Timely response</p>
+                </li>
+                <li>
+                    <img src="https://assets.vakilsearch.com/live-images/talk-to-expert/check.svg" alt="check"
+                        width="24" height="24" />
+                    <p>Top lawyer support</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 7th section  -->
+
+
+
+
+<div class="duties-container">
+    <h2 class="title">Duties of a Lawyer</h2>
+    <div class="duties-list">
+        <div class="duty-item">
+            <div class="duty-header">
+                <img alt="tick" class="tick-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="duty-title">Legal Representation:</p>
+            </div>
+            <p class="duty-description">Lawyers provide legal representation and advocacy for their clients, whether
+                individuals or organisations, in various legal matters.</p>
+        </div>
+        <div class="duty-item">
+            <div class="duty-header">
+                <img alt="tick" class="tick-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="duty-title">Legal Advice:</p>
+            </div>
+            <p class="duty-description">Lawyers offer expert legal advice to clients on specific legal issues, helping
+                them understand their rights and obligations.</p>
+        </div>
+        <div class="duty-item">
+            <div class="duty-header">
+                <img alt="tick" class="tick-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="duty-title">Research and Analysis:</p>
+            </div>
+            <p class="duty-description">Lawyers conduct extensive research and analysis of legal cases and statutes to
+                build strong arguments and strategies for their clients.</p>
+        </div>
+        <div class="duty-item">
+            <div class="duty-header">
+                <img alt="tick" class="tick-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="duty-title">Drafting Legal Documents:</p>
+            </div>
+            <p class="duty-description">Lawyers prepare and review legal documents such as contracts, wills, pleadings,
+                and other legal agreements.</p>
+        </div>
+        <div class="duty-item">
+            <div class="duty-header">
+                <img alt="tick" class="tick-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="duty-title">Negotiation and Mediation:</p>
+            </div>
+            <p class="duty-description">Lawyers engage in negotiations with opposing parties to reach settlements or
+                mediate disputes to resolve conflicts outside of the courtroom.</p>
+        </div>
+        <div class="duty-item">
+            <div class="duty-header">
+                <img alt="tick" class="tick-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="duty-title">Courtroom Representation:</p>
+            </div>
+            <p class="duty-description">Lawyers represent clients in court proceedings, presenting evidence, examining
+                witnesses, and making oral arguments before judges and juries.</p>
+        </div>
+        <div class="duty-item">
+            <div class="duty-header">
+                <img alt="tick" class="tick-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="duty-title">Client Counselling:</p>
+            </div>
+            <p class="duty-description">Lawyers provide ongoing counsel to their clients, keeping them informed about
+                the progress of their case and advising them on the best course of action.</p>
+        </div>
+        <div class="duty-item">
+            <div class="duty-header">
+                <img alt="tick" class="tick-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="duty-title">Maintain Confidentiality:</p>
+            </div>
+            <p class="duty-description">Lawyers must uphold high ethical standards, ensuring confidentiality and loyalty
+                to their clients while maintaining integrity and professionalism in their practice.</p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 8th section  -->
+
+
+
+<!-- <div class="container">
+    <h2 class="title">Online Lawyer Consultation</h2>
+    <div class="content">
+      <p class="description">
+        Getting reliable legal help is now easier and more accessible with online consultation services. Whether you’re dealing with property disputes, corporate law, family law, or criminal matters, our platform enables you to connect with experienced lawyers via video or phone calls. With Vakilsearch, you can choose from legal experts specializing in various fields, including cybercrime, intellectual property, domestic violence, and more, to receive personalized, professional advice tailored to your specific needs—all from the comfort of your home.
+      </p>
+      <p class="description">
+        Our online consultation service allows you to schedule sessions at your convenience, simplifying the process of obtaining timely legal assistance without the need for in-person meetings. Vakilsearch is committed to empowering you to address legal challenges with confidence. By connecting you directly with skilled legal professionals, we ensure your concerns are addressed promptly and accurately.
+      </p>
+      <p class="description">
+        Take charge of your legal needs with our efficient, user-friendly online lawyer consultation service at Vakilsearch.
+      </p>
+    </div>
+  </div> -->
+
+
+
+<!-- 9th section  -->
+
+
+
+<div class="slick-containerr">
+    <!-- Review Heading -->
+    <h2 class="review-headingg">Reviews</h2>
+
+    <div class="slick-track">
+        <div class="slick-slide">
+            <div class="testimonial-card">
+                <div class="profile">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <div>
+                        <h3 class="testimonial-name">Sai Abhishek</h3>
+                        <div class="stars">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-text">“Got the best legal advice from Vakilsearch for my startup. Their team was
+                    knowledgeable and responsive, and they helped me navigate complex legal issues with ease. Highly
+                    recommended”</p>
+            </div>
+        </div>
+
+        <div class="slick-slide">
+            <div class="testimonial-card">
+                <div class="profile">
+                    <img alt="customer profile" class="profile-image" src="/path/to/swetha.jpg">
+                    <div>
+                        <h3 class="testimonial-name">Swetha</h3>
+                        <div class="stars">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-text">“The lawyers are professional, diligent, and kept me informed throughout my
+                    property dispute case. I appreciated their hard work and would definitely recommend them to anyone
+                    in need of legal assistance”</p>
+            </div>
+        </div>
+
+        <div class="slick-slide">
+            <div class="testimonial-card">
+                <div class="profile">
+                    <img alt="customer profile" class="profile-image" src="/path/to/zoya-khan.jpg">
+                    <div>
+                        <h3 class="testimonial-name">Zoya Khan</h3>
+                        <div class="stars">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-text">“Lawyers from Vakilsearch really are the best. They helped me in drafting a
+                    legal notice and estate planning seamlessly. The team was patient, thorough, and provided practical
+                    advice tailored to my needs. Highly recommend their personalised service”</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 10th section  -->
+
+<h2 class="text-center faq-heading">FAQs on Online Lawyer Consultation</h2> <!-- Heading -->
+<h2 class="text-center faq-subheading">Explore answers to common questions about online legal consultations, including
+    privacy options, lawyer expertise, consultation languages, and follow-up procedures to ensure a secure and informed
+    experience</h2> <!-- Subheading -->
+
+<section class="banner__area-two1 banner__bg-two faq-section" style="background-color: white;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="section-title text-center mb-50 tg-heading-subheading animation-style3">
+                    <!-- <h2>Frequently Asked Questions</h2> -->
+                </div>
+            </div>
+        </div>
+        <div class="accordion col-xl-9 mx-auto" id="accordionExample">
+            <div *ngFor="let item of faqs; let i = index" class="accordion-item">
+                <h2 class="accordion-header" [attr.id]="'heading' + i">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#collapse' + i" [attr.aria-expanded]="item.isOpen ? 'true' : 'false'"
+                        [attr.aria-controls]="'collapse' + i">
+                        {{item.question}}
+                    </button>
+                </h2>
+                <div [attr.id]="'collapse' + i" class="accordion-collapse collapse" [ngClass]="{'show': item.isOpen}"
+                    [attr.aria-labelledby]="'heading' + i" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        {{item.answer}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- button  -->
+
+
+<!-- example.component.html -->
+<div class="view-more-container">
+    <button class="view-more-button" type="button">
+        View More
+    </button>
+</div>
+
+
+
+<!-- button close  -->
+
+
+
+<!-- 11th section  -->
+
+
+<section class="recommended-lawyer-section">
+    <div class="section-header">
+        <h3>Recommended Lawyer/Expert Pages to check</h3>
+    </div>
+
+    <div class="lawyer-links-grid">
+        <div class="lawyer-link">
+            <a href="https://vakm/criminal-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Criminal lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://bour-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Labour Lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://nsumer-court-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Consumer court lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https:/vorce-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Divorce Lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://wyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Banking lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https:/on-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Immigration Lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="httpser-services-in-india">
+                <i class="fas fa-arrow-right"></i> Family Lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https:/n-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Litigation lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https:/roperty-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Intellectual property lawyer
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https:/gulatory-risk">
+                <i class="fas fa-arrow-right"></i> Risk and Regulatory
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 12th section  -->
+
+
+
+<div class="author-flex">
+    <div
+        class="author-flex-col author-gap-3 author-p-4 author-bg-lightblue author-rounded author-width-full md:author-width-60rem">
+        <p class="author-font-semibold">Authors</p>
+        <p>Written by Nilesh, Reviewed by Harshitha. Last updated on <b>Aprile 5 2025, 07:22 AM</b></p>
+        <div>
+            <div class="author-flex-col author-gap-3">
+                <p>
+                    <a class="author-underline author-decoration-blue author-text-blue author-inline author-pr-2"
+                        href="https://vakilsearch.com/authors/harshitha">
+                        Harshitha
+                    </a>
+                    <span>BBA.LLB. (Hons.), specializes in various legal disciplines including GST advice, tax-saving
+                        strategies, ITR filing, and LLP annual compliance. With her expertise, she provides valuable
+                        guidance to clients across diverse industries.</span>
+                </p>
+                <p>
+                    <a class="author-underline author-decoration-blue author-text-blue author-inline author-pr-2"
+                        href="https://vakilsearch.com/blog/author/akash-varadarajvakilsearch-com/">
+                        Nilesh G Pendare
+                    </a>
+                    <span>a legal content writer at Vakilsearch, brings over 3 years of experience in the legal niche.
+                        His mission is to simplify complex legal matters into understandable terms even for a layman.
+                        Collaborating closely with senior lawyers and SMEs, he ensures the delivery of top-notch
+                        content.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,436 @@
+<!-- 1st section  -->
+
+<div class="container mt-section flex max-md:flex-col md:justify-between md:gap-20">
+    <!-- Left Content -->
+    <div class="left-content flex flex-col px-4">
+        <h1 class="heading">
+            Intellectual Property Lawyers in India
+            <hr class="highlight-bar" />
+        </h1>
+
+        <ul class="feature-list">
+            <li><i class="far fa-check-circle icon"></i>Expert IP lawyers assist with Trademark, Patent, Copyright &
+                Design registration</li>
+            <li><i class="far fa-check-circle icon"></i>Guided assistance via chat throughout the process</li>
+            <li><i class="far fa-check-circle icon"></i>Lawyer callback in less than 24 hours</li>
+        </ul>
+
+        <!-- Expert Info Box -->
+        <div class="expert-box">
+            <p class="box-label">Talk with our expert</p>
+            <div class="box-content">
+                <div class="box-info">
+                    <p class="box-description">
+                        With 7+ years of experience, the India-based IP Rights lawyer specializes in patents,
+                        trademarks, copyrights, and design, committed to optimal outcomes.
+                    </p>
+                    <div class="box-profile">
+                        <img src="http://assets.vakilsearch.com/live-images/karanagrawal.svg" width="43" height="43"
+                            alt="Karan Agarwal" />
+                        <div>
+                            <p class="profile-name">Karan Agarwal</p>
+                            <p class="profile-title">IP lawyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Process Steps -->
+        <div class="steps-section">
+            <div class="step">
+                <img src="https://assets.vakilsearch.com/live-images/talk-to-expert/form.svg" alt="Fill the Form" />
+                <p>Fill the Form</p>
+            </div>
+            <div class="step">
+                <img src="https://assets.vakilsearch.com/live-images/talk-to-expert/calendar.svg"
+                    alt="Schedule an Appointment" />
+                <p>Schedule an Appointment</p>
+            </div>
+            <div class="step">
+                <img src="https://assets.vakilsearch.com/live-images/talk-to-expert/payment.svg" alt="Make Payment" />
+                <p>Make Payment</p>
+            </div>
+            <div class="step">
+                <img src="https://assets.vakilsearch.com/live-images/talk-to-expert/phone.svg"
+                    alt="Talk to IP lawyer" />
+                <p>Talk to IP Lawyer</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="lead-form-wrapper">
+        <div class="lead-form-container">
+            <!-- <img
+            class="mobile-offer-img"
+            src="https://assets.vakilsearch.com/off-AprilSale.svg"
+            alt="offer-image"
+          />
+          <img
+            class="desktop-offer-img"
+            src="https://assets.vakilsearch.com/off-AprilSale.svg"
+            alt="offer-image"
+          /> -->
+
+            <form (ngSubmit)="submitForm()" #leadForm="ngForm">
+                <!-- Email -->
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" [(ngModel)]="form.email" required />
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" name="phone" maxlength="10" [(ngModel)]="form.phone" required />
+                </div>
+
+                <!-- City / Pincode -->
+                <div class="form-group">
+                    <label>City/Pincode</label>
+                    <input type="text" name="location" [(ngModel)]="form.location" required />
+                </div>
+
+                <!-- Language Dropdown (Select) -->
+                <div class="form-group">
+                    <label>Language</label>
+                    <select name="language" [(ngModel)]="form.language" required>
+                        <option value="" disabled selected>Select Language</option>
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Tamil">Tamil</option>
+                    </select>
+                </div>
+
+                <!-- Problem Type Dropdown (Select) -->
+                <div class="form-group">
+                    <label>Problem Type</label>
+                    <select name="problemType" [(ngModel)]="form.problemType" required>
+                        <option value="" disabled selected>Select Problem Type</option>
+                        <option *ngFor="let type of problemTypes" [value]="type">{{ type }}</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 2nd section  -->
+
+
+
+
+<div class="expert-container">
+    <img alt="star" loading="lazy" width="60" height="60" decoding="async" class="star-img"
+        src="https://assets.vakilsearch.com/live-images/talk-to-expert/bg-star.svg" />
+
+    <div class="stats-flex">
+        <div class="stats-grid">
+            <div class="stat-block border-md-r">
+                <div class="ml-fix">
+                    <p class="stat-number">5,00,000+</p>
+                    <p class="stat-title">Happy Users</p>
+                </div>
+            </div>
+            <div class="stat-block border-md-l">
+                <div class="ml-fix">
+                    <p class="stat-number">1,00,000+</p>
+                    <p class="stat-title">Cases Resolved</p>
+                </div>
+            </div>
+            <div class="stat-block border-md-l border-md-r">
+                <div class="ml-fix">
+                    <p class="stat-number">300+</p>
+                    <p class="stat-title">Expert Lawyers</p>
+                </div>
+            </div>
+            <div class="stat-block border-md-l border-md-r">
+                <div class="ml-fix">
+                    <p class="stat-number">50+</p>
+                    <p class="stat-title">Specialities</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-block">
+            <a href="https://g.co/kgs/Aro7t3m" target="_blank">
+                <div class="review-container">
+                    <img alt="google-logo" width="75" height="75"
+                        src="https://assets.vakilsearch.com/live-images/talk-to-expert/google-review-logo.svg" />
+                    <div class="review-content">
+                        <p class="review-title">Google Reviews</p>
+                        <div class="stars-row">
+                            <ng-container *ngFor="let i of [1, 2, 3, 4]">
+                                <img alt="full-star" width="20" height="20"
+                                    src="https://assets.vakilsearch.com/live-images/talk-to-expert/rating-star-full.svg" />
+                            </ng-container>
+                            <img alt="half-star" width="20" height="20"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/rating-star-half.svg" />
+                            <p class="rating-text">
+                                4.5/5
+                                <span class="review-extra">18k+ Happy Reviews</span>
+                            </p>
+                        </div>
+                        <p class="review-mobile">18k+ Happy Reviews</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 3rd section  -->
+
+
+
+<!-- areas-of-expertise.component.html -->
+<div class="expertise-wrapper">
+    <div class="expertise-heading">
+        <h2>Areas of Expertise</h2>
+    </div>
+
+    <div class="expertise-content">
+        <div class="expertise-tabs" id="scroll-container">
+            <div class="expertise-tab">
+                <h2>Objection</h2>
+            </div>
+            <div class="expertise-tab">
+                <h2>Hearing</h2>
+            </div>
+            <div class="expertise-tab">
+                <h2>Opposition/Cancellation/Rectification</h2>
+            </div>
+            <div class="expertise-tab">
+                <h2>Legal Notice</h2>
+            </div>
+            <div class="expertise-tab">
+                <h2>Due Diligence</h2>
+            </div>
+            <div class="expertise-tab">
+                <h2>IP Infringement</h2>
+            </div>
+            <div class="expertise-tab">
+                <h2>Litigation</h2>
+            </div>
+        </div>
+
+        <div class="expertise-details">
+            <p class="expertise-description">
+                Trademark, Copyright, patent, or design objections can arise due to various reasons...
+            </p>
+
+            <ul class="expertise-points">
+                <li><b>Trademark Objection Services:</b></li>
+                <li>1. Trademark search and analysis</li>
+                <li>2. Responding to trademark objection/ examination reports</li>
+                <li>3. Drafting and filing responses to objections...</li>
+                <li>4. Negotiating with the trademark office or other parties...</li>
+                <li>5. Filing amendments and providing advisory...</li>
+
+                <li><b>Copyright Objection Services:</b></li>
+                <li>1. Copyright discrepancy clearance</li>
+                <li>2. Responding to copyright objections...</li>
+                <li>3. Drafting and filing responses to objections...</li>
+                <li>4. Negotiating with the copyright office...</li>
+
+                <li><b>Patent Objection Services:</b></li>
+                <li>1. Responding to patent office first examination report</li>
+                <li>2. Drafting and filing responses to objections...</li>
+                <li>3. Negotiating with the patent office...</li>
+                <li>4. Drafting and filing amendments...</li>
+
+                <li><b>Design Objection Services:</b></li>
+                <li>1. Design search and analysis</li>
+                <li>2. Responding to design office actions</li>
+                <li>3. Drafting and filing responses to objections...</li>
+                <li>4. Negotiating with the design office...</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 4rth section  -->
+
+
+
+<section class="why-vakilsearch">
+    <h2 class="section-title">Why Vakilsearch?</h2>
+    <div class="feature-container">
+        <div class="feature-box" *ngFor="let feature of features">
+            <div class="feature-highlight">
+                <div class="feature-content">
+                    <div class="feature-header">
+                        <img [src]="feature.img" [alt]="feature.title" width="40" height="40" />
+                        <h3>{{ feature.title }}</h3>
+                    </div>
+                    <p>{{ feature.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 5th section  -->
+
+
+
+<section class="review-section">
+    <h2 class="review-title">Reviews</h2>
+    <div class="review-slider">
+      <div class="slider-track" #sliderTrack>
+        <div class="review-card" *ngFor="let review of reviews">
+          <div class="card-content">
+            <div class="profile">
+              <img [src]="review.image" alt="{{ review.name }}" />
+              <div>
+                <h3>{{ review.name }}</h3>
+                <div class="stars">
+                  <img src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg" *ngFor="let _ of [1,2,3,4,5]" />
+                </div>
+              </div>
+            </div>
+            <p class="review-text">“{{ review.text }}”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+<!-- 6th section  -->
+
+
+
+
+
+
+<section class="banner__area-two1 banner__bg-two faq-section" style="background-color: white;">
+    <h2 class="text-center faq-heading">FAQs on Online Lawyer Consultation</h2> <!-- Heading -->
+    <h2 class="text-center faq-subheading">Explore answers to common questions about online legal consultations,
+        including
+        privacy options, lawyer expertise, consultation languages, and follow-up procedures to ensure a secure and
+        informed
+        experience</h2> <!-- Subheading -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="section-title text-center mb-50 tg-heading-subheading animation-style3">
+                    <!-- <h2>Frequently Asked Questions</h2> -->
+                </div>
+            </div>
+        </div>
+        <div class="accordion col-xl-9 mx-auto" id="accordionExample">
+            <div *ngFor="let item of faqs; let i = index" class="accordion-item">
+                <h2 class="accordion-header" [attr.id]="'heading' + i">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#collapse' + i" [attr.aria-expanded]="item.isOpen ? 'true' : 'false'"
+                        [attr.aria-controls]="'collapse' + i">
+                        {{item.question}}
+                    </button>
+                </h2>
+                <div [attr.id]="'collapse' + i" class="accordion-collapse collapse" [ngClass]="{'show': item.isOpen}"
+                    [attr.aria-labelledby]="'heading' + i" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        {{item.answer}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- button  -->
+
+
+<!-- example.component.html -->
+<div class="view-more-container">
+    <button class="view-more-button" type="button">
+        View More
+    </button>
+</div>
+
+
+
+<!-- button close  -->
+
+
+<!-- 7th section  -->
+
+
+<section class="recommended-lawyer-section">
+    <div class="section-header">
+        <h3>Recommended Lawyer/Expert Pages to check</h3>
+    </div>
+
+    <div class="lawyer-links-grid">
+        <div class="lawyer-link">
+            <a href="https://vakm/criminal-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Criminal lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://bour-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Labour Lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://nsumer-court-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Consumer court lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https:/vorce-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Divorce Lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://wyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Banking lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https:/on-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Immigration Lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="httpser-services-in-india">
+                <i class="fas fa-arrow-right"></i> Family Lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https:/n-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Litigation lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https:/roperty-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Intellectual property lawyer
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https:/gulatory-risk">
+                <i class="fas fa-arrow-right"></i> Risk and Regulatory
+            </a>
+        </div>
+    </div>
+</section>
+  

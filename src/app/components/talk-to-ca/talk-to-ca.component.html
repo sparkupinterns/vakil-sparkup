@@ -1,0 +1,921 @@
+<!-- 1st section  -->
+
+<div class="consultation-container">
+    <!-- Left: Lawyer Consultation -->
+    <div class="consultation-wrapper">
+        <div class="heading">
+            <h1>Online CA Consultation</h1>
+            <ul class="features">
+                <li>
+                    <i class="far fa-check-circle icon"></i>
+                    <p>Our Chartered Accountants (CAs) specialize in offering comprehensive services for businesses and
+                        individuals, including compliance services, accounting, financial reporting, tax planning and
+                        preparation, business advisory, and more.</p>
+                </li>
+                <div class="showcase-container">
+                    <img alt="Showcase Banner" loading="lazy" width="70" height="70" decoding="async"
+                        class="banner-image"
+                        srcset="https://assets.vakilsearch.com/live-images/mega-speaker.png?w=96&q=75 1x, 
+                                                     https://assets.vakilsearch.com/live-images/mega-speaker.png?w=256&q=75 2x"
+                        src="https://assets.vakilsearch.com/live-images/mega-speaker.png?w=256&q=75">
+                    <div class="content">
+                        <ul class="list-items">
+                            <!-- List items go here if needed -->
+                        </ul>
+                        <p class="description">
+                            Need assistance? <b>Talk to our CA experts</b> now to avoid penalties and ensure your
+                            returns are filed correctly and on time.
+                        </p>
+                    </div>
+                </div>
+
+            </ul>
+
+            <div class="status-bar">
+                <div class="status-box">
+                    <img src="https://assets.vakilsearch.com/live-images/available-lawyers-ttl.svg"
+                        alt="lawyers online" />
+                    <div class="status-text">
+                        <span>191+ CA are online</span>
+                        <div class="dot green"></div>
+                    </div>
+                </div>
+
+                <div class="status-box">
+                    <img src="https://assets.vakilsearch.com/live-images/whatsapp-icon-calls.svg" alt="calls" />
+                    <div class="status-text">
+                        <span>35+ live ongoing calls</span>
+                        <div class="dot orange"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="expertise-section">
+            <p class="title">Our Legal Expertise</p>
+            <div class="slider-wrapper">
+                <div class="arrow">
+                    <img src="https://assets.vakilsearch.com/live-images/left-blue-icon.svg" alt="left arrow" />
+                </div>
+
+                <div class="slider">
+                    <div *ngFor="let item of expertiseList" class="slider-item">
+                        <div class="icon-container">
+                            <img [src]="item.icon" [alt]="item.label" />
+                        </div>
+                        <h3>{{ item.label }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right: Lead Form -->
+    <div class="form-wrapper">
+        <div class="form-container">
+            <img class="offer-banner" src="https://assets.vakilsearch.com/50off-AprilSale.svg" alt="Offer Banner" />
+            <form>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email" />
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" maxlength="10" placeholder="Enter your number" />
+                </div>
+                <div class="form-group">
+                    <label>City / Pincode</label>
+                    <input type="text" placeholder="Enter city or pincode" />
+                </div>
+                <div class="form-group">
+                    <label>Language</label>
+                    <input type="text" placeholder="Select language" />
+                </div>
+                <div class="form-group">
+                    <label>Problem Type</label>
+                    <input type="text" placeholder="Describe your issue" />
+                </div>
+                <button type="submit" class="submit-btn">Get Free Consultation</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 2nd section  -->
+
+
+
+<div class="expert-container">
+    <img alt="star" loading="lazy" width="60" height="60" decoding="async" class="star-img"
+        src="https://assets.vakilsearch.com/live-images/talk-to-expert/bg-star.svg" />
+
+    <div class="stats-flex">
+        <div class="stats-grid">
+            <div class="stat-block border-md-r">
+                <div class="ml-fix">
+                    <p class="stat-number">5,00,000+</p>
+                    <p class="stat-title">Happy Users</p>
+                </div>
+            </div>
+            <div class="stat-block border-md-l">
+                <div class="ml-fix">
+                    <p class="stat-number">1,00,000+</p>
+                    <p class="stat-title">Cases Resolved</p>
+                </div>
+            </div>
+            <div class="stat-block border-md-l border-md-r">
+                <div class="ml-fix">
+                    <p class="stat-number">300+</p>
+                    <p class="stat-title">Expert Lawyers</p>
+                </div>
+            </div>
+            <div class="stat-block border-md-l border-md-r">
+                <div class="ml-fix">
+                    <p class="stat-number">50+</p>
+                    <p class="stat-title">Specialities</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-block">
+            <a href="https://g.co/kgs/Aro7t3m" target="_blank">
+                <div class="review-container">
+                    <img alt="google-logo" width="75" height="75"
+                        src="https://assets.vakilsearch.com/live-images/talk-to-expert/google-review-logo.svg" />
+                    <div class="review-content">
+                        <p class="review-title">Google Reviews</p>
+                        <div class="stars-row">
+                            <ng-container *ngFor="let i of [1, 2, 3, 4]">
+                                <img alt="full-star" width="20" height="20"
+                                    src="https://assets.vakilsearch.com/live-images/talk-to-expert/rating-star-full.svg" />
+                            </ng-container>
+                            <img alt="half-star" width="20" height="20"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/rating-star-half.svg" />
+                            <p class="rating-text">
+                                4.5/5
+                                <span class="review-extra">18k+ Happy Reviews</span>
+                            </p>
+                        </div>
+                        <p class="review-mobile">18k+ Happy Reviews</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- 3rd section  -->
+
+
+
+<div class="steps-container">
+    <h2 class="steps-heading">
+        Steps to Get an Online Legal Consultation
+        <span class="highlight"></span>
+    </h2>
+
+    <div class="steps-list">
+        <div class="step-item">
+            <img src="https://assets.vakilsearch.com/live-images/talk-to-services/fill-form.svg" alt="Fill Form"
+                class="step-icon" />
+            <div class="step-text">
+                <p class="step-title">Fill Out the Form</p>
+                <p class="step-desc"></p>
+            </div>
+            <div class="step-border"></div>
+            <img src="https://assets.vakilsearch.com/Polygon.svg" alt="arrow" class="arrow" />
+        </div>
+
+        <div class="step-item">
+            <img src="https://assets.vakilsearch.com/live-images/talk-to-services/schedule.svg" alt="Schedule"
+                class="step-icon" />
+            <div class="step-text">
+                <p class="step-title">Schedule an Appointment</p>
+                <p class="step-desc"></p>
+            </div>
+            <div class="step-border"></div>
+            <img src="https://assets.vakilsearch.com/Polygon.svg" alt="arrow" class="arrow" />
+        </div>
+
+        <div class="step-item">
+            <img src="https://assets.vakilsearch.com/live-images/talk-to-services/make-payment.svg" alt="Payment"
+                class="step-icon" />
+            <div class="step-text">
+                <p class="step-title">Make Payment</p>
+                <p class="step-desc"></p>
+            </div>
+            <div class="step-border"></div>
+            <img src="https://assets.vakilsearch.com/Polygon.svg" alt="arrow" class="arrow" />
+        </div>
+
+        <div class="step-item">
+            <img src="https://assets.vakilsearch.com/live-images/talk-to-services/lawyer.svg" alt="Lawyer Call"
+                class="step-icon" />
+            <div class="step-text">
+                <p class="step-title">Lawyer Will Call You</p>
+                <p class="step-desc"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- 4rth section  -->
+
+
+
+<div class="expert-services-container">
+    <img alt="bulb" loading="lazy" width="40" height="40" decoding="async" class="service-icon"
+        src="https://assets.vakilsearch.com/bulb.svg">
+    <div class="service-description">
+        <p>
+            Opt for expert online CA services at Vakilsearch, covering the entire accounting process for individuals,
+            businesses, and enterprises, including bookkeeping, tax filing, compliance, financial reporting, and
+            advisory support. We provide expert solutions tailored to your needs, ensuring compliance and maximizing
+            financial success.
+        </p>
+    </div>
+</div>
+
+
+
+<!-- 5th section  -->
+
+
+<div class="expertise-container">
+    <div class="expertise-header">
+        <h2>Areas of Expertise</h2>
+    </div>
+
+    <div class="expertise-list-container">
+        <div class="expertise-list">
+            <div class="expertise-item">
+                <h2>Tax Advisory</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>GST Audit Report (GSTR 9 & 9C)</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>Transfer Pricing (Opinion Report)</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>Transfer Pricing (Audit Report)</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>ITR Filing for Companies</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>Income Tax Notices</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>Income Tax Audit</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>Net Worth and Valuation Certificate</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>Accountancy</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>Auditing & Taxation</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>ITR Filing</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>GST Compliance, Audit, and Training</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>Tax on Property Purchase & Sales</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>NRI Taxation and ITR Filings</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>Tax on Consultancy & Freelancing</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>ITR for Tenders</h2>
+            </div>
+            <div class="expertise-item">
+                <h2>Others</h2>
+            </div>
+        </div>
+
+        <div class="expertise-details">
+            <div class="expertise-description">
+                Our team of skilled Chartered Accountants at Vakilsearch provides extensive tax advisory services to
+                help individuals and businesses navigate the intricate world of taxation. We remain well-informed about
+                the latest tax laws and regulations, ensuring that you receive precise and timely advice customised to
+                your specific requirements. Our experts help,
+            </div>
+
+            <ul class="expertise-benefits-list">
+                <li class="benefit-item">
+                    <img alt="check" width="24" height="24"
+                        src="https://assets.vakilsearch.com/live-images/talk-to-expert/check.svg">
+                    <p>Better tax planning structure and explains the available deductions</p>
+                </li>
+                <li class="benefit-item">
+                    <img alt="check" width="24" height="24"
+                        src="https://assets.vakilsearch.com/live-images/talk-to-expert/check.svg">
+                    <p>Analyse your financial situation and assess potential risks.</p>
+                </li>
+                <li class="benefit-item">
+                    <img alt="check" width="24" height="24"
+                        src="https://assets.vakilsearch.com/live-images/talk-to-expert/check.svg">
+                    <p>Recommend the most beneficial tax strategies tailored to your needs.</p>
+                </li>
+                <li class="benefit-item">
+                    <img alt="check" width="24" height="24"
+                        src="https://assets.vakilsearch.com/live-images/talk-to-expert/check.svg">
+                    <p>Ensure that you make informed decisions and remain compliant with tax laws.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 6th section  -->
+
+
+
+<div class="updates-container">
+    <div class="updates-header">
+        <img alt="calender" loading="lazy" width="28" height="28" decoding="async"
+            src="https://assets.vakilsearch.com/tts.svg">
+        <p class="updates-title">Updates</p>
+    </div>
+
+    <p class="updates-description">
+        In the Union Budget 2025-26, Finance Minister Nirmala Sitharaman announced significant changes to the income tax
+        structure under the new tax regime, aiming to provide relief to middle-class taxpayers.
+    </p>
+
+    <div class="highlights">
+        <div class="highlight">
+            <p class="highlight-title">Highlights:</p>
+            <p><b>Tax Exemption Limit Increased:</b> No income tax will be payable on annual income up to ₹12,00,000
+                under the new tax regime.</p>
+        </div>
+
+        <div class="highlight">
+            <p><b>Revised Tax Slabs:</b> The new tax slabs under the revised regime are as follows:</p>
+
+            <div class="tax-table-container">
+                <table class="tax-table">
+                    <thead>
+                        <tr>
+                            <th>Annual Income (₹)</th>
+                            <th>Tax Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0 – 4,00,000</td>
+                            <td>Nil</td>
+                        </tr>
+                        <tr>
+                            <td>4,00,001 – 8,00,000</td>
+                            <td>5%</td>
+                        </tr>
+                        <tr>
+                            <td>8,00,001 – 12,00,000</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>12,00,001 – 16,00,000</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td>16,00,001 – 20,00,000</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <td>20,00,001 – 24,00,000</td>
+                            <td>25%</td>
+                        </tr>
+                        <tr>
+                            <td>Above 24,00,000</td>
+                            <td>30%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="highlight">
+            <p><b>Section 87A Rebate Enhanced:</b> The rebate under Section 87A has been increased to ₹60,000 from the
+                previous ₹25,000, further benefiting taxpayers under the new regime.</p>
+        </div>
+    </div>
+
+    <p class="updates-conclusion">
+        These adjustments are designed to increase disposable income for taxpayers, thereby boosting consumption and
+        contributing to economic growth.
+    </p>
+</div>
+
+
+
+
+<!-- 7th section  -->
+
+
+<div id="pricing-package" class="pricing-package">
+    <div class="content-container">
+        <p class="title">
+            <span class="highlight-text">Choose</span> the Right Plan For Your ITR Filing
+        </p>
+        <p class="subtitle">Vakilsearch's experts file over 10,000+ ITRs every month.</p>
+    </div>
+
+    <div class="mobile-view">
+        <div class="plans-header">
+            <p class="plan-type">Lite</p>
+            <p class="plan-type selected">Standard</p>
+            <p class="plan-type">Elite</p>
+        </div>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <p class="pricing-title">Lite</p>
+                <p class="pricing-description">Filing support for salaried individuals in completing the ITR-1 form</p>
+                <div class="price-container">
+                    <div class="original-price">₹1999</div>
+                    <div class="discount-label">
+                        <img class="discount-icon" src="https://assets.vakilsearch.com/offer+(1).svg" alt="offer" />
+                        <p class="discount-text">25% discount</p>
+                    </div>
+                </div>
+                <div class="final-price-container">
+                    <p class="final-price">₹1,499</p>
+                </div>
+                <button class="get-started-button" (click)="openModal()">Get Started</button>
+                <div class="what-you-get">
+                    <p class="section-title">What you'll get</p>
+                    <div class="feature">
+                        <img class="tick-icon" src="https://assets.vakilsearch.com/greentick.svg" alt="tick" />
+                        <p class="feature-text">Computation of Tax calculation</p>
+                    </div>
+                    <div class="feature">
+                        <img class="tick-icon" src="https://assets.vakilsearch.com/greentick.svg" alt="tick" />
+                        <p class="feature-text">Automatic Form 16 import</p>
+                    </div>
+                    <div class="feature">
+                        <img class="tick-icon" src="https://assets.vakilsearch.com/greentick.svg" alt="tick" />
+                        <p class="feature-text">Basic income tax return filing</p>
+                    </div>
+                    <div class="feature">
+                        <img class="tick-icon" src="https://assets.vakilsearch.com/greentick.svg" alt="tick" />
+                        <p class="feature-text">Email support</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-card">
+                <p class="pricing-title">Standard</p>
+                <p class="pricing-description">Filing includes salary, one house property, capital gains, and interest
+                    income</p>
+                <div class="price-container">
+                    <p class="original-price">₹3845</p>
+                    <div class="discount-badge">
+                        <img src="https://assets.vakilsearch.com/offer+(1).svg" alt="offer" class="offer-icon" />
+                        <p class="discount-text">35% discount</p>
+                    </div>
+                </div>
+                <div class="final-price">
+                    <p class="price">₹2,499</p>
+                </div>
+                <!-- Get Started Button -->
+                <button class="get-started-button" (click)="openModal()">Get Started</button>
+
+                <!-- Modal (Popup) -->
+                <div class="modal" *ngIf="isOpen">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Book Slot & File Your ITR</h2>
+                            <span class="close" (click)="closeModal()">×</span> <!-- Close Button on the right -->
+                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Mobile Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your mobile number"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                            </div>
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="what-you-get">
+                    <p class="section-title">What you'll get</p>
+                    <ul class="benefits-list">
+                        <li class="benefit-item">Includes everything in <b>Lite</b></li>
+                        <li class="benefit-item"><b>Deductions and Exemptions:</b> Calculation and claim of eligible
+                            deductions under sections 80C, 80D, etc., and exemptions like HRA</li>
+                        <li class="benefit-item"><b>Capital gains</b> from stocks or mutual funds Computation</li>
+                        <li class="benefit-item">Income from other sources (interest, etc.)</li>
+                        <li class="benefit-item">Priority email and chat support</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pricing-card">
+                <p class="pricing-title">Elite</p>
+                <p class="pricing-description">Filing includes salary, one house property, capital gains, interest &amp;
+                    other sources of income</p>
+                <div class="extra-info">
+                    <p class="info-text">*Speak with our CA for exclusive pricing</p>
+                </div>
+                <button class="appointment-button">Book an appointment now</button>
+                <div class="what-you-get">
+                    <p class="section-title">What you'll get</p>
+                    <div class="feature">
+                        <img class="tick-icon" src="https://assets.vakilsearch.com/greentick.svg" alt="tick" />
+                        <p class="feature-text">Includes everything in <b>Standard</b></p>
+                    </div>
+                    <div class="feature">
+                        <img class="tick-icon" src="https://assets.vakilsearch.com/greentick.svg" alt="tick" />
+                        <p class="feature-text"><b>Dedicated tax expert assistance:</b> A session with a tax expert
+                            before filing to ensure all income and deductions are accounted</p>
+                    </div>
+                    <div class="feature">
+                        <img class="tick-icon" src="https://assets.vakilsearch.com/greentick.svg" alt="tick" />
+                        <p class="feature-text">Tailoring deductions and exemptions to perfectly fit your financial
+                            profile</p>
+                    </div>
+                    <div class="feature">
+                        <img class="tick-icon" src="https://assets.vakilsearch.com/greentick.svg" alt="tick" />
+                        <p class="feature-text">Assistance after post filings and follow-up till the refund</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 8th section  -->
+
+
+
+<div class="services-container">
+    <h2 class="section-title">Online CA Services For Business Registrations</h2>
+    <p class="section-description">
+        When it comes to business registrations, online CA services simplify the process for various entities,
+        from Sole Proprietorships to Private Limited Companies and Limited Liability Partnerships. Whether you're
+        seeking Company Registration, or NGO registration, our CA’s provide efficient solutions tailored to your needs.
+        You can receive comprehensive support for MSME registration, Section 8 Company formation, and more.
+        By consulting with a CA online, you ensure a smooth registration process, helping your business meet legal
+        requirements and achieve its financial goals. The following are the online CA services for business
+        registrations:
+    </p>
+
+    <div class="services-list">
+        <div class="service-item">
+            <div class="service-header">
+                <img alt="tick" class="service-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="service-title">Tax Planning & Advisory</p>
+            </div>
+            <p class="service-description">
+                We minimize your tax liabilities by identifying legal deductions and credits.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <div class="service-header">
+                <img alt="tick" class="service-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="service-title">Tax Return Preparation & Filing</p>
+            </div>
+            <p class="service-description">
+                We ensure accurate and timely filing of income tax returns, <a
+                    href="https://vakilsearch.com/gst/return-filing">GST returns</a>, and other necessary forms,
+                adhering to all compliance requirements.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <div class="service-header">
+                <img alt="tick" class="service-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="service-title">Tax Representation</p>
+            </div>
+            <p class="service-description">
+                Our CAs represent you before tax authorities in disputes or inquiries, providing expert guidance and
+                support.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <div class="service-header">
+                <img alt="tick" class="service-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="service-title">Company Formation & Registration</p>
+            </div>
+            <p class="service-description">
+                We facilitate establishing new businesses by managing all registration aspects, obtaining licenses, and
+                fulfilling legal requirements.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <div class="service-header">
+                <img alt="tick" class="service-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="service-title">Financial Modeling & Forecasting</p>
+            </div>
+            <p class="service-description">
+                Our CAs develop financial models to aid businesses in budgeting, planning, and securing funding,
+                ensuring financial strategies.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <div class="service-header">
+                <img alt="tick" class="service-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="service-title">Valuation Services</p>
+            </div>
+            <p class="service-description">
+                Our CAs accurately determine the fair value of a business or its assets, crucial for mergers,
+                acquisitions, and other financial activities.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <div class="service-header">
+                <img alt="tick" class="service-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="service-title">Due Diligence</p>
+            </div>
+            <p class="service-description">
+                We conduct thorough due diligence reviews to evaluate a business's financial health, providing critical
+                insights before major transactions.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <div class="service-header">
+                <img alt="tick" class="service-icon" src="https://assets.vakilsearch.com/ttsTick.svg">
+                <p class="service-title">Debt Financing</p>
+            </div>
+            <p class="service-description">
+                Our CAs assist businesses in securing loans and other debt financing by preparing complete documentation
+                and financial statements, increasing approval likelihood.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 9th section  -->
+
+
+
+<div class="slick-containerrr">
+    <!-- Review Heading -->
+    <h2 class="review-headinggg">Reviews</h2>
+
+    <div class="slick-track">
+        <div class="slick-slide">
+            <div class="testimonial-card">
+                <div class="profile">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <div>
+                        <h3 class="testimonial-name">Sai Abhishek</h3>
+                        <div class="stars">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-text">“Got the best legal advice from Vakilsearch for my startup. Their team was
+                    knowledgeable and responsive, and they helped me navigate complex legal issues with ease. Highly
+                    recommended”</p>
+            </div>
+        </div>
+
+        <div class="slick-slide">
+            <div class="testimonial-card">
+                <div class="profile">
+                    <img alt="customer profile" class="profile-image" src="/path/to/swetha.jpg">
+                    <div>
+                        <h3 class="testimonial-name">Swetha</h3>
+                        <div class="stars">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-text">“The CA are professional, diligent, and kept me informed throughout my
+                    property dispute case. I appreciated their hard work and would definitely recommend them to anyone
+                    in need of legal assistance”</p>
+            </div>
+        </div>
+
+        <div class="slick-slide">
+            <div class="testimonial-card">
+                <div class="profile">
+                    <img alt="customer profile" class="profile-image" src="/path/to/zoya-khan.jpg">
+                    <div>
+                        <h3 class="testimonial-name">Zoya Khan</h3>
+                        <div class="stars">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                            <img alt="star" class="star"
+                                src="https://assets.vakilsearch.com/live-images/talk-to-expert/star.svg">
+                        </div>
+                    </div>
+                </div>
+                <p class="testimonial-text">“CA from Vakilsearch really are the best. They helped me in drafting a
+                    legal notice and estate planning seamlessly. The team was patient, thorough, and provided practical
+                    advice tailored to my needs. Highly recommend their personalised service”</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- 10th section  -->
+
+
+
+<h2 class="text-center faq-heading">FAQs on Online CA Consultation</h2> <!-- Heading -->
+<h2 class="text-center faq-subheading">Explore answers to common questions about online legal consultations, including
+    privacy options, CA expertise, consultation languages, and follow-up procedures to ensure a secure and informed
+    experience</h2> <!-- Subheading -->
+
+<section class="banner__area-two1 banner__bg-two faq-section" style="background-color: white;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="section-title text-center mb-50 tg-heading-subheading animation-style3">
+                    <!-- <h2>Frequently Asked Questions</h2> -->
+                </div>
+            </div>
+        </div>
+        <div class="accordion col-xl-9 mx-auto" id="accordionExample">
+            <div *ngFor="let item of faqs; let i = index" class="accordion-item">
+                <h2 class="accordion-header" [attr.id]="'heading' + i">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#collapse' + i" [attr.aria-expanded]="item.isOpen ? 'true' : 'false'"
+                        [attr.aria-controls]="'collapse' + i">
+                        {{item.question}}
+                    </button>
+                </h2>
+                <div [attr.id]="'collapse' + i" class="accordion-collapse collapse" [ngClass]="{'show': item.isOpen}"
+                    [attr.aria-labelledby]="'heading' + i" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        {{item.answer}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  <!-- button  -->
+
+
+<!-- example.component.html -->
+<div class="view-more-container">
+    <button class="view-more-button" type="button">
+      View More
+    </button>
+  </div>
+  
+
+  
+  <!-- button close  -->
+
+
+
+<!-- 11th section  -->
+
+
+<section class="recommended-lawyer-section">
+    <div class="section-header">
+      <h3>Recommended Lawyer/Expert Pages to check</h3>
+    </div>
+  
+    <div class="lawyer-links-grid">
+      <div class="lawyer-link">
+        <a href="https://vakilsearch.com/criminal-lawyer-services-in-india">
+          <i class="fas fa-arrow-right"></i> Criminal lawyers
+        </a>
+      </div>
+      <div class="lawyer-link">
+        <a href="https://vakilsearch.com/labour-lawyer-services-in-india">
+          <i class="fas fa-arrow-right"></i> Labour Lawyers
+        </a>
+      </div>
+      <div class="lawyer-link">
+        <a href="https://vakilsearch.com/consumer-court-lawyer-services-in-india">
+          <i class="fas fa-arrow-right"></i> Consumer court lawyers
+        </a>
+      </div>
+      <div class="lawyer-link">
+        <a href="https://vakilsearch.com/divorce-lawyer-services-in-india">
+          <i class="fas fa-arrow-right"></i> Divorce Lawyers
+        </a>
+      </div>
+      <div class="lawyer-link">
+        <a href="https://vakilsearch.com/banking-lawyer-services-in-india">
+          <i class="fas fa-arrow-right"></i> Banking lawyers
+        </a>
+      </div>
+      <div class="lawyer-link">
+        <a href="https://vakilsearch.com/immigration-lawyer-services-in-india">
+          <i class="fas fa-arrow-right"></i> Immigration Lawyers
+        </a>
+      </div>
+      <div class="lawyer-link">
+        <a href="https://vakilsearch.com/family-lawyer-services-in-india">
+          <i class="fas fa-arrow-right"></i> Family Lawyers
+        </a>
+      </div>
+      <div class="lawyer-link">
+        <a href="https://vakilsearch.com/litigation-lawyer-services-in-india">
+          <i class="fas fa-arrow-right"></i> Litigation lawyers
+        </a>
+      </div>
+      <div class="lawyer-link">
+        <a href="https://vakilsearch.com/intellectual-property-lawyer-services-in-india">
+          <i class="fas fa-arrow-right"></i> Intellectual property lawyer
+        </a>
+      </div>
+      <div class="lawyer-link">
+        <a href="https://vakilsearch.com/risk-management-and-regulatory-risk">
+          <i class="fas fa-arrow-right"></i> Risk and Regulatory
+        </a>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- 12th section  -->
+
+
+
+  <div class="author-flex">
+    <div class="author-flex-col author-gap-3 author-p-4 author-bg-lightblue author-rounded author-width-full md:author-width-60rem">
+      <p class="author-font-semibold">Authors</p>
+      <p>Written by Nilesh, Reviewed by Harshitha. Last updated on <b>Aprile 5 2025, 07:22 AM</b></p>
+      <div>
+        <div class="author-flex-col author-gap-3">
+          <p>
+            <a class="author-underline author-decoration-blue author-text-blue author-inline author-pr-2" href="https://vakilsearch.com/authors/harshitha">
+              Harshitha
+            </a>
+            <span>BBA.LLB. (Hons.), specializes in various legal disciplines including GST advice, tax-saving strategies, ITR filing, and LLP annual compliance. With her expertise, she provides valuable guidance to clients across diverse industries.</span>
+          </p>
+          <p>
+            <a class="author-underline author-decoration-blue author-text-blue author-inline author-pr-2" href="https://vakilsearch.com/blog/author/akash-varadarajvakilsearch-com/">
+                Nilesh G Pendare
+            </a>
+            <span>a legal content writer at Vakilsearch, brings over 3 years of experience in the legal niche. His mission is to simplify complex legal matters into understandable terms even for a layman. Collaborating closely with senior lawyers and SMEs, he ensures the delivery of top-notch content.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
