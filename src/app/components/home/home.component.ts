@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import AOS from 'aos';
-declare var $: any;  
+// declare var $: any;  
 
 @Component({
   selector: 'app-home',

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-declare var $: any;  // To access jQuery ($) globally
+
 
 @Component({
   selector: 'app-talk-to-cmpny-secratary',
@@ -68,32 +68,32 @@ export class TalkToCmpnySecrataryComponent {
     }
   }
 
-  ngAfterViewInit(): void {
-    // Initialize Slick Carousel after the view is initialized
-    $('.slick-container').slick({
-      infinite: true, // Loops the carousel infinitely
-      slidesToShow: 3, // Show 3 slides at a time
-      slidesToScroll: 1, // Scroll 1 slide at a time
-      dots: true, // Display pagination dots
-      arrows: true, // Show navigation arrows
-      responsive: [
-        {
-          breakpoint: 1024, // For medium-sized screens, show 2 slides
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1,
-          }
-        },
-        {
-          breakpoint: 600, // For smaller screens, show 1 slide
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          }
-        }
-      ]
-    });
-  }
+  // ngAfterViewInit(): void {
+  //   // Initialize Slick Carousel after the view is initialized
+  //   $('.slick-container').slick({
+  //     infinite: true, // Loops the carousel infinitely
+  //     slidesToShow: 3, // Show 3 slides at a time
+  //     slidesToScroll: 1, // Scroll 1 slide at a time
+  //     dots: true, // Display pagination dots
+  //     arrows: true, // Show navigation arrows
+  //     responsive: [
+  //       {
+  //         breakpoint: 1024, // For medium-sized screens, show 2 slides
+  //         settings: {
+  //           slidesToShow: 2,
+  //           slidesToScroll: 1,
+  //         }
+  //       },
+  //       {
+  //         breakpoint: 600, // For smaller screens, show 1 slide
+  //         settings: {
+  //           slidesToShow: 1,
+  //           slidesToScroll: 1,
+  //         }
+  //       }
+  //     ]
+  //   });
+  // }
 
    // Define the FAQ array with question, answer, and isOpen property to control the accordion state
    faqs = [
