@@ -4,11 +4,14 @@ import { TalkToLawyerComponent } from './components/talk-to-lawyer/talk-to-lawye
 import { TalkToCaComponent } from './components/talk-to-ca/talk-to-ca.component';
 import { TalkToCmpnySecrataryComponent } from './components/talk-to-cmpny-secratary/talk-to-cmpny-secratary.component';
 import { TalkToTrademarkComponent } from './components/talk-to-trademark/talk-to-trademark.component';
+import { PvtLtdComponent } from './pvt-ltd/pvt-ltd.component';
+import { LlpComponent } from './llp/llp.component';
+import { OpcComponent } from './opc/opc.component';
 
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'home',
+        redirectTo: '/',
         pathMatch: 'full'
     },
     {
@@ -27,9 +30,21 @@ export const routes: Routes = [
         path: 'talk-to-secretary-cmpny',
         component: TalkToCmpnySecrataryComponent
     },
-    // {
-    //     path: 'talk-to-trademark',
-    //     component: TalkToTrademarkComponent
-    // }
+    {
+        path: 'talk-to-trademark',
+        component: TalkToTrademarkComponent
+    },
+    {
+        path: 'pvt-ltd',
+        component: PvtLtdComponent
+    },
+    {
+        path: 'llp',
+        component: LlpComponent
+    },
+    {
+        path: 'opc',
+        component: OpcComponent
+    }
 ];
 

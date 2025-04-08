@@ -1,0 +1,126 @@
+.navbar {
+    background: #002244;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(248, 245, 245, 0.959);
+    transition: background 0.3s ease-in-out;
+  
+    .navbar-left img {
+      height: 50px;
+      transition: transform 0.3s ease-in-out;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  
+    .navbar-center {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+      align-items: center;
+  
+      .dropdown {
+        position: relative;
+  
+        > span {
+          color: white;
+          font-weight: 500;
+          cursor: pointer;
+          padding: 10px 16px;
+          display: flex;
+          align-items: center;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: #ffc24f;
+          }
+  
+          .arrow {
+            margin-left: 6px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            padding: 4px;
+            transform: rotate(45deg);
+            transition: transform 0.3s ease;
+          }
+        }
+  
+        .dropdown-menu {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: #fff;
+          min-width: 220px;
+          display: none;
+          flex-direction: column;
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          padding: 10px;
+          z-index: 20;
+        }
+  
+        &:hover .dropdown-menu {
+          display: flex;
+        }
+      }
+  
+      .mega-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        background: #fff;
+        display: none;
+        flex-direction: row;
+        padding: 30px 40px;
+        gap: 30px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+        border-top: 3px solid #ffc24f;
+        z-index: 25;
+      }
+    }
+  
+    .navbar-right .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+  
+    @media (max-width: 768px) {
+      .navbar-center {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #002244;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+        padding: 20px 0;
+        border-top: 1px solid #fff;
+        &.open {
+          display: flex;
+        }
+  
+        li {
+          padding: 10px 0;
+        }
+      }
+  
+      .navbar-right .hamburger {
+        display: block;
+      }
+    }
+  }
+  

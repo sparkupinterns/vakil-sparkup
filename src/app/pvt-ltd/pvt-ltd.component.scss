@@ -1,0 +1,597 @@
+
+// marquee 
+
+
+/* Marquee Wrapper */
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    // background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: black;
+    padding: 20px 0; /* Increased padding to increase the height */
+    position: fixed; /* Keep the wrapper fixed on the page while scrolling */
+    top: 60px; /* Adjust this value based on your navbar height */
+    left: 0;
+    z-index: 1; /* Lower z-index to ensure dropdowns appear above the marquee */
+    font-family: 'Segoe UI', sans-serif;
+    height: 80px; /* Set the height */
+    text-align: center; /* Ensure the text is centered */
+    -webkit-font-smoothing: antialiased; /* Font smoothing for better clarity on webkit browsers */
+    -moz-osx-font-smoothing: grayscale; /* Font smoothing for Firefox on macOS */
+    font-smoothing: antialiased; /* Enable font smoothing for all browsers */
+    text-rendering: optimizeLegibility; /* Ensure better text rendering */
+    letter-spacing: 1px; /* Improve clarity by slightly spacing out letters */
+    font-weight: 700; /* Bold text for better readability */
+    position: fixed; /* Keep the wrapper fixed on the page while scrolling */
+    top: 60px; /* Adjust this value based on your navbar height */
+    left: 0;
+    z-index: 1; /* Lower z-index to ensure dropdowns appear above the marquee */
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Marquee text animation */
+  .marquee {
+    display: inline-block;
+    white-space: nowrap; /* Prevents the text from wrapping */
+    font-size: 25px; /* Increased font size for larger text */
+    color: black;
+    animation: marquee 35s linear infinite; /* Make the content scroll */
+    line-height: 80px; /* Align text vertically within the increased height */
+    font-weight: 700; /* Ensures bold text for better clarity */
+  }
+  
+  .marquee span {
+    display: inline-block;
+    padding-right: 100px; /* Space between the repeating content */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%); /* Start from right */
+    }
+    100% {
+      transform: translateX(-100%); /* End at left */
+    }
+  }
+  
+
+// 1st section 
+
+/* Container for the entire section */
+.company-container {
+    margin-top: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: white;
+    min-height: 80vh;
+  }
+  
+  /* Layout for left and right content */
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px;
+    flex-wrap: wrap;
+  }
+  
+  /* Left Content - Textual Content */
+  .left-content {
+    flex: 1;
+    max-width: 45%;
+    padding-right: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2980b9;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    color: #555;
+    font-size: 16px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .cta-section {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .cta-section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2980b9;
+  }
+  
+  .cta-section p {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  
+  /* Right Content - Form */
+  .right-form {
+    flex: 1;
+    max-width: 45%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  .company-form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #007bff;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  /* Form Elements */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-top: 8px;
+    outline: none;
+  }
+  
+  input:focus {
+    border-color: #2980b9;
+  }
+  
+  /* Button Styling */
+  button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Button Colors */
+  .btn-create {
+    background-color: #e7c609;
+    color: black;
+  }
+  
+  .btn-appoint {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-terminate {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  /* Disabled Buttons */
+  button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Lawyer Details Section */
+  .lawyer-details {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .lawyer-details p {
+    margin: 8px 0;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column;
+    }
+  
+    .left-content,
+    .right-form {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+
+//   2nd section 
+
+
+.company-info-section {
+    margin-top: 30px; // ✅ Added
+    padding: 80px 20px;
+    background: linear-gradient(to bottom right, #f8fafc, #e0f2fe);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  
+    .intro-block {
+      max-width: 800px;
+      margin: 0 auto 60px;
+  
+      h2 {
+        font-size: 2.5rem;
+        color: #0f172a;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        font-size: 1.1rem;
+        color: #475569;
+      }
+    }
+  
+    .info-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+  
+      .info-card {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        max-width: 340px;
+        flex: 1 1 300px;
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          transform: translateY(-5px);
+        }
+  
+        h3 {
+          font-size: 1.4rem;
+          color: #1e293b;
+          margin-bottom: 15px;
+        }
+  
+        p {
+          color: #334155;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  
+
+//   3rd section 
+
+
+.about-company-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+  
+    .about-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 100px; // 🔥 Add space between image and content
+    }
+  
+    .about-image {
+      flex: 1;
+      min-width: 300px;
+  
+      img {
+        width: 100%;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+    }
+  
+    .about-content {
+      flex: 1;
+      min-width: 300px;
+  
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #0f172a;
+      }
+  
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        color: #334155;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+  
+        li {
+          font-size: 1rem;
+          margin-bottom: 10px;
+          padding-left: 24px;
+          position: relative;
+          color: #1e293b;
+  
+          &::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+  
+      .learn-btn {
+        background-color: #e0822a;
+        color: white;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: fit-content;
+        display: block;           // Required for margin auto
+        margin: 0 auto;           // 🔥 Center horizontally
+      
+        &:hover {
+          background-color: #1d4ed8;
+        }
+      }
+      
+    }
+  }
+
+
+
+//   4rth section 
+
+
+.why-choose-us {
+    background: #f1f5f9;
+    padding: 80px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  
+    .why-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+  
+    .why-heading {
+      font-size: 2.5rem;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+  
+    .why-subtext {
+      font-size: 1.1rem;
+      color: #475569;
+      margin-bottom: 40px;
+    }
+  
+    .why-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+  
+    .why-card {
+      background: #ffffff;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      width: 300px;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+  
+      img {
+        width: 60px;
+        margin-bottom: 20px;
+      }
+  
+      h3 {
+        font-size: 1.4rem;
+        color: #1e293b;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: #475569;
+      }
+    }
+  }
+  
+
+// 5th section 
+
+
+.lawyer-expert-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  
+    .lawyer-container {
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+  
+    .lawyer-heading {
+      font-size: 2.5rem;
+      color: #1e293b;
+      margin-bottom: 10px;
+    }
+  
+    .lawyer-subtext {
+      color: #64748b;
+      font-size: 1.1rem;
+      margin-bottom: 50px;
+    }
+  
+    .lawyer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+  
+    .lawyer-card {
+      background-color: #f8fafc;
+      padding: 30px;
+      border-radius: 16px;
+      width: 300px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+      }
+  
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+  
+      h3 {
+        font-size: 1.3rem;
+        color: #0f172a;
+        margin-bottom: 5px;
+      }
+  
+      .role {
+        font-size: 1rem;
+        color: #2563eb;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+  
+      .bio {
+        font-size: 0.95rem;
+        color: #475569;
+      }
+    }
+  }
+  
+
+//   6th section 
+
+
+.slider-container {
+    margin-top: 100px;
+    margin-bottom: 70px;
+    height: 140px; /* Increased height */
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    align-items: center; /* Center content vertically */
+  }
+  
+  .slider-wrapper {
+    display: flex;
+    width: max-content;
+    animation: scrollAnimation 10s linear infinite;
+  }
+  
+  .slide {
+    flex: 0 0 auto;
+    margin-right: 60px; /* Increased spacing between images */
+    display: flex;
+    align-items: center; /* Center images inside the slide */
+  }
+  
+  .slide img {
+    height: 80px; /* Adjusted to fit the new container */
+    width: auto;
+  }
+  
+  /* 🔥 Smooth infinite scrolling effect */
+  @keyframes scrollAnimation {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  

@@ -1,164 +1,196 @@
 <nav class="navbar">
-    <div class="navbar-left">
-      <img src="https://assets.zolvit.com/live-images/zolvit-logo-white.svg" alt="Logo" />
-    </div>
-  
-    <ul class="navbar-center">
-      <li class="dropdown yellow">
-        <span>Consult an Expert ▼</span>
-        <ul class="dropdown-menu">
-          <li><a routerLink="/talk-to-lawyer">Talk to a Lawyer</a></li>
-          <li><a routerLink="/talk-to-charted-accountant">Talk to a CA</a></li>
-          <li><a routerLink="/talk-to-secretary-cmpny">Talk to a CS</a></li>
-          <li><a routerLink="/talk-to-trademark">Talk to IP Lawyer</a></li>          
-        </ul>
-      </li>
-  <!-- asdsdfsdfsdf -->
-      <li class="dropdown">
-        <span>Business Setup <i class="arrow"></i></span>
-        <ul class="dropdown-menu">
-          <li><a href="#">Private Ltd Company</a></li>
-          <li><a href="#">LLP</a></li>
-          <li><a href="#">OPC</a></li>
-          <li><a href="#">Startup India</a></li>
-        </ul>
-      </li>
-  
-      <li class="dropdown">
-        <span>Tax & Compliance <i class="arrow"></i></span>
-        <ul class="dropdown-menu">
-          <li><a href="#">GST Registration</a></li>
-          <li><a href="#">GST Filing</a></li>
-          <li><a href="#">Indirect Tax</a></li>
-          <li><a href="#">RoDTEP</a></li>
-        </ul>
-      </li>
-  
-      
+  <div class="navbar-left">
+    <!-- <img src="../../../images/logo.jpg" alt="Logo" /> -->
+    <img src="/assets/images/logo.jpg" alt="logo" />
+  </div>
+
+  <ul class="navbar-center">
+    <li class="dropdown yellow">
+      <span>Consult an Expert ▼</span>
+      <ul class="dropdown-menu">
+        <li><a routerLink="/talk-to-lawyer">Talk to a Lawyer</a></li>
+        <li><a routerLink="/talk-to-charted-accountant">Talk to a CA</a></li>
+        <li><a routerLink="/talk-to-secretary-cmpny">Talk to a CS</a></li>
+        <li><a routerLink="/talk-to-trademark">Talk to IP Lawyer</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <span>Business Setup <i class="arrow"></i></span>
+      <ul class="dropdown-menu">
+        <li><a href="#">Private Ltd Company</a></li>
+        <li><a href="#">LLP</a></li>
+        <li><a href="#">OPC</a></li>
+        <li><a href="#">Startup India</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <span>Tax & Compliance <i class="arrow"></i></span>
+      <ul class="dropdown-menu">
+        <li><a href="#">GST Registration</a></li>
+        <li><a href="#">GST Filing</a></li>
+        <li><a href="#">Indirect Tax</a></li>
+        <li><a href="#">RoDTEP</a></li>
+      </ul>
+    </li>
+
+
+    <!-- Documentation Dropdown -->
+    <li class="dropdown tab">
       <!-- Documentation Dropdown -->
-      <li class="dropdown tab">
-       <!-- Documentation Dropdown -->
-       <li class="dropdown tab">
-        <span>Documentation <i class="arrow"></i></span>
-        <div class="mega-dropdown">
-          <div class="mega-content">
-            <div class="left-buttons">
-              <button
-                *ngFor="let item of items"
-                (click)="selectItem(item)"
-                [class.active]="selectedItem?.name === item.name">
-                <img [src]="item.icon" alt="icon" />
-                <span>{{ item.name }}</span>
-              </button>
-            </div>
-      
-            <!-- Right side changes based on selection -->
-            <div class="leftNavWrapper" *ngIf="selectedItem">
-              <div class="dropDownContainerStyle" style="height:550px">
-                <div class="leftNavContainer">
-                  <button class="btnwrapper btnwrapperActive">
-                    <span class="dropDownImageWrapper">
-                      <span class="dropDownImageContainer">
-                        <img
-                          [src]="selectedItem.icon"
-                          [alt]="selectedItem.name"
-                          [title]="selectedItem.name"
-                          width="35"
-                          height="30"
-                        />
-                        <span class="dropDownName dropDownNameActive">{{ selectedItem.name }}</span>
-                      </span>
+    <li class="dropdown tab">
+      <span>Documentation <i class="arrow"></i></span>
+      <div class="mega-dropdown">
+        <div class="mega-content">
+          <div class="left-buttons">
+            <button *ngFor="let item of items" (click)="selectItem(item)"
+              [class.active]="selectedItem?.name === item.name">
+              <img [src]="item.icon" alt="icon" />
+              <span>{{ item.name }}</span>
+            </button>
+          </div>
+
+          <!-- Right side changes based on selection -->
+          <div class="leftNavWrapper" *ngIf="selectedItem">
+            <div class="dropDownContainerStyle" style="height:550px">
+              <div class="leftNavContainer">
+                <button class="btnwrapper btnwrapperActive">
+                  <span class="dropDownImageWrapper">
+                    <span class="dropDownImageContainer">
+                      <img [src]="selectedItem.icon" [alt]="selectedItem.name" [title]="selectedItem.name" width="35"
+                        height="30" />
+                      <span class="dropDownName dropDownNameActive">{{ selectedItem.name }}</span>
                     </span>
-                    <i class="arrow"></i>
-                  </button>
-                </div>
-      
-                <div class="rightSection">
-                  <div class="columnContainer">
-                    <div class="clib-mr-[57px]">
-                      <div class="groupStyle">
-                        <p class="groupNameStyle">{{ selectedItem.name }}</p>
-                        <div class="linksPaddingStyle">
-                          <p class="linkStyle" *ngFor="let link of selectedItem.links">
-                            <a [href]="link.url">{{ link.label }}</a>
-                          </p>
-                        </div>
+                  </span>
+                  <i class="arrow"></i>
+                </button>
+              </div>
+
+              <div class="rightSection">
+                <div class="columnContainer">
+                  <div class="clib-mr-[57px]">
+                    <div class="groupStyle">
+                      <p class="groupNameStyle">{{ selectedItem.name }}</p>
+                      <div class="linksPaddingStyle">
+                        <p class="linkStyle" *ngFor="let link of selectedItem.links">
+                          <a [href]="link.url">{{ link.label }}</a>
+                        </p>
                       </div>
                     </div>
                   </div>
-      
-                  <div class="bookAppointmentwrapper">
-                    <div class="referContainerStyle">
-                      <img
-                        src="https://assets.vakilsearch.com/header-desktop/bookAppoitment.svg"
-                        alt="BookAppointment"
-                        width="30"
-                        height="30"
-                        class="referContainerImageStyle"
-                      />
-                      <div class="referContainerText">
-                        <p class="referContainerTextPara">Prefer to talk to a business advisor first?</p>
-                        <a
-                          href="https://vakilsearch.com/business-consulting-services-india"
-                          class="callBackLink">
-                          Book a call back
-                        </a>
-                      </div>
+                </div>
+
+                <div class="bookAppointmentwrapper">
+                  <div class="referContainerStyle">
+                    <img src="https://assets.vakilsearch.com/header-desktop/bookAppoitment.svg" alt="BookAppointment"
+                      width="30" height="30" class="referContainerImageStyle" />
+                    <div class="referContainerText">
+                      <p class="referContainerTextPara">Prefer to talk to a business advisor first?</p>
+                      <a href="https://vakilsearch.com/business-consulting-services-india" class="callBackLink">
+                        Book a call back
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- /leftNavWrapper -->
+          </div>
+          <!-- /leftNavWrapper -->
+        </div>
+      </div>
+    </li>
+
+
+
+
+    <!-- Trademark & IP Dropdown -->
+    <li class="dropdown tab">
+      <span>Trademark & IP <i class="arrow"></i></span>
+      <div class="mega-dropdown">
+        <div class="mega-content">
+          <div class="left-buttons">
+            <button class="active">
+              <img src="https://assets.vakilsearch.com/header-desktop/Trademark.svg" alt="icon" />
+              <span>Trademark Reg</span>
+            </button>
+            <button>
+              <img src="https://assets.vakilsearch.com/header-desktop/Copyright.svg" alt="icon" />
+              <span>Copyright</span>
+            </button>
+          </div>
+          <div class="right-content">
+            <h3>Trademark Services</h3>
+            <ul>
+              <li><a href="#">Check Availability</a></li>
+              <li><a href="#">Trademark Filing</a></li>
+              <li><a href="#">Objection</a></li>
+
+
+
+            </ul>
           </div>
         </div>
+        <div class="callback">
+          <img src="https://assets.vakilsearch.com/header-desktop/bookAppoitment.svg" alt="callback" />
+          <div>
+            <p>Need IP Help?</p>
+            <a href="#">Speak to Expert</a>
+          </div>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+  <!-- Right: Login and Hamburger Toggle -->
+  <div class="navbar-right">
+    <button class="login-btn">Login</button>
+    <button class="hamburger" (click)="toggleMobileMenu()">☰</button>
+  </div>
+  <!-- </nav> -->
+
+  <!-- MOBILE MENU (shows on toggle click) -->
+  <div class="mobile-menu" [class.open]="isMobileMenuOpen">
+    <button class="close-btn" (click)="closeMobileMenu()">×</button>
+
+    <ul class="mobile-nav-links">
+
+      <!-- Consult an Expert with Dropdown -->
+      <li>
+        <button class="mobile-dropdown-toggle" (click)="toggleExpertDropdown()">
+          Consult an Expert
+          <span [class.rotated]="isExpertDropdownOpen">▼</span>
+        </button>
+        <ul class="mobile-submenu" *ngIf="isExpertDropdownOpen">
+          <li><a routerLink="/talk-to-lawyer" (click)="closeMobileMenu()">Talk to a Lawyer</a></li>
+          <li><a routerLink="/talk-to-charted-accountant" (click)="closeMobileMenu()">Talk to a CA</a></li>
+          <li><a routerLink="/talk-to-secretary-cmpny" (click)="closeMobileMenu()">Talk to a CS</a></li>
+          <li><a routerLink="/talk-to-trademark" (click)="closeMobileMenu()">Talk to IP Lawyer</a></li>
+        </ul>
       </li>
 
-      
-      
-  
-  <!-- Trademark & IP Dropdown -->
-  <li class="dropdown tab">
-    <span>Trademark & IP <i class="arrow"></i></span>
-    <div class="mega-dropdown">
-      <div class="mega-content">
-        <div class="left-buttons">
-          <button class="active">
-            <img src="https://assets.vakilsearch.com/header-desktop/Trademark.svg" alt="icon" />
-            <span>Trademark Reg</span>
-          </button>
-          <button>
-            <img src="https://assets.vakilsearch.com/header-desktop/Copyright.svg" alt="icon" />
-            <span>Copyright</span>
-          </button>
-        </div>
-        <div class="right-content">
-          <h3>Trademark Services</h3>
-          <ul>
-            <li><a href="#">Check Availability</a></li>
-            <li><a href="#">Trademark Filing</a></li>
-            <li><a href="#">Objection</a></li>
+   <!-- Business Setup with Dropdown -->
+<li>
+  <button class="mobile-dropdown-toggle" (click)="toggleBusinessDropdown()">
+    Business Setup
+    <span [class.rotated]="isBusinessDropdownOpen">▼</span>
+  </button>
+  <ul class="mobile-submenu" *ngIf="isBusinessDropdownOpen">
+    <li><a routerLink="/private-ltd" (click)="closeMobileMenu()">Private Limited</a></li>
+    <li><a routerLink="/opc-registration" (click)="closeMobileMenu()">One Person Company</a></li>
+    <li><a routerLink="/llp-registration" (click)="closeMobileMenu()">LLP Registration</a></li>
+    <li><a routerLink="/partnership" (click)="closeMobileMenu()">Partnership Firm</a></li>
+  </ul>
+</li>
 
 
-            
-          </ul>
-        </div>
-      </div>
-      <div class="callback">
-        <img src="https://assets.vakilsearch.com/header-desktop/bookAppoitment.svg" alt="callback" />
-        <div>
-          <p>Need IP Help?</p>
-          <a href="#">Speak to Expert</a>
-        </div>
-      </div>
-    </div>
-  </li>
-  
-    </ul>
-  
-    <div class="navbar-right">
-      <button class="login-btn">Login</button>
-      <button class="hamburger">&#9776;</button>
-    </div>
-  </nav>
-  
+    <!-- Other Nav Items -->
+    <li><a routerLink="/gst-registration" (click)="closeMobileMenu()">Tax & Compliance</a></li>
+    <li><a routerLink="/documentation" (click)="closeMobileMenu()">Documentation</a></li>
+    <li><a routerLink="/trademark" (click)="closeMobileMenu()">Trademark & IP</a></li>
+  </ul>
+
+  </div>
+
+</nav>

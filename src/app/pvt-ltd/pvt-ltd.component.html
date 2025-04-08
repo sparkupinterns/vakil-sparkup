@@ -1,0 +1,261 @@
+
+<!-- marquee  -->
+
+<div class="marquee-wrapper">
+    <div class="marquee">
+      <span>⚖️ Talk to Top Lawyers | 🕒 24x7 Legal Advice | 🧾 Legal Notice Drafting | 🏠 Property Disputes | 👩‍⚖️ Civil & Criminal Law | 📑 Legal Documents Online </span>
+      <span>⚖️ Talk to Top Lawyers | 🕒 24x7 Legal Advice | 🧾 Legal Notice Drafting | 🏠 Property Disputes | 👩‍⚖️ Civil & Criminal Law | 📑 Legal Documents Online </span>
+    </div>
+  </div>
+  
+
+<!-- 1st section  -->
+
+<div class="company-container">
+    <div class="content-container">
+      <!-- Left Content Section -->
+      <div class="left-content">
+        <h1>Start Your Private Limited Company</h1>
+        <p>Take the first step towards building a successful business with the benefits of a Private Limited Company. Let us help you with the process!</p>
+  
+        <div class="content-block">
+          <h2>The Benefits of a Private Limited Company</h2>
+          <ul>
+            <li><strong>Limited Liability:</strong> Protect your personal assets.</li>
+            <li><strong>Easy Ownership Transfer:</strong> Simplified procedures for transferring shares.</li>
+            <li><strong>Access to Funding:</strong> Attract investors and raise capital with ease.</li>
+            <li><strong>Tax Benefits:</strong> Leverage tax advantages for better financial growth.</li>
+          </ul>
+        </div>
+  
+        <div class="content-block">
+            <ul>
+                <li><strong>Limited Liability:</strong> Protect your personal assets.</li>
+                <li><strong>Easy Ownership Transfer:</strong> Simplified procedures for transferring shares.</li>
+                <li><strong>Access to Funding:</strong> Attract investors and raise capital with ease.</li>
+                <li><strong>Tax Benefits:</strong> Leverage tax advantages for better financial growth.</li>
+              </ul>
+        </div>
+      </div>
+  
+      <!-- Right Form Section -->
+      <div class="right-form">
+        <div class="company-form">
+          <h2>Create Your Company</h2>
+          <form>
+            <div class="form-group">
+              <label for="companyName">Company Name:</label>
+              <input id="companyName" [(ngModel)]="companyName" name="companyName" placeholder="Enter Company Name" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="registrationNumber">Registration Number:</label>
+              <input id="registrationNumber" [(ngModel)]="registrationNumber" name="registrationNumber" placeholder="Enter Registration Number" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="businessType">Business Type:</label>
+              <input id="businessType" [(ngModel)]="businessType" name="businessType" placeholder="Enter Business Type" required>
+            </div>
+  
+            <button type="button" (click)="createCompany()" class="btn-create">Create Company</button>
+          </form>
+        </div>
+  
+        <!-- Lawyer Appointment Section -->
+        <div *ngIf="companyName && registrationNumber && businessType" class="lawyer-section">
+          <h3>Lawyer Appointment</h3>
+          
+          <div class="form-group">
+            <label for="lawyerName">Lawyer Name:</label>
+            <input id="lawyerName" [(ngModel)]="lawyerName" name="lawyerName" placeholder="Enter Lawyer's Name" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="lawyerFee">Lawyer Fee (per hour):</label>
+            <input id="lawyerFee" [(ngModel)]="lawyerFee" name="lawyerFee" type="number" placeholder="Enter Lawyer Fee" required>
+          </div>
+  
+          <div class="button-group">
+            <button type="button" (click)="appointLawyer()" class="btn-appoint" [disabled]="!lawyerName || !lawyerFee">Appoint Lawyer</button>
+            <button type="button" (click)="terminateLawyerAppointment()" class="btn-terminate" [disabled]="!lawyerEngaged">Terminate Lawyer</button>
+          </div>
+        </div>
+  
+        <div *ngIf="lawyerEngaged" class="lawyer-details">
+          <h3>Lawyer Appointment Details:</h3>
+          <p><strong>Lawyer Name:</strong> {{ lawyerName }}</p>
+          <p><strong>Hourly Fee:</strong> ${{ lawyerFee }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <!-- 2nd section  -->
+
+
+  <section class="company-info-section">
+    <div class="intro-block">
+      <h2>🚀 Why Choose Our Legal Services?</h2>
+      <p>We blend technology with expert legal support to give you fast, reliable, and affordable solutions for all your personal and business legal needs.</p>
+    </div>
+  
+    <div class="info-cards">
+      <div class="info-card">
+        <h3>✔️ Trusted Experts</h3>
+        <p>Connect with verified lawyers from across India who are experts in their respective fields.</p>
+      </div>
+      <div class="info-card">
+        <h3>⚡ Instant Access</h3>
+        <p>Get legal help in minutes. Chat or call professionals directly from your device — no appointments needed.</p>
+      </div>
+      <div class="info-card">
+        <h3>💸 Transparent Pricing</h3>
+        <p>No hidden costs. Choose affordable consultation packages that suit your needs.</p>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- 3rd section  -->
+
+
+  <section class="about-company-section">
+    <div class="about-container">
+      <!-- Left Image -->
+      <div class="about-image">
+        <img src="https://img.freepik.com/free-vector/business-team-discussing-ideas-startup_74855-4380.jpg" alt="About Company" />
+      </div>
+  
+      <!-- Right Content -->
+      <div class="about-content">
+        <h2>About Our Company</h2>
+        <p>
+          We are a modern legal-tech company dedicated to simplifying legal processes for individuals and businesses.
+          Our team of expert lawyers, advisors, and tech professionals ensures that every client gets the best support, fast and reliably.
+        </p>
+  
+        <ul>
+          <li>✅ Decade of Legal Expertise</li>
+          <li>✅ 100K+ Clients Served</li>
+          <li>✅ PAN India Presence</li>
+        </ul>
+  
+        <button class="learn-btn">Learn More</button>
+      </div>
+    </div>
+  </section>
+  
+
+
+<!-- 4rth section  -->
+
+
+<section class="why-choose-us">
+    <div class="why-container">
+      <h2 class="why-heading">Why Choose Us</h2>
+      <p class="why-subtext">We make legal processes simple, reliable, and accessible for everyone.</p>
+  
+      <div class="why-grid">
+        <!-- Card 1 -->
+        <div class="why-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Expert Lawyers" />
+          <h3>Expert Lawyers</h3>
+          <p>Connect with highly qualified legal professionals with years of experience.</p>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="why-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1029/1029183.png" alt="Affordable Pricing" />
+          <h3>Affordable Pricing</h3>
+          <p>Legal help at transparent and budget-friendly rates with no hidden fees.</p>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="why-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/4299/4299956.png" alt="Fast Resolution" />
+          <h3>Fast Resolution</h3>
+          <p>Timely and efficient legal solutions tailored to your requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  
+  <!-- 5th section  -->
+
+
+  <section class="lawyer-expert-section">
+    <div class="lawyer-container">
+      <h2 class="lawyer-heading">Meet Our Legal Experts</h2>
+      <p class="lawyer-subtext">Experienced, Dedicated, and Ready to Help You</p>
+  
+      <div class="lawyer-grid">
+        <!-- Lawyer Card 1 -->
+        <div class="lawyer-card">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Lawyer 1">
+          <h3>Adv. Rajeev Sinha</h3>
+          <p class="role">Criminal Law Specialist</p>
+          <p class="bio">Over 12 years of experience in handling high-profile criminal cases and ensuring justice for clients.</p>
+        </div>
+  
+        <!-- Lawyer Card 2 -->
+        <div class="lawyer-card">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Lawyer 2">
+          <h3>Adv. Neha Malhotra</h3>
+          <p class="role">Corporate Law Expert</p>
+          <p class="bio">Helping startups and companies with legal structuring, compliance, and corporate matters.</p>
+        </div>
+  
+        <!-- Lawyer Card 3 -->
+        <div class="lawyer-card">
+          <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Lawyer 3">
+          <h3>Adv. Anil Kapoor</h3>
+          <p class="role">Property & Civil Lawyer</p>
+          <p class="bio">Specializes in land disputes, property documentation, and civil matters with a 98% success rate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- 6th section  -->
+
+
+  <section class="lawyer-company">
+    <div class="container">
+      <h2 class="section-title">About Our Lawyer Company</h2>
+      <p class="section-description">
+        Welcome to LegalSphere Associates — a trusted law firm where expertise meets compassion. We specialize in corporate, civil, and criminal law,
+        offering clients a deep bench of legal professionals dedicated to their case.
+      </p>
+      <p>
+        With over two decades of experience, our mission is to provide transparent, ethical, and impactful legal solutions to individuals and organizations alike.
+        We pride ourselves on fostering long-term client relationships and being a pillar of support in their legal journey.
+      </p>
+      <p>
+        Whether you require counsel on business setup, trademark protection, family settlements, or criminal defense, our tailored legal strategies
+        and client-first approach ensure that you are in capable hands.
+      </p>
+    </div>
+  </section>
+
+
+  
+
+  <div class="slider-container">
+    <div class="slider-wrapper" #slider>
+      <div *ngFor="let image of images" class="slide">
+        <img [src]="image.src" alt="Client Image" />
+      </div>
+      <!-- Duplicate images for seamless effect -->
+      <div *ngFor="let image of images" class="slide">
+        <img [src]="image.src" alt="Client Image" />
+      </div>
+    </div>
+  </div>

@@ -1,35 +1,38 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Component, HostListener } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-header',
-  imports: [CommonModule, RouterLink],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  selector: 'app-navbar',
+  imports: [FormsModule, CommonModule],
+  templateUrl: './navbar.component.html',
+  styleUrl: './navbar.component.scss'
 })
-export class HeaderComponent {
+export class NavbarComponent {
+  isMenuOpen: boolean = false;  // To track whether the menu is open or not
+  isMobile: boolean = false;    // To detect mobile screen size
 
-  isMobileMenuOpen: boolean = false;
-  isExpertDropdownOpen: boolean = false;
-  isBusinessDropdownOpen: boolean = false;
-
-  toggleMobileMenu() {
-    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  // Detect screen size changes
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isMobile = window.innerWidth <= 768;
   }
 
-  closeMobileMenu() {
-    this.isMobileMenuOpen = false;
-    this.isExpertDropdownOpen = false;
-    this.isBusinessDropdownOpen = false;
+  // Initialize the mobile detection on component load
+  ngOnInit() {
+    this.isMobile = window.innerWidth <= 768;
   }
 
-  toggleExpertDropdown() {
-    this.isExpertDropdownOpen = !this.isExpertDropdownOpen;
-  }
+  // Toggle menu visibility on hamburger click
+  // toggleMenu() {
+  //   this.isMenuOpen = !this.isMenuOpen;
+  // }
 
-  toggleBusinessDropdown() {
-    this.isBusinessDropdownOpen = !this.isBusinessDropdownOpen;
+
+  menuOpened: boolean = false;
+
+  toggleMenu() {
+    this.menuOpened = !this.menuOpened;
   }
    // selectedItem: any;
 
@@ -119,5 +122,4 @@ export class HeaderComponent {
     },
   ];
   
-
 }

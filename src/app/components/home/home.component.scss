@@ -168,6 +168,7 @@
 }
 
 .service-links {
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -187,6 +188,7 @@
     padding: 4px 16px;
     cursor: pointer;
     text-decoration: none;
+    align-items: center;
 
     @media (min-width: 768px) {
       font-size: 1rem;
@@ -421,6 +423,7 @@
 
 
 .experts-container {
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -430,6 +433,7 @@
   }
 
   .experts-heading {
+    // margin-top: 50px;
     max-width: 342px;
     text-align: center;
     font-size: 18px;
@@ -599,6 +603,7 @@
 
 
 .customers-section {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -615,6 +620,7 @@
   }
 
   .customers-heading {
+    margin-top: 70px;
     font-size: 24px;
     font-weight: bold;
     line-height: 41px;
@@ -1216,15 +1222,16 @@
   text-decoration: none;
   color: #022B50;
   background-color: #FCD209;
-  padding: 12px 18px; /* Reduced padding */
-  border-radius: 4px;
+  padding: 8px 12px; /* Reduced padding */
+  border-radius: 8px;
   margin-top: 32px;
   margin-bottom: 50px;
-  width: 200px; /* Set a fixed width for the button */
+  width: 50px; /* Set a fixed width for the button */
   text-align: center; /* Center the text inside the button */
 }
 
 .button-text {
+  text-align: center;
   font-size: 1rem;
   font-weight: medium;
   color: #022B50;
