@@ -18,10 +18,11 @@
     <li class="dropdown">
       <span>Business Setup <i class="arrow"></i></span>
       <ul class="dropdown-menu">
-        <li><a href="#">Private Ltd Company</a></li>
-        <li><a href="#">LLP</a></li>
-        <li><a href="#">OPC</a></li>
-        <li><a href="#">Startup India</a></li>
+        <li><a routerLink="/pvt-ltd">Private Ltd Company</a></li>
+        <li><a routerLink="/llp">LLP</a></li>
+        <li><a routerLink="/opc">OPC</a></li>
+        <li><a routerLink="/start-up">Startup India</a></li>
+
       </ul>
     </li>
 
@@ -104,42 +105,95 @@
 
 
 
-    <!-- Trademark & IP Dropdown -->
+    <!-- Documentation Dropdown -->
+    <li class="dropdown tab">
+      <!-- Documentation Dropdown -->
     <li class="dropdown tab">
       <span>Trademark & IP <i class="arrow"></i></span>
       <div class="mega-dropdown">
         <div class="mega-content">
           <div class="left-buttons">
-            <button class="active">
-              <img src="https://assets.vakilsearch.com/header-desktop/Trademark.svg" alt="icon" />
-              <span>Trademark Reg</span>
-            </button>
-            <button>
-              <img src="https://assets.vakilsearch.com/header-desktop/Copyright.svg" alt="icon" />
-              <span>Copyright</span>
+            <button *ngFor="let trade of trademark" (click)="selectItem(trade)"
+              [class.active]="selectedItem?.name === trade.name">
+              <img [src]="trade.icon" alt="icon" />
+              <span>{{ trade.name }}</span>
             </button>
           </div>
-          <div class="right-content">
-            <h3>Trademark Services</h3>
-            <ul>
-              <li><a href="#">Check Availability</a></li>
-              <li><a href="#">Trademark Filing</a></li>
-              <li><a href="#">Objection</a></li>
 
+          <!-- Right side changes based on selection -->
+          <div class="leftNavWrapper" *ngIf="selectedItem">
+            <div class="dropDownContainerStyle" style="height:550px">
+              <div class="leftNavContainer">
+                <button class="btnwrapper btnwrapperActive">
+                  <span class="dropDownImageWrapper">
+                    <span class="dropDownImageContainer">
+                      <img [src]="selectedItem.icon" [alt]="selectedItem.name" [title]="selectedItem.name" width="35"
+                        height="30" />
+                      <span class="dropDownName dropDownNameActive">{{ selectedItem.name }}</span>
+                    </span>
+                  </span>
+                  <i class="arrow"></i>
+                </button>
+              </div>
 
+              <div class="rightSection">
+                <div class="columnContainer">
+                  <div class="clib-mr-[57px]">
+                    <div class="groupStyle">
+                      <p class="groupNameStyle">{{ selectedItem.name }}</p>
+                      <div class="linksPaddingStyle">
+                        <p class="linkStyle" *ngFor="let link of selectedItem.links">
+                          <a [href]="link.url">{{ link.label }}</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-            </ul>
+                <div class="bookAppointmentwrapper">
+                  <div class="referContainerStyle">
+                    <img src="https://assets.vakilsearch.com/header-desktop/bookAppoitment.svg" alt="BookAppointment"
+                      width="30" height="30" class="referContainerImageStyle" />
+                    <div class="referContainerText">
+                      <p class="referContainerTextPara">Prefer to talk to a business advisor first?</p>
+                      <a href="https://vakilsearch.com/business-consulting-services-india" class="callBackLink">
+                        Book a call back
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="callback">
-          <img src="https://assets.vakilsearch.com/header-desktop/bookAppoitment.svg" alt="callback" />
-          <div>
-            <p>Need IP Help?</p>
-            <a href="#">Speak to Expert</a>
-          </div>
+          <!-- /leftNavWrapper -->
         </div>
       </div>
     </li>
+
+
+  <!-- </ul>
+  </div>
+  </div>
+  <div class="callback">
+    <img src="https://assets.vakilsearch.com/header-desktop/bookAppoitment.svg" alt="callback" />
+    <div>
+      <p>Need IP Help?</p>
+      <a href="#">Speak to Expert</a>
+    </div>
+  </div>
+  </div>
+  </li> -->
+
+  <li class="dropdown">
+    <span>Others <i class="arrow"></i></span>
+    <ul class="dropdown-menu">
+      <li><a href="#">GST Registration</a></li>
+      <li><a href="#">GST Filing</a></li>
+      <li><a href="#">Indirect Tax</a></li>
+      <li><a href="#">RoDTEP</a></li>
+    </ul>
+  </li>
+
 
   </ul>
 
@@ -170,26 +224,26 @@
         </ul>
       </li>
 
-   <!-- Business Setup with Dropdown -->
-<li>
-  <button class="mobile-dropdown-toggle" (click)="toggleBusinessDropdown()">
-    Business Setup
-    <span [class.rotated]="isBusinessDropdownOpen">▼</span>
-  </button>
-  <ul class="mobile-submenu" *ngIf="isBusinessDropdownOpen">
-    <li><a routerLink="/private-ltd" (click)="closeMobileMenu()">Private Limited</a></li>
-    <li><a routerLink="/opc-registration" (click)="closeMobileMenu()">One Person Company</a></li>
-    <li><a routerLink="/llp-registration" (click)="closeMobileMenu()">LLP Registration</a></li>
-    <li><a routerLink="/partnership" (click)="closeMobileMenu()">Partnership Firm</a></li>
-  </ul>
-</li>
+      <!-- Business Setup with Dropdown -->
+      <li>
+        <button class="mobile-dropdown-toggle" (click)="toggleBusinessDropdown()">
+          Business Setup
+          <span [class.rotated]="isBusinessDropdownOpen">▼</span>
+        </button>
+        <ul class="mobile-submenu" *ngIf="isBusinessDropdownOpen">
+          <li><a routerLink="/private-ltd" (click)="closeMobileMenu()">Private Limited</a></li>
+          <li><a routerLink="/opc-registration" (click)="closeMobileMenu()">One Person Company</a></li>
+          <li><a routerLink="/llp-registration" (click)="closeMobileMenu()">LLP Registration</a></li>
+          <li><a routerLink="/partnership" (click)="closeMobileMenu()">Partnership Firm</a></li>
+        </ul>
+      </li>
 
 
-    <!-- Other Nav Items -->
-    <li><a routerLink="/gst-registration" (click)="closeMobileMenu()">Tax & Compliance</a></li>
-    <li><a routerLink="/documentation" (click)="closeMobileMenu()">Documentation</a></li>
-    <li><a routerLink="/trademark" (click)="closeMobileMenu()">Trademark & IP</a></li>
-  </ul>
+      <!-- Other Nav Items -->
+      <li><a routerLink="/gst-registration" (click)="closeMobileMenu()">Tax & Compliance</a></li>
+      <li><a routerLink="/documentation" (click)="closeMobileMenu()">Documentation</a></li>
+      <li><a routerLink="/trademark" (click)="closeMobileMenu()">Trademark & IP</a></li>
+    </ul>
 
   </div>
 

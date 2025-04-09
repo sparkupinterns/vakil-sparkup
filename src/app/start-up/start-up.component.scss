@@ -1,0 +1,656 @@
+
+// 1st section 
+
+
+.startup-india-section {
+    margin-top: 40px;
+    padding: 40px 20px;
+    background-color: white; /* Light background */
+    border-radius: 8px;
+    margin-bottom: 40px;
+    color: #333;
+  
+    .section-heading {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #17181a;
+      margin-bottom: 15px;
+      text-align: center; /* Centers the heading */
+    }
+  
+    .section-subheading {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 30px;
+      text-align: center; /* Centers the subheading */
+      line-height: 1.6;
+    }
+  
+    .container {
+        margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1350px;
+      margin-top: 50px;
+      
+      /* For small screens */
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+  
+      .startup-image {
+        flex: 1;
+        padding-right: 20px;
+  
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          object-fit: cover;
+        }
+      }
+  
+      .startup-content {
+        flex: 1;
+        padding-left: 20px;
+  
+        h2 {
+          font-size: 2rem;
+          color: #333;
+          margin-bottom: 15px;
+        }
+  
+        p {
+          font-size: 1.1rem;
+          color: #555;
+          margin-bottom: 20px;
+          line-height: 1.6;
+        }
+  
+        ul {
+          padding-left: 20px;
+          margin-bottom: 20px;
+  
+          li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.5;
+  
+            &::before {
+              content: "✔️";
+              margin-right: 10px;
+              color: #28a745; /* Green checkmark */
+            }
+          }
+        }
+  
+        .cta-button {
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 1.1rem;
+          background-color: #ffa600; /* Blue background */
+          color: #fff;
+          text-decoration: none;
+          border-radius: 4px;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: #142b44; /* Darker blue on hover */
+          }
+        }
+      }
+    }
+  
+    /* AOS animation */
+    &[data-aos="fade-up"] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+      
+      &.aos-animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  
+
+
+//   2nd section 
+
+
+
+.startup-india-lawyer-section {
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1350px;
+      margin: 0 auto;
+      gap: 40px; // Adds space between the text and image section
+  
+      .lawyer-content {
+        flex: 1;
+        padding-right: 20px;
+  
+        h2 {
+          font-size: 2rem;
+          color: #16191b;
+          margin-bottom: 15px;
+          font-weight: bold;
+        }
+  
+        p {
+          font-size: 1.1rem;
+          color: #555;
+          margin-bottom: 20px;
+          line-height: 1.6;
+        }
+  
+        ul {
+          padding-left: 20px;
+          margin-bottom: 20px;
+          list-style-type: disc;
+  
+          li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+          }
+        }
+  
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            background-color: #db881b;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: #0b1825;
+          }
+        }
+      }
+  
+      .lawyer-image {
+        flex: 1;
+        padding-left: 20px;
+  
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  
+
+
+//   3rd section 
+
+
+
+#startup-ecosystem {
+    .my-container {
+      padding: 20px;
+    }
+  
+    .startup-hding {
+      text-align: center;
+      margin-bottom: 40px;
+  
+      h2 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #333;
+      }
+  
+      p {
+        font-size: 16px;
+        color: #777;
+        margin-top: 10px;
+      }
+    }
+  
+    /* Flexbox row to display columns horizontally */
+    .row {
+      display: flex; /* Flexbox for horizontal layout */
+      justify-content: space-between; /* Distribute space evenly between columns */
+      align-items: stretch; /* Ensure columns are stretched to the same height */
+      width: 100%;
+      gap: 20px; /* Space between columns */
+    }
+  
+    /* Styling for columns */
+    .col-md-4 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 32%; /* Set each column to take up approximately 1/3 of the container's width */
+      height: 100%; /* Ensure the columns have the same height */
+      margin-bottom: 20px;
+  
+      .startup-ecosystem-box {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Ensure even spacing inside the box */
+        height: 100%;
+      }
+  
+      .startup-ecosystem {
+        width: 100%;
+      }
+  
+      .startup-ecosystem-heading {
+        text-align: center;
+        margin-bottom: 20px;
+  
+        h5 {
+          font-size: 20px;
+          font-weight: 600;
+          color: #333;
+        }
+      }
+  
+      .startup-ecosystem1 {
+        text-align: center;
+  
+        p {
+          font-size: 14px;
+          color: #555;
+          margin-bottom: 20px;
+        }
+  
+        a {
+          font-size: 14px;
+          color: #0066cc;
+          text-decoration: none;
+          font-weight: 600;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+  
+        .startup-ecosystem-img {
+          margin-top: 20px;
+          img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+          }
+        }
+  
+        .net-links {
+          font-size: 14px;
+          color: #0066cc;
+          text-decoration: none;
+          cursor: pointer;
+          font-weight: 600;
+        }
+  
+        .network-explore {
+          margin-top: 20px;
+  
+          .explore-map {
+            height: 250px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            margin-bottom: 20px;
+          }
+  
+          .explore-startups h4 {
+            font-size: 18px;
+            color: #333;
+          }
+        }
+  
+        /* Add border to the button */
+        button {
+          border: 2px solid #0066cc;  /* Add blue border */
+          padding: 10px 20px;          /* Add padding to the button */
+          background-color: transparent; /* Transparent background */
+          color: #0066cc;              /* Blue text color */
+          font-weight: 600;
+          border-radius: 5px;          /* Rounded corners */
+          cursor: pointer;            /* Pointer cursor on hover */
+          transition: all 0.3s ease;   /* Smooth transition for hover effects */
+  
+          &:hover {
+            background-color: #0066cc;  /* Blue background on hover */
+            color: #fff;                /* White text color on hover */
+            border-color: #005bb5;      /* Darker blue border on hover */
+          }
+  
+          &:focus {
+            outline: none;              /* Remove outline on focus */
+            box-shadow: 0 0 5px rgba(0, 102, 204, 0.5); /* Add subtle focus shadow */
+          }
+        }
+      }
+    }
+  
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+        align-items: center;
+      }
+  
+      .col-md-4 {
+        width: 100%; /* Ensure each column takes full width on small screens */
+        max-width: 100%;
+      }
+  
+      .startup-ecosystem-box {
+        max-width: 100%;
+      }
+    }
+  }
+  
+
+//   4rth section 
+
+
+
+/* social-media.component.scss */
+
+#socialmedia-min {
+    .social-wrap {
+      padding: 20px;
+      max-width: 1200px;  /* Set the maximum width to 1200px */
+      margin: 40px auto;    /* Center the container horizontally */
+      
+      .startup-hding {
+        text-align: center;
+        margin-bottom: 20px;
+  
+        h2 {
+          font-size: 32px;
+          font-weight: 600;
+          color: #333;
+        }
+      }
+  
+      .social-media {
+        ul {
+          list-style-type: none;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          
+          li {
+            display: inline-block;
+            a {
+              display: block;
+              img {
+                width: 95px;
+                height: 95px;
+                transition: transform 0.3s ease;
+              }
+  
+              &:hover img {
+                transform: scale(1.1);
+              }
+            }
+          }
+  
+          /* Optional: Style each social media icon */
+          .link-color a img {
+            filter: grayscale(100%);
+          }
+          .insta-color a img {
+            filter: sepia(100%);
+          }
+          .faceb-color a img {
+            filter: contrast(150%);
+          }
+          .yout-color a img {
+            filter: hue-rotate(90deg);
+          }
+          .spot-color a img {
+            filter: invert(50%);
+          }
+        }
+      }
+    }
+  }
+  
+
+
+//   5th section 
+
+
+
+/* startup-toolkits.component.scss */
+
+/* Container */
+.my-container {
+    width: 1200px; /* Fix width to 1200px */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .startup-hding {
+    text-align: center;
+    margin-bottom: 40px;
+  
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      color: #333;
+    }
+  
+    p {
+      font-size: 16px;
+      color: #777;
+      margin-top: 10px;
+    }
+  }
+  
+  /* Main Wrapper */
+  .toolkits-facilities-wrapp {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  /* Left Tab Section */
+  .tabs-left {
+    width: 25%;
+  }
+  
+  .radio-set ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .radio-set ul li {
+    margin-bottom: 10px;
+  }
+  
+  .radio-set ul li input {
+    display: none;
+  }
+  
+  .radio-set ul li label {
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .radio-set ul li input:checked + label {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Right Content Section */
+  .tabs-content {
+    width: 70%;
+  }
+  
+  /* Content Articles (Tabs) */
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content#ideation {
+    display: block;
+  }
+  
+  .tab-content h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+  
+  .tab-content p {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Individual Column */
+  .col-md-4, .col-md-8 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Image and List Styles */
+  .ideation-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .ideation-list ul li {
+    margin-bottom: 10px;
+  }
+  
+  .ideation-list ul li a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: 600;
+  }
+  
+  .ideation-list ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .resource-ptn img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .ideation-box {
+    margin-bottom: 30px;
+  }
+  
+
+
+//   6th section 
+
+
+
+
+.lawyer-opc-container {
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 30px; // Outer margin
+    padding-left: 40px;  // Adds 40px padding on the left
+    padding-right: 40px; // Adds 40px padding on the right
+    color: #333;
+    margin-bottom: 80px;
+  
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #090a0a;
+    }
+  
+    section {
+      margin-bottom: 30px;
+  
+      h2 {
+        font-size: 1.5rem;
+        color: #1d2329;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #e9ecef;
+        padding-bottom: 5px;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 15px;
+      }
+  
+      ul, ol {
+        padding-left: 20px;
+        font-size: 1rem;
+        color: #555;
+      }
+  
+      ul {
+        list-style-type: disc;
+      }
+  
+      ol {
+        list-style-type: decimal;
+      }
+  
+      li {
+        margin-bottom: 10px;
+      }
+  
+      strong {
+        font-weight: bold;
+        color: #333;
+      }
+  
+      li strong {
+        color: #0056b3;
+      }
+    }
+  
+    .lawyer-opc-container section:last-child {
+      margin-bottom: 0;
+    }
+  }
+  

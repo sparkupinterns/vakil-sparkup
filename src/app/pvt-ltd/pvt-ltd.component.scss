@@ -164,14 +164,14 @@
   }
   
   h2 {
-    color: #007bff;
+    color: #0b0d0f;
     text-align: center;
     font-size: 28px;
     font-weight: 700;
   }
   
   form {
-    margin-top: 20px;
+    // margin-top: 20px;
   }
   
   /* Form Elements */
@@ -222,7 +222,7 @@
   }
   
   .btn-appoint {
-    background-color: #007bff;
+    background-color: #0b0c0e;
     color: white;
   }
   
@@ -267,62 +267,63 @@
 //   2nd section 
 
 
+
 .company-info-section {
-    margin-top: 30px; // ✅ Added
-    padding: 80px 20px;
-    background: linear-gradient(to bottom right, #f8fafc, #e0f2fe);
-    font-family: 'Segoe UI', sans-serif;
-    text-align: center;
-  
-    .intro-block {
-      max-width: 800px;
-      margin: 0 auto 60px;
-  
-      h2 {
-        font-size: 2.5rem;
-        color: #0f172a;
-        margin-bottom: 20px;
-      }
-  
-      p {
-        font-size: 1.1rem;
-        color: #475569;
-      }
+  margin-top: -100px; /* Set margin-top to 0px */
+  padding: 60px 10px;
+  background: linear-gradient(to bottom right, #f8fafc, #e0f2fe);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+
+  .intro-block {
+    max-width: 800px;
+    margin: 0 auto 60px;
+
+    h2 {
+      font-size: 2.5rem;
+      color: #0f172a;
+      margin-bottom: 20px;
     }
-  
-    .info-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-  
-      .info-card {
-        background: #ffffff;
-        border-radius: 12px;
-        padding: 30px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-        max-width: 340px;
-        flex: 1 1 300px;
-        transition: transform 0.3s ease;
-  
-        &:hover {
-          transform: translateY(-5px);
-        }
-  
-        h3 {
-          font-size: 1.4rem;
-          color: #1e293b;
-          margin-bottom: 15px;
-        }
-  
-        p {
-          color: #334155;
-          font-size: 1rem;
-        }
+
+    p {
+      font-size: 1.1rem;
+      color: #475569;
+    }
+  }
+
+  .info-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    .info-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      max-width: 340px;
+      flex: 1 1 300px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      h3 {
+        font-size: 1.4rem;
+        color: #1e293b;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: #334155;
+        font-size: 1rem;
       }
     }
   }
-  
+}
+
 
 //   3rd section 
 

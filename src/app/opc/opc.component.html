@@ -1,22 +1,214 @@
-<div class="slider-container">
-    <div class="slider-wrapper" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
-      [style.transition]="currentIndex === 0 ? 'none' : 'transform 0.5s ease-in-out'">
-  
+<!-- 1st section  -->
 
-      <div *ngFor="let post of posts; let i = index" class="slide" [style.backgroundImage]="'url(' + post.image + ')'">
-  
-   
-        <div class="overlay"></div>
-  
-  
-        <div class="slide-content">
-          <h2>{{ post.title }}</h2>
-          <button (click)="onButtonClick()">Contact Now</button>
-        </div>
+<div class="slider-container">
+  <div class="slider-wrapper" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+    [style.transition]="currentIndex === 0 ? 'none' : 'transform 0.5s ease-in-out'">
+
+
+    <div *ngFor="let post of posts; let i = index" class="slide" [style.backgroundImage]="'url(' + post.image + ')'">
+
+
+      <div class="overlay"></div>
+
+
+      <div class="slide-content">
+        <h4>{{ post.title }}</h4>
+        <button (click)="onButtonClick()">Contact Now</button>
       </div>
     </div>
-  
- 
-    <button class="prev" (click)="prevSlide()">❮</button>
-    <button class="next" (click)="nextSlide()">❯</button>
   </div>
+
+
+  <button class="prev" (click)="prevSlide()">❮</button>
+  <button class="next" (click)="nextSlide()">❯</button>
+</div>
+
+
+
+<!-- 2nd section  -->
+
+
+
+<div class="section-heading">
+  <h2>Smart Way to Start – Register a One Person Company</h2>
+  <p>Choose from a variety of professional home layouts designed for law and legal businesses.</p>
+</div>
+
+<div class="image-grid">
+  <div class="image-box" *ngFor="let item of imageItems">
+    <a [href]="item.link" target="_blank">
+      <img [src]="item.image" [alt]="item.title" />
+    </a>
+    <div class="text-content">
+      <h6>
+        <a [href]="item.link" target="_blank">
+          <span class="text">{{ item.title }}</span>
+          <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="9.795" height="9.751">
+            <!-- <g><path d="m 0.35 9.4 l 8.94 -8.91 M 0.4 0.5 h 8.88 M 9.3 9.2 V 0.49"></path></g> -->
+          </svg>
+        </a>
+        <!-- <span class="number">{{ item.number }}</span> -->
+      </h6>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 3rd section  -->
+
+
+<section class="opc-section" *ngIf="sectionData?.fields; else loading">
+  <div class="opc-container">
+    <div class="opc-content">
+      <h2>{{ sectionData.fields.heading }}</h2>
+      <p>{{ sectionData.fields.description }}</p>
+      <ul>
+        <li *ngFor="let feature of sectionData.fields.features">✔️ {{ feature }}</li>
+      </ul>
+      <a [href]="sectionData.fields.ctaLink" class="cta-button">
+        {{ sectionData.fields.ctaText }}
+      </a>
+    </div>
+    <div class="opc-image">
+      <img [src]="sectionData.fields.image" [alt]="sectionData.fields.heading" />
+    </div>
+  </div>
+</section>
+
+<ng-template #loading>
+  <div>Loading...</div>
+</ng-template>
+
+
+
+<!-- jdsbfjkasdbnfjkfkbnkfbsdjkbnvkadjnvjkasdnc -->
+
+
+<!-- 4rth section  -->
+
+
+<!-- About OPC Section -->
+<section class="opc-about-section" *ngIf="opcInfo?.fields" data-aos="fade-up">
+  <div class="opc-container">
+    <div class="opc-image">
+      <img [src]="opcInfo.fields.image" [alt]="opcInfo.fields.heading" />
+    </div>
+    <div class="opc-content">
+      <h2>{{ opcInfo.fields.heading }}</h2>
+      <p>{{ opcInfo.fields.description }}</p>
+      <ul>
+        <li *ngFor="let feature of opcInfo.fields.features">✔️ {{ feature }}</li>
+      </ul>
+      <a [href]="opcInfo.fields.ctaLink" class="cta-button">
+        {{ opcInfo.fields.ctaText }}
+      </a>
+    </div>
+   
+  </div>
+</section>
+
+
+
+<!-- 5th section  -->
+
+
+<div class="table-container">
+  <h2>Lawyer OPC Information</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Lawyer ID</th>
+        <th>Name</th>
+        <th>Specialty</th>
+        <th>Company Name</th>
+        <th>Years of Experience</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Loop through the lawyer data using *ngFor -->
+      <tr *ngFor="let lawyer of lawyers">
+        <td>{{ lawyer.id }}</td>
+        <td>{{ lawyer.name }}</td>
+        <td>{{ lawyer.specialty }}</td>
+        <td>{{ lawyer.companyName }}</td>
+        <td>{{ lawyer.yearsOfExperience }}</td>
+        <td>{{ lawyer.location }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<!-- 6th section  -->
+
+
+<div class="lawyer-opc-container">
+  <h1>{{ title }}</h1>
+
+  <section>
+    <h2>What is an OPC (One Person Company)?</h2>
+    <p>
+      An One Person Company (OPC) is a type of company that has only one shareholder. 
+      It provides the benefits of limited liability to the sole owner, which is similar to a private limited company, 
+      but with simpler compliance requirements.
+    </p>
+  </section>
+
+  <section>
+    <h2>Key Features of OPC:</h2>
+    <ul>
+      <li><strong>Single Shareholder:</strong> The most significant feature of an OPC is that it can be owned by just one person.</li>
+      <li><strong>Limited Liability:</strong> The liability of the shareholder is limited to the extent of their shareholding in the company.</li>
+      <li><strong>Separate Legal Entity:</strong> OPC is a separate legal entity distinct from its owner, meaning the company can own property, enter into contracts, and file lawsuits.</li>
+      <li><strong>Nominee:</strong> While the company can be owned by one person, a nominee must be appointed. The nominee is the person who will take over the company if the original shareholder passes away or becomes incapacitated.</li>
+      <li><strong>Simplified Compliance:</strong> OPCs have fewer compliance requirements compared to other companies. For example, OPCs don't need to hold annual general meetings (AGMs) or have a board of directors.</li>
+      <li><strong>No Minimum Paid-up Capital:</strong> Unlike other companies, OPCs do not require a minimum paid-up capital to be formed.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Lawyer OPC Company</h2>
+    <p>
+      A lawyer or legal professional may choose to set up an OPC for their legal practice for several reasons, 
+      such as personal liability protection, ease of setup, and smoother operations. A law firm OPC may also be beneficial for 
+      solo practitioners who prefer to keep their practice separate from their personal assets and want to maintain limited liability.
+    </p>
+  </section>
+
+  <section>
+    <h2>Setting Up a Lawyer's OPC</h2>
+    <ol>
+      <li><strong>Eligibility:</strong> Only individuals who are citizens and residents of India can form an OPC. The individual can act as the director and shareholder of the OPC. A nominee must be appointed at the time of registration.</li>
+      <li><strong>Choosing a Name:</strong> The company name should be unique and should not resemble any existing company or trademark. The name should reflect the legal profession if it’s a law firm. For example: "John Doe Legal OPC Pvt. Ltd."</li>
+      <li><strong>Obtaining Director Identification Number (DIN):</strong> The director (the lawyer in this case) needs to obtain a DIN (Director Identification Number), which is required to become a director in any company.</li>
+      <li><strong>Registering the Company:</strong> The OPC must be registered with the Registrar of Companies (RoC), and the application must be submitted online to the Ministry of Corporate Affairs (MCA).</li>
+      <li><strong>Obtaining Certificate of Incorporation:</strong> After submission of all documents and approvals, the Registrar of Companies will issue a Certificate of Incorporation.</li>
+      <li><strong>Complying with Legal Formalities:</strong> After the OPC is set up, you must comply with basic corporate governance, which includes maintaining financial records, filing annual returns, and other compliance activities.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Benefits of Setting Up an OPC for Lawyers</h2>
+    <ul>
+      <li><strong>Limited Liability:</strong> As the sole shareholder of an OPC, the lawyer's personal assets are protected from any legal or financial liabilities of the company.</li>
+      <li><strong>Easier Operation:</strong> OPCs have fewer statutory requirements compared to other company forms. For example, there’s no need for AGMs, which can save the lawyer time and resources.</li>
+      <li><strong>Separate Legal Entity:</strong> An OPC is considered a separate legal entity, so it can sign contracts, hold property, and be sued or sue in its name.</li>
+      <li><strong>Sole Ownership:</strong> Lawyers who prefer not to share the ownership of their business can benefit from the OPC structure, as it allows one person to run the company entirely on their own.</li>
+      <li><strong>Nominee Appointment:</strong> In case the lawyer faces an unfortunate situation (e.g., passing away), the nominee will take over the business, ensuring smooth continuity.</li>
+      <li><strong>Professional Independence:</strong> Lawyers running an OPC have greater autonomy in managing their business operations and financials.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Challenges of Lawyer OPC</h2>
+    <ul>
+      <li><strong>Limitations on Shareholders:</strong> An OPC can only have one shareholder. While this is ideal for solo practitioners, it does not allow for multiple partners or shareholders.</li>
+      <li><strong>Not Suitable for Larger Law Firms:</strong> If the lawyer wants to run a large firm with multiple partners, the OPC structure may not be the right choice.</li>
+      <li><strong>No Funding from Investors:</strong> OPCs are restricted in terms of raising capital from outside investors.</li>
+      <li><strong>Exit and Transfer of Ownership:</strong> Transferring the ownership or shareholding in an OPC is not as easy as in a private limited company. The transfer can only occur by converting the OPC into a private limited company.</li>
+    </ul>
+  </section>
+</div>

@@ -166,12 +166,10 @@
   outline: none;
   padding: 0 12px;
 }
-
 .service-links {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   gap: 8px;
   z-index: 10;
@@ -188,7 +186,11 @@
     padding: 4px 16px;
     cursor: pointer;
     text-decoration: none;
-    align-items: center;
+    display: flex;              // ✅ added for flex to work
+    align-items: center;        // ✅ vertical centering
+    justify-content: center;    // ✅ horizontal centering
+    text-align: center;         // ✅ for multiline centering
+    min-height: 50px;           // ✅ ensure some height for centering effect
 
     @media (min-width: 768px) {
       font-size: 1rem;
@@ -196,6 +198,7 @@
 
     p {
       color: white;
+      margin: 0;                // ✅ avoid spacing issue
     }
 
     &:hover {
@@ -203,7 +206,6 @@
     }
   }
 }
-
 .logo-banner {
   position: absolute;
   left: 0;

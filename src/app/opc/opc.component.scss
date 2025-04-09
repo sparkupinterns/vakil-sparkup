@@ -1,3 +1,7 @@
+
+// 1st section 
+
+
 /* Parent Container */
 .slider-container {
     width: 100%;
@@ -39,6 +43,7 @@
 
 /* Content on Image */
 .slide-content {
+    font-weight: bold;
     position: absolute;
     text-align: center;
     color: white;
@@ -55,7 +60,7 @@ h2 {
 
 /* Button */
 button {
-    background: rgb(107, 205, 230); /* Default Background Color */
+    background: rgb(34, 107, 126); /* Default Background Color */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -67,8 +72,8 @@ button {
 
 button:hover {
     background: transparent; /* Hover par Transparent ho jayega */
-    color: aqua; /* Aqua color ka text dikhayega */
-    border: 2px solid aqua; /* Border add for visibility */
+    color: rgb(28, 100, 100); /* Aqua color ka text dikhayega */
+    border: 2px solid rgb(38, 104, 104); /* Border add for visibility */
 }
 
 /* Previous & Next Buttons */
@@ -97,3 +102,400 @@ button:hover {
 .prev:hover, .next:hover {
     background-color: transparent;
 }
+
+
+
+
+// 2nd section 
+
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+  
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 16px;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+  
+  .image-grid {
+    // width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  
+    .image-box {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+      width: 100%;
+      max-width: 450px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      border-radius: 12px;
+      background: #fff;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px 12px 0 0;
+      }
+  
+      a {
+        color: #1a1a1a;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 12px;
+      }
+  
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+  
+  /* === Responsive Media Queries === */
+  
+  @media (max-width: 768px) {
+    .section-heading {
+      h2 {
+        font-size: 24px;
+      }
+  
+      p {
+        font-size: 15px;
+      }
+    }
+  
+    .image-grid {
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+  
+      .image-box {
+        max-width: 90%;
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section-heading {
+      h2 {
+        font-size: 20px;
+      }
+  
+      p {
+        font-size: 14px;
+      }
+    }
+  
+    .image-grid {
+      gap: 16px;
+  
+      .image-box {
+        max-width: 95%;
+      }
+    }
+  }
+  
+
+//   3rd section 
+
+
+
+.opc-section {
+    margin-top: 50px;
+    padding: 60px 20px;
+    background-color: white;
+    gap: 50px;
+  
+    .opc-container {
+      max-width: 1350px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .opc-content {
+      flex: 1;
+      min-width: 320px;
+  
+      h2 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #002a5c;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        font-size: 16px;
+        color: #444;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+  
+        li {
+          margin-bottom: 8px;
+          color: #2c3e50;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+        }
+      }
+  
+      .cta-button {
+        display: inline-block;
+        background-color: #e68f1f;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #014aa6;
+        }
+      }
+    }
+  
+    .opc-image {
+      flex: 1;
+      min-width: 320px;
+  
+      img {
+        width: 100%;
+        max-width: 650px;
+        border-radius: 12px;
+        // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  
+
+
+//   4rth section 
+
+
+
+.opc-about-section {
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    margin-top: 70px;
+    
+    .opc-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1350px;
+      margin: 0 auto;
+      gap: 40px; // Adds a 40px gap between the .opc-image and .opc-content
+  
+      .opc-image {
+        flex: 1;
+        padding-right: 20px;
+  
+        img {
+          width: 80%;
+          height: auto;
+          border-radius: 8px;
+          object-fit: cover;
+        }
+      }
+  
+      .opc-content {
+        flex: 1;
+        padding-left: 20px;
+  
+        h2 {
+          font-size: 2rem;
+          color: #333;
+          margin-bottom: 15px;
+        }
+  
+        p {
+          font-size: 1.1rem;
+          color: #555;
+          margin-bottom: 20px;
+          line-height: 1.6;
+        }
+  
+        ul {
+          padding-left: 20px;
+          margin-bottom: 20px;
+  
+          li {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+          }
+        }
+  
+        .cta-button {
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 1.1rem;
+          background-color: #eb8c0f;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 4px;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
+    }
+  
+    /* AOS animation */
+    &[data-aos="fade-up"] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+      
+      &.aos-animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  
+  
+
+
+// 5th section 
+
+
+
+.table-container {
+    max-width: 1350px;
+    margin: 80px auto 0;  /* Added 80px margin-top */
+    padding: 30px;  /* Increased padding for better spacing */
+  }
+  
+  table {
+    width: 100%;  /* Ensures the table stretches to 100% of the parent container */
+    border-collapse: collapse;  /* Ensures borders collapse into a single line */
+    height: 400px; /* Set a fixed height for the table */
+  }
+  
+  th, td {
+    padding: 15px;  /* Increased padding for more space between text and borders */
+    text-align: left;
+    font-size: 16px;  /* Increased font size for better readability */
+    border: 1px solid #ddd;  /* Add border to cells (both rows and columns) */
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold; /* Make table headers bold */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;  /* Increased bottom margin for better spacing */
+  }
+  
+
+
+//   6th section 
+
+
+
+.lawyer-opc-container {
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 30px; // Outer margin
+    padding-left: 40px;  // Adds 40px padding on the left
+    padding-right: 40px; // Adds 40px padding on the right
+    color: #333;
+    margin-bottom: 80px;
+  
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #090a0a;
+    }
+  
+    section {
+      margin-bottom: 30px;
+  
+      h2 {
+        font-size: 1.5rem;
+        color: #1d2329;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #e9ecef;
+        padding-bottom: 5px;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 15px;
+      }
+  
+      ul, ol {
+        padding-left: 20px;
+        font-size: 1rem;
+        color: #555;
+      }
+  
+      ul {
+        list-style-type: disc;
+      }
+  
+      ol {
+        list-style-type: decimal;
+      }
+  
+      li {
+        margin-bottom: 10px;
+      }
+  
+      strong {
+        font-weight: bold;
+        color: #333;
+      }
+  
+      li strong {
+        color: #0056b3;
+      }
+    }
+  
+    .lawyer-opc-container section:last-child {
+      margin-bottom: 0;
+    }
+  }
+  

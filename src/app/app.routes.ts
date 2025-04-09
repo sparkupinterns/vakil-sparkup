@@ -7,13 +7,15 @@ import { TalkToTrademarkComponent } from './components/talk-to-trademark/talk-to
 import { PvtLtdComponent } from './pvt-ltd/pvt-ltd.component';
 import { LlpComponent } from './llp/llp.component';
 import { OpcComponent } from './opc/opc.component';
+import { StartUpComponent } from './start-up/start-up.component';
+import { GstRegistrationComponent } from './gst-registration/gst-registration.component';
 
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: '/',
+        redirectTo: 'home',
         pathMatch: 'full'
-    },
+      },
     {
         path: 'home',
         component: HomeComponent
@@ -30,10 +32,10 @@ export const routes: Routes = [
         path: 'talk-to-secretary-cmpny',
         component: TalkToCmpnySecrataryComponent
     },
-    // {
-    //     path: 'talk-to-trademark',
-    //     component: TalkToTrademarkComponent
-    // },
+    {
+        path: 'talk-to-trademark',
+        component: TalkToTrademarkComponent
+    },
     {
         path: 'pvt-ltd',
         component: PvtLtdComponent
@@ -45,6 +47,14 @@ export const routes: Routes = [
     {
         path: 'opc',
         component: OpcComponent
+    },
+    {
+        path: 'start-up',
+        component: StartUpComponent
+    },
+    {
+        path: 'gst-registration',
+        component: GstRegistrationComponent
     }
 ];
 
