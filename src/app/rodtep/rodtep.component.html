@@ -1,1 +1,162 @@
-<p>rodtep works!</p>
+
+<!-- 1st section  -->
+
+
+<div class="webinar-banner-cta">
+    <!-- Left Section -->
+    <div class="left-section">
+      <div class="left-image">
+        <img alt="" src="https://assets.clear.in/cleartax/images/1734954559_group1814222066.png">
+      </div>
+      <div class="m-web">
+        <img alt="" src="https://assets.clear.in/cleartax/images/1735138708_group1814222069.png">
+      </div>
+      <div class="content">
+        <div class="content-heading">
+          Smarter Financial <br class="br-1">
+          Decisions <br class="br-2">
+          Made Easy
+        </div>
+        <div class="content-description">
+          Subscribe to Briefcase, your go-to email series for
+          <br class="content-br-1">
+          practical tips to stay ahead financially.
+        </div>
+        <button class="m-web-button" id="toggle-form-button" (click)="toggleForm()">Subscribe Now</button>
+      </div>
+    </div>
+  
+    <!-- Right Section -->
+    <div class="right-section">
+      <div class="form-container" *ngIf="formVisible">
+        <div class="form-section">
+          <!-- Left Side: Name and Phone Number -->
+          <div class="form-group">
+            <label for="yourName">Your Name</label>
+            <input class="input-box box1" id="yourName" placeholder="Enter your name" type="text" [(ngModel)]="user.name">
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+            <div class="phone-group">
+              <div class="flag-box">
+                <img alt="" src="https://assets.clear.in/cleartax/images/1735035067_flag_of_india1.png">
+                <span style="color: #020518">+91</span>
+              </div>
+              <input class="input-box" id="phoneNumber" placeholder="Enter your phone number" type="number" [(ngModel)]="user.phoneNumber">
+            </div>
+            <div style="height: 4px">
+              <p class="error-message" *ngIf="phoneError">{{ phoneError }}</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-section">
+          <!-- Right Side: Email ID and Subscribe Button -->
+          <div class="form-group">
+            <label for="email">Email ID <span class="required">*</span></label>
+            <input class="input-box box2" id="email" placeholder="Enter your e-mail" type="email" [(ngModel)]="user.email">
+            <div>
+              <p class="error-message" *ngIf="emailError">{{ emailError }}</p>
+            </div>
+          </div>
+          <button class="button" id="subscribeButton" (click)="subscribe()">Subscribe Now</button>
+        </div>
+      </div>
+  
+      <!-- Thank You Section -->
+      <div class="thankyou-section" *ngIf="thankYouVisible">
+        <div class="thankyou-image">
+          <img alt="" src="https://assets1.cleartax-cdn.com/cleartax/images/1674553598_completedicon.png" width="105px">
+        </div>
+        <div>
+          <div class="thankyou-description">Thank you for registering</div>
+          <div class="thankyou-register">
+            Want to register for someone else
+            <a id="clickhere" style="cursor: pointer" (click)="toggleForm()">Click Here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <!-- 2nd section  -->
+
+
+  
+<div class="latest-blogs-container">
+    <h2 class="latest-blogs-heading">Latest Blogs</h2>
+  
+    <div class="gst-registration-images">
+      <div class="gst-image-container">
+        <img src="https://images.indianexpress.com/2024/05/sitharaman_8bdcd1.jpg?w=414" alt="GST Registration Process"
+          class="gst-image" />
+        <div class="image-overlay">Register for Income Tax</div>
+      </div>
+      <div class="gst-image-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPLrUH87mZZ_LsowlnVsTWo14MxXEzF8Aa6A&s"
+          alt="GST Benefits" class="gst-image" />
+        <div class="image-overlay">GST Benefits</div>
+      </div>
+      <div class="gst-image-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCCdYT0N3OE6d9FAG940wnjmG-EMYtqFCIjA&s"
+          alt="GST Documents" class="gst-image" />
+        <div class="image-overlay">Required Documents</div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- 3rd section  -->
+
+
+
+<div class="rodtep-section-container">
+    <h2>RODTEP Scheme - Remission of Duties and Taxes on Export Products</h2>
+    
+    <p>
+        The Remission of Duties and Taxes on Export Products (RODTEP) scheme was introduced by the Government of India to boost exports and provide relief to exporters. The scheme aims to refund all embedded taxes and duties paid on exports, except for the import duties and taxes. Here’s everything you need to know about RODTEP:
+    </p>
+
+    <div class="rodtep-overview">
+        <h3>What is RODTEP?</h3>
+        <p>
+            The RODTEP scheme is designed to refund all taxes and duties that are not refunded under other existing schemes. This includes duties and taxes that were previously embedded in the export process but were not directly refunded. The goal is to make exports more competitive in global markets.
+        </p>
+    </div>
+
+    <div class="rodtep-eligibility">
+        <h3>Eligibility Criteria</h3>
+        <ul>
+            <li><strong>Exporters of Goods:</strong> The scheme is available to all exporters engaged in the export of goods, except for those in prohibited export categories.</li>
+            <li><strong>GST Registered Entities:</strong> The exporter must be registered under the Goods and Services Tax (GST) Act.</li>
+            <li><strong>Compliant Exporters:</strong> Exporters should have a good track record of filing their GST returns and must comply with the necessary export norms.</li>
+        </ul>
+    </div>
+
+    <div class="rodtep-benefits">
+        <h3>Benefits of RODTEP</h3>
+        <ul>
+            <li><strong>Refund of Embedded Taxes:</strong> RODTEP provides refunds on embedded taxes and duties, making exports more competitive.</li>
+            <li><strong>Boost to Exporters:</strong> The scheme offers direct benefits to exporters, helping them reduce the cost burden and improve profitability.</li>
+            <li><strong>Wider Coverage:</strong> It covers a wide range of products and duties, ensuring that most exporters benefit from it.</li>
+            <li><strong>Ease of Application:</strong> The application process is streamlined and can be done through the DGFT portal for smooth processing.</li>
+        </ul>
+    </div>
+
+    <div class="rodtep-apply">
+        <h3>How to Apply for RODTEP</h3>
+        <p>
+            Applying for RODTEP is a straightforward process. Follow these steps to apply:
+        </p>
+        <ol>
+            <li><strong>Step 1:</strong> Ensure that your business is GST registered and complies with export norms.</li>
+            <li><strong>Step 2:</strong> Log in to the <a href="https://www.dgft.gov.in/" target="_blank">DGFT (Directorate General of Foreign Trade) Portal</a>.</li>
+            <li><strong>Step 3:</strong> Complete the application form for RODTEP under the "Scheme of Remission of Duties and Taxes on Export Products" section.</li>
+            <li><strong>Step 4:</strong> Submit your application and provide required documents such as export invoices and GST returns.</li>
+            <li><strong>Step 5:</strong> Once approved, you will receive the benefits as a percentage of your export value through the RODTEP scheme.</li>
+        </ol>
+    </div>
+</div>

@@ -102,11 +102,10 @@
         }
   
         .mega-dropdown {
-          // margin-top: 25px;
           position: absolute;
           top: 100%;
           left: 0;
-          width: 100vw;
+          width: 80vw; /* Adjusted width to 80% of viewport width */
           background: #fff;
           display: none;
           flex-direction: row;
@@ -115,18 +114,18 @@
           box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
           border-top: 3px solid #ffc24f;
           z-index: 25;
-          width: calc(100vw - 40px); // margin-right for spacing
-  
+          width: calc(80vw - 40px); /* Adjusted for margin-right */
+        
           .mega-content {
             display: flex;
             width: 100%;
-            gap: 40px;
-  
+            gap: 30px; /* Adjusted gap for a more compact layout */
+        
             .left-buttons {
               display: flex;
               flex-direction: column;
               gap: 16px;
-  
+        
               button {
                 display: flex;
                 align-items: center;
@@ -137,51 +136,51 @@
                 font-weight: 600;
                 color: #333;
                 padding: 8px 0;
-  
+        
                 img {
                   width: 30px;
                 }
-  
+        
                 &.active {
                   color: #002244;
                 }
               }
             }
-  
+        
             .leftNavWrapper {
               flex-grow: 1;
-  
+        
               .dropDownContainerStyle {
                 display: flex;
                 height: 100%;
-                gap: 40px;
+                gap: 30px; /* Adjusted for compact spacing */
                 overflow: hidden;
               }
-  
+        
               .leftNavContainer {
-                width: 200px;
-  
+                width: 180px; /* Reduced width for more compact left navigation */
+                
                 .btnwrapper {
                   display: flex;
                   flex-direction: column;
                   background: transparent;
                   border: none;
                   cursor: default;
-  
+        
                   .dropDownImageWrapper {
                     display: flex;
                     align-items: center;
                     gap: 10px;
-  
+        
                     .dropDownImageContainer {
                       display: flex;
                       align-items: center;
-  
+        
                       img {
-                        width: 35px;
-                        height: 30px;
+                        width: 30px;
+                        height: 25px;
                       }
-  
+        
                       .dropDownName {
                         margin-left: 10px;
                         font-weight: bold;
@@ -191,10 +190,10 @@
                   }
                 }
               }
-  
+        
               .rightSection {
                 flex-grow: 1;
-  
+        
                 .columnContainer {
                   .groupStyle {
                     .groupNameStyle {
@@ -202,19 +201,16 @@
                       font-weight: 600;
                       margin-bottom: 10px;
                       color: #002244;
-                      display: block;
-                      opacity: 1;
-                      visibility: visible;
                     }
-  
+        
                     .linksPaddingStyle {
                       .linkStyle {
                         margin-bottom: 8px;
-  
+        
                         a {
                           color: #333;
                           text-decoration: none;
-  
+        
                           &:hover {
                             text-decoration: underline;
                             color: #002244;
@@ -224,30 +220,30 @@
                     }
                   }
                 }
-  
+        
                 .bookAppointmentwrapper {
                   margin-top: 30px;
-  
+        
                   .referContainerStyle {
                     display: flex;
                     gap: 10px;
                     align-items: center;
-  
+        
                     .referContainerImageStyle {
                       width: 30px;
                       height: 30px;
                     }
-  
+        
                     .referContainerText {
                       .referContainerTextPara {
                         font-size: 14px;
                         color: #555;
                       }
-  
+        
                       .callBackLink {
                         color: #007bff;
                         text-decoration: underline;
-  
+        
                         &:hover {
                           color: #002244;
                         }
@@ -258,7 +254,7 @@
               }
             }
           }
-  
+        
           .right-content {
             h3 {
               font-size: 18px;
@@ -266,18 +262,18 @@
               color: #002244;
               margin-bottom: 10px;
             }
-  
+        
             ul {
               list-style: none;
               padding: 0;
-  
+        
               li {
                 margin-bottom: 8px;
-  
+        
                 a {
                   text-decoration: none;
                   color: #333;
-  
+        
                   &:hover {
                     color: #002244;
                   }
@@ -285,26 +281,26 @@
               }
             }
           }
-  
+        
           .callback {
             display: flex;
             align-items: center;
             gap: 12px;
             margin-top: 20px;
-  
+        
             img {
               width: 40px;
             }
-  
+        
             p {
               margin: 0;
               font-weight: 500;
             }
-  
+        
             a {
               color: #007bff;
               text-decoration: underline;
-  
+        
               &:hover {
                 color: #002244;
               }
@@ -374,8 +370,8 @@
     
       .mega-dropdown {
         flex-direction: column;
-        width: 100%;
-        padding: 20px;
+        width: 50%;
+        padding: 10px;
       }
     }
     

@@ -197,8 +197,10 @@ export class HeaderComponent {
     // Add other menu items
   ];
   
-  
-  selectedItem: any = this.items[0]; // Default selected item
+   onLoginClick() {
+    // Simply call a method from the parent component via Input binding
+  }
+  selectedItem: any; // Default selected item
   
   selectItem(item: any) {
     this.selectedItem = item;

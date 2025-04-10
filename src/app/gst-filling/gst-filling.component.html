@@ -1,1 +1,251 @@
-<p>gst-filling works!</p>
+
+
+<!-- form  -->
+
+
+
+<div class="webinar-banner-cta">
+    <!-- Left Section -->
+    <div class="left-section">
+      <div class="left-image">
+        <img alt="" src="https://assets.clear.in/cleartax/images/1734954559_group1814222066.png">
+      </div>
+      <div class="m-web">
+        <img alt="" src="https://assets.clear.in/cleartax/images/1735138708_group1814222069.png">
+      </div>
+      <div class="content">
+        <div class="content-heading">
+          Smarter Financial <br class="br-1">
+          Decisions <br class="br-2">
+          Made Easy
+        </div>
+        <div class="content-description">
+          Subscribe to Briefcase, your go-to email series for
+          <br class="content-br-1">
+          practical tips to stay ahead financially.
+        </div>
+        <button class="m-web-button" id="toggle-form-button" (click)="toggleForm()">Subscribe Now</button>
+      </div>
+    </div>
+  
+    <!-- Right Section -->
+    <div class="right-section">
+      <div class="form-container" *ngIf="formVisible">
+        <div class="form-section">
+          <!-- Left Side: Name and Phone Number -->
+          <div class="form-group">
+            <label for="yourName">Your Name</label>
+            <input class="input-box box1" id="yourName" placeholder="Enter your name" type="text" [(ngModel)]="user.name">
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+            <div class="phone-group">
+              <div class="flag-box">
+                <img alt="" src="https://assets.clear.in/cleartax/images/1735035067_flag_of_india1.png">
+                <span style="color: #020518">+91</span>
+              </div>
+              <input class="input-box" id="phoneNumber" placeholder="Enter your phone number" type="number" [(ngModel)]="user.phoneNumber">
+            </div>
+            <div style="height: 4px">
+              <p class="error-message" *ngIf="phoneError">{{ phoneError }}</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-section">
+          <!-- Right Side: Email ID and Subscribe Button -->
+          <div class="form-group">
+            <label for="email">Email ID <span class="required">*</span></label>
+            <input class="input-box box2" id="email" placeholder="Enter your e-mail" type="email" [(ngModel)]="user.email">
+            <div>
+              <p class="error-message" *ngIf="emailError">{{ emailError }}</p>
+            </div>
+          </div>
+          <button class="button" id="subscribeButton" (click)="subscribe()">Subscribe Now</button>
+        </div>
+      </div>
+  
+      <!-- Thank You Section -->
+      <div class="thankyou-section" *ngIf="thankYouVisible">
+        <div class="thankyou-image">
+          <img alt="" src="https://assets1.cleartax-cdn.com/cleartax/images/1674553598_completedicon.png" width="105px">
+        </div>
+        <div>
+          <div class="thankyou-description">Thank you for registering</div>
+          <div class="thankyou-register">
+            Want to register for someone else
+            <a id="clickhere" style="cursor: pointer" (click)="toggleForm()">Click Here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+<!-- 1st section  -->
+
+
+<div class="gst-filing-container">
+    <!-- Left Content Section (GST Filing Information) -->
+    <div class="gst-content">
+        <h2>GST Filing - Everything You Need to Know</h2>
+        <p>
+          Goods and Services Tax (GST) is a comprehensive, multi-stage, destination-based tax that is levied on every value addition in the supply chain. 
+          It’s essential for businesses to comply with GST laws to avoid any legal issues or penalties. Below is a breakdown of crucial information regarding GST filing:
+        </p>
+        <ul>
+          <li><strong>GST Number:</strong> A unique identifier issued to every registered taxpayer under GST. It’s used for all tax-related transactions.</li>
+          <li><strong>Filing Frequency:</strong> GST returns are filed on a monthly or quarterly basis, depending on the turnover and the type of business.</li>
+          <li><strong>GST Returns:</strong> There are various GST returns such as:
+            <ul>
+              <li><strong>GSTR-1:</strong> Details of outward supplies (sales).</li>
+              <li><strong>GSTR-3B:</strong> A monthly return summarizing the total sales, input tax credit (ITC), and tax liability.</li>
+              <li><strong>GSTR-9:</strong> Annual return summarizing all transactions for the year.</li>
+            </ul>
+          </li>
+          <li><strong>Filing Deadline:</strong> Returns are generally due by the 20th of every month for the previous month. However, businesses with a quarterly filing option will file their returns every quarter.</li>
+          <li><strong>GST Registration:</strong> GST registration is mandatory for businesses whose turnover exceeds Rs. 40 Lakhs (Rs. 20 Lakhs for service providers). It's also required for businesses engaged in inter-state transactions.</li>
+          <li><strong>Types of GST:</strong> There are different types of GST, such as:
+            <ul>
+              <li><strong>IGST (Integrated GST):</strong> For inter-state transactions.</li>
+              <li><strong>CGST (Central GST):</strong> For intra-state transactions collected by the central government.</li>
+              <li><strong>SGST (State GST):</strong> For intra-state transactions collected by the state government.</li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          Filing GST returns is essential to remain compliant with tax laws. By staying organized and keeping track of your business transactions, you can file returns without errors. Remember to consult with a tax professional or GST consultant if needed to ensure your filings are accurate and timely.
+        </p>
+    </div>
+  
+    <!-- Right Form Section (Form Inputs) -->
+    <div class="gst-form">
+      <h2>GST Filing Form</h2>
+      <form (ngSubmit)="onSubmit()" #gstForm="ngForm">
+        <!-- Row for GST Number and Business Name -->
+        <div class="form-row">
+          <div class="form-field">
+            <label for="gstNumber">GST Number</label>
+            <input type="text" id="gstNumber" name="gstNumber" [(ngModel)]="formData.gstNumber" required placeholder="Enter GST Number">
+          </div>
+          <div class="form-field">
+            <label for="businessName">Business Name</label>
+            <input type="text" id="businessName" name="businessName" [(ngModel)]="formData.businessName" required placeholder="Enter Business Name">
+          </div>
+        </div>
+  
+        <!-- Row for Annual Turnover and Business Type -->
+        <div class="form-row">
+          <div class="form-field">
+            <label for="turnover">Annual Turnover</label>
+            <input type="number" id="turnover" name="turnover" [(ngModel)]="formData.turnover" required placeholder="Enter Annual Turnover">
+          </div>
+          <div class="form-field">
+            <label for="businessType">Business Type</label>
+            <select id="businessType" name="businessType" [(ngModel)]="formData.businessType" required>
+              <option value="service">Service</option>
+              <option value="product">Product</option>
+              <option value="both">Both</option>
+            </select>
+          </div>
+        </div>
+  
+        <!-- Contact Email Field -->
+        <div class="form-field">
+          <label for="contactEmail">Contact Email</label>
+          <input type="email" id="contactEmail" name="contactEmail" [(ngModel)]="formData.contactEmail" required placeholder="Enter Contact Email">
+        </div>
+  
+        <!-- Phone Number Field -->
+        <div class="form-field">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="text" id="phoneNumber" name="phoneNumber" [(ngModel)]="formData.phoneNumber" required placeholder="Enter Phone Number">
+        </div>
+  
+        <!-- Business Address Field -->
+        <div class="form-field">
+          <label for="address">Business Address</label>
+          <textarea id="address" name="address" [(ngModel)]="formData.address" required placeholder="Enter Business Address"></textarea>
+        </div>
+  
+        <button type="submit" [disabled]="!gstForm.form.valid">Submit</button>
+      </form>
+    </div>
+</div>
+
+
+
+
+  <!-- 2nd section  -->
+
+
+
+  
+<div class="latest-blogs-container">
+    <h2 class="latest-blogs-heading">Latest Blogs</h2>
+  
+    <div class="gst-registration-images">
+      <div class="gst-image-container">
+        <img src="https://images.indianexpress.com/2024/05/sitharaman_8bdcd1.jpg?w=414" alt="GST Registration Process"
+          class="gst-image" />
+        <div class="image-overlay">Register for Income Tax</div>
+      </div>
+      <div class="gst-image-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPLrUH87mZZ_LsowlnVsTWo14MxXEzF8Aa6A&s"
+          alt="GST Benefits" class="gst-image" />
+        <div class="image-overlay">GST Benefits</div>
+      </div>
+      <div class="gst-image-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCCdYT0N3OE6d9FAG940wnjmG-EMYtqFCIjA&s"
+          alt="GST Documents" class="gst-image" />
+        <div class="image-overlay">Required Documents</div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+  <!-- 3rd section  -->
+
+
+
+  <!-- 3rd section: How to Ensure Smooth GST Filing -->
+<div class="gst-filing-guide-container">
+    <h2>How to Ensure Smooth GST Filing</h2>
+    <p>
+        Filing GST returns can be a complex process, but with the right preparation and understanding of the rules, you can ensure that your filings are accurate and timely. Here are some key tips and important resources to help you with the filing process:
+    </p>
+
+    <div class="gst-tips">
+        <h3>Tips for Smooth GST Filing</h3>
+        <ul>
+            <li><strong>Keep Track of Sales and Purchases:</strong> Always maintain an accurate record of your sales and purchases. This will help you correctly file GSTR-1 and GSTR-3B.</li>
+            <li><strong>Reconcile Input Tax Credit (ITC):</strong> Ensure that the ITC claimed matches your sales and purchases. Avoid discrepancies that could lead to penalties.</li>
+            <li><strong>Regularly Check GST Portal:</strong> Keep checking the GST portal for updates, notices, and new rules. The portal can also help track the status of your returns.</li>
+            <li><strong>Submit Returns on Time:</strong> Timely filing helps avoid penalties. Set reminders and keep track of your filing deadlines to ensure that you submit returns on time.</li>
+            <li><strong>Consult a Tax Professional:</strong> If you are unsure about the filing process, it’s always a good idea to consult a tax professional or GST consultant to ensure that your filings are accurate and compliant with the law.</li>
+        </ul>
+    </div>
+
+    <div class="gst-common-mistakes">
+        <h3>Common Mistakes to Avoid</h3>
+        <ul>
+            <li><strong>Incorrect GSTIN:</strong> Always double-check your GSTIN before filing. Mistakes in the GSTIN can result in returns being rejected.</li>
+            <li><strong>Not Reconciled Input Tax Credit:</strong> Failing to reconcile ITC with the purchase invoices can lead to discrepancies and fines.</li>
+            <li><strong>Incorrect HSN/SAC Codes:</strong> Ensure that the correct HSN (for goods) or SAC (for services) codes are entered in the returns. Incorrect codes can delay processing and lead to penalties.</li>
+            <li><strong>Filing Under Incorrect Tax Category:</strong> Incorrect categorization of supplies as IGST, CGST, or SGST can result in improper tax payment and penalties.</li>
+            <li><strong>Not Verifying E-way Bill Details:</strong> Before filing, ensure that all e-way bill details are accurately entered, particularly for interstate sales.</li>
+        </ul>
+    </div>
+
+    <div class="gst-resources">
+        <h3>Important Resources</h3>
+        <ul>
+            <li><a href="https://www.gst.gov.in/" target="_blank">GST Official Portal</a>: Access the official portal for filing returns, checking notices, and more.</li>
+            <li><a href="https://www.gst.gov.in/download/handbook" target="_blank">GST Handbook</a>: A comprehensive guide for GST filing and returns.</li>
+            <li><a href="https://www.gst.gov.in/resources/education" target="_blank">GST Education & Awareness Resources</a>: Learn more about GST through various educational resources available on the official website.</li>
+        </ul>
+    </div>
+</div>

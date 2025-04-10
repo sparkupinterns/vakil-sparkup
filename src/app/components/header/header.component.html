@@ -29,10 +29,11 @@
     <li class="dropdown">
       <span>Tax & Compliance <i class="arrow"></i></span>
       <ul class="dropdown-menu">
-        <li><a href="#">GST Registration</a></li>
-        <li><a href="#">GST Filing</a></li>
-        <li><a href="#">Indirect Tax</a></li>
-        <li><a href="#">RoDTEP</a></li>
+        <li><a routerLink="/gst-registration">Gst Registration</a></li>
+        <li><a routerLink="/gst-filling">Gst Filling</a></li>
+        <li><a routerLink="/indirect-tax">indirect-tax</a></li>
+        <li><a routerLink="/RoDTEP">RoDTEP</a></li>
+
       </ul>
     </li>
 
@@ -55,7 +56,7 @@
           <!-- Right side changes based on selection -->
           <div class="leftNavWrapper" *ngIf="selectedItem">
             <div class="dropDownContainerStyle" style="height:550px">
-              <div class="leftNavContainer">
+              <!-- <div class="leftNavContainer">
                 <button class="btnwrapper btnwrapperActive">
                   <span class="dropDownImageWrapper">
                     <span class="dropDownImageContainer">
@@ -66,7 +67,7 @@
                   </span>
                   <i class="arrow"></i>
                 </button>
-              </div>
+              </div> -->
 
               <div class="rightSection">
                 <div class="columnContainer">
@@ -123,7 +124,7 @@
           <!-- Right side changes based on selection -->
           <div class="leftNavWrapper" *ngIf="selectedItem">
             <div class="dropDownContainerStyle" style="height:550px">
-              <div class="leftNavContainer">
+              <!-- <div class="leftNavContainer">
                 <button class="btnwrapper btnwrapperActive">
                   <span class="dropDownImageWrapper">
                     <span class="dropDownImageContainer">
@@ -134,7 +135,7 @@
                   </span>
                   <i class="arrow"></i>
                 </button>
-              </div>
+              </div> -->
 
               <div class="rightSection">
                 <div class="columnContainer">
@@ -184,22 +185,77 @@
   </div>
   </li> -->
 
-  <li class="dropdown">
+  <!-- Documentation Dropdown -->
+  <li class="dropdown tab">
+    <!-- Documentation Dropdown -->
+  <li class="dropdown tab">
     <span>Others <i class="arrow"></i></span>
-    <ul class="dropdown-menu">
-      <li><a href="#">GST Registration</a></li>
-      <li><a href="#">GST Filing</a></li>
-      <li><a href="#">Indirect Tax</a></li>
-      <li><a href="#">RoDTEP</a></li>
-    </ul>
-  </li>
+    <div class="mega-dropdown">
+      <div class="mega-content">
+        <div class="left-buttons">
+          <button *ngFor="let trade of trademark" (click)="selectItem(trade)"
+            [class.active]="selectedItem?.name === trade.name">
+            <img [src]="trade.icon" alt="icon" />
+            <span>{{ trade.name }}</span>
+          </button>
+        </div>
 
+        <!-- Right side changes based on selection -->
+        <div class="leftNavWrapper" *ngIf="selectedItem">
+          <div class="dropDownContainerStyle" style="height:550px">
+            <!-- <div class="leftNavContainer">
+              <button class="btnwrapper btnwrapperActive">
+                <span class="dropDownImageWrapper">
+                  <span class="dropDownImageContainer">
+                    <img [src]="selectedItem.icon" [alt]="selectedItem.name" [title]="selectedItem.name" width="35"
+                      height="30" />
+                    <span class="dropDownName dropDownNameActive">{{ selectedItem.name }}</span>
+                  </span>
+                </span>
+                <i class="arrow"></i>
+              </button>
+            </div> -->
+
+            <div class="rightSection">
+              <div class="columnContainer">
+                <div class="clib-mr-[57px]">
+                  <div class="groupStyle">
+                    <p class="groupNameStyle">{{ selectedItem.name }}</p>
+                    <div class="linksPaddingStyle">
+                      <p class="linkStyle" *ngFor="let link of selectedItem.links">
+                        <a [href]="link.url">{{ link.label }}</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bookAppointmentwrapper">
+                <div class="referContainerStyle">
+                  <img src="https://assets.vakilsearch.com/header-desktop/bookAppoitment.svg" alt="BookAppointment"
+                    width="30" height="30" class="referContainerImageStyle" />
+                  <div class="referContainerText">
+                    <p class="referContainerTextPara">Prefer to talk to a business advisor first?</p>
+                    <a href="https://vakilsearch.com/business-consulting-services-india" class="callBackLink">
+                      Book a call back
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /leftNavWrapper -->
+      </div>
+    </div>
+  </li>
 
   </ul>
 
   <!-- Right: Login and Hamburger Toggle -->
   <div class="navbar-right">
-    <button class="login-btn">Login</button>
+    <button class="login-btn" (click)="onLoginClick()">Login</button>
+
     <button class="hamburger" (click)="toggleMobileMenu()">☰</button>
   </div>
   <!-- </nav> -->

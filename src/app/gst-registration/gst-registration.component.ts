@@ -136,5 +136,25 @@ export class GstRegistrationComponent {
     toggleFaq(index: number) {
       this.faqs[index].isOpen = !this.faqs[index].isOpen;
     }
+
+    tocItems = [
+      { id: 'h0', title: 'What is GST Registration' },
+      { id: 'h1', title: 'Who should obtain the GST registration?' },
+      { id: 'h2', title: 'Benefits of GST registration' },
+      { id: 'h3', title: 'All about the GST registration process' },
+      { id: 'h4', title: 'GST Registration Fees' },
+      { id: 'h5', title: 'Documents Required for GST Registration' },
+      { id: 'h6', title: 'GSTIN' },
+      { id: 'h7', title: 'GST Registration Certificate' },
+      { id: 'h8', title: 'Penalty for not obtaining GST registration' }
+    ];
+  
+    selectedSectionId = 'h0'; // default content shown
+  
+    selectSection(id: string) {
+      this.selectedSectionId = id;
+    }
+
+    
     
 }

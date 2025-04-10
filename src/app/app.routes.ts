@@ -9,6 +9,11 @@ import { LlpComponent } from './llp/llp.component';
 import { OpcComponent } from './opc/opc.component';
 import { StartUpComponent } from './start-up/start-up.component';
 import { GstRegistrationComponent } from './gst-registration/gst-registration.component';
+import { IndrectTaxComponent } from './indrect-tax/indrect-tax.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { GstFillingComponent } from './gst-filling/gst-filling.component';
+import { RodtepComponent } from './rodtep/rodtep.component';
 
 export const routes: Routes = [
     {
@@ -55,6 +60,26 @@ export const routes: Routes = [
     {
         path: 'gst-registration',
         component: GstRegistrationComponent
+    },
+    {
+        path: 'indirect-tax',
+        component: IndrectTaxComponent
+    },
+    {
+        path: 'gst-filling',
+        component: GstFillingComponent
+    },
+    {
+        path: 'RoDTEP',
+        component: RodtepComponent
+    },
+    {
+        path: 'login',
+        component: LoginComponent
+    },
+    {
+        path: 'signup',
+        component: SignupComponent
     }
 ];
 

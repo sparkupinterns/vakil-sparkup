@@ -1,1 +1,537 @@
-<p>indrect-tax works!</p>
+
+
+<!-- form  -->
+
+
+
+<div class="webinar-banner-cta">
+  <!-- Left Section -->
+  <div class="left-section">
+    <div class="left-image">
+      <img alt="" src="https://assets.clear.in/cleartax/images/1734954559_group1814222066.png">
+    </div>
+    <div class="m-web">
+      <img alt="" src="https://assets.clear.in/cleartax/images/1735138708_group1814222069.png">
+    </div>
+    <div class="content">
+      <div class="content-heading">
+        Smarter Financial <br class="br-1">
+        Decisions <br class="br-2">
+        Made Easy
+      </div>
+      <div class="content-description">
+        Subscribe to Briefcase, your go-to email series for
+        <br class="content-br-1">
+        practical tips to stay ahead financially.
+      </div>
+      <button class="m-web-button" id="toggle-form-button" (click)="toggleForm()">Subscribe Now</button>
+    </div>
+  </div>
+
+  <!-- Right Section -->
+  <div class="right-section">
+    <div class="form-container" *ngIf="formVisible1">
+      <div class="form-section">
+        <!-- Left Side: Name and Phone Number -->
+        <div class="form-group">
+          <label for="yourName">Your Name</label>
+          <input class="input-box box1" id="yourName" placeholder="Enter your name" type="text" [(ngModel)]="user.name">
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+          <div class="phone-group">
+            <div class="flag-box">
+              <img alt="" src="https://assets.clear.in/cleartax/images/1735035067_flag_of_india1.png">
+              <span style="color: #020518">+91</span>
+            </div>
+            <input class="input-box" id="phoneNumber" placeholder="Enter your phone number" type="number" [(ngModel)]="user.phoneNumber">
+          </div>
+          <div style="height: 4px">
+            <p class="error-message" *ngIf="phoneError">{{ phoneError }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <!-- Right Side: Email ID and Subscribe Button -->
+        <div class="form-group">
+          <label for="email">Email ID <span class="required">*</span></label>
+          <input class="input-box box2" id="email" placeholder="Enter your e-mail" type="email" [(ngModel)]="user.email">
+          <div>
+            <p class="error-message" *ngIf="emailError">{{ emailError }}</p>
+          </div>
+        </div>
+        <button class="button" id="subscribeButton" (click)="subscribe()">Subscribe Now</button>
+      </div>
+    </div>
+
+    <!-- Thank You Section -->
+    <div class="thankyou-section" *ngIf="thankYouVisible">
+      <div class="thankyou-image">
+        <img alt="" src="https://assets1.cleartax-cdn.com/cleartax/images/1674553598_completedicon.png" width="105px">
+      </div>
+      <div>
+        <div class="thankyou-description">Thank you for registering</div>
+        <div class="thankyou-register">
+          Want to register for someone else
+          <a id="clickhere" style="cursor: pointer" (click)="toggleForm()">Click Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 1st section  -->
+
+<!-- <div 
+  class="content-area"
+  [ngStyle]="{
+    'background-image': !selectedLink ? 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYSQk_6gdu5OyRAa4pi1wepeotnfJ_T9805A&s)' : 'none',
+    'background-size': 'cover',
+    'background-position': 'center',
+    'background-repeat': 'no-repeat'
+  }"
+> -->
+
+
+
+<div class="quick-links-container">
+  <div class="sidebar">
+    <h3>Quick Links</h3>
+    <ul>
+      <li *ngFor="let link of quickLinks" [class.active]="selectedLink === link" (click)="selectLink(link)">
+        <img [src]="link.imgSrc" [alt]="link.alt" />
+        {{ link.title }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="processing-line">
+    <div class="progress-bar" style="width: 50%"></div> <!-- Set width dynamically as per progress -->
+  </div>
+
+  <div class="content-area">
+    <!-- Title and Open Form Button Section -->
+    <div class="title-container">
+      <h2 [innerHTML]="selectedLink?.title"></h2>
+      <!-- Button for opening the form -->
+      <button *ngIf="selectedLink" class="open-form-btn" (click)="openForm()">
+        Open Form
+      </button>
+    </div>
+
+    <div class="underline"></div>
+
+    <img [src]="selectedLink?.imgSrc" [alt]="selectedLink?.alt" class="preview-img" />
+    <div class="inline" [innerHTML]="selectedLink?.inlineText"></div>
+    <a class="visit-link" [href]="selectedLink?.url" target="_blank">Visit Link</a>
+
+    <!-- Modal Form Area (hidden by default) -->
+    <div *ngIf="formVisible" class="modal-overlay">
+      <div class="modal-content">
+        <button class="close-btn" (click)="closeForm()">X</button>
+        <h3>{{ selectedLink?.title }} Form</h3>
+        <form>
+          <!-- Render fields based on selected link -->
+
+          <label for="nameField">Name:</label>
+          <input id="nameField" type="text" placeholder="Enter Name" />
+
+          <label for="emailField">Email:</label>
+          <input id="emailField" type="email" placeholder="Enter Email" />
+
+          <label for="phoneField">Phone:</label>
+          <input id="phoneField" type="tel" placeholder="Enter Phone Number" />
+
+          <label for="companyField">Company:</label>
+          <input id="companyField" type="text" placeholder="Enter Company" />
+
+          <label for="subjectField">Subject:</label>
+          <input id="subjectField" type="text" placeholder="Enter Subject" />
+
+          <!-- Submit Button -->
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 2nd section  -->
+
+
+
+<div class="container">
+  <ul class="nav nav-tabs card-header-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link o_default_snippet_text active" id="nav_tabs_link_1723025517454_590" data-bs-toggle="tab"
+        href="#nav_tabs_content_1723025517454_590" role="tab" aria-controls="nav_tabs_content_1723025517454_590"
+        aria-selected="true">
+        Who Should File an Income Tax Return?
+      </a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link o_default_snippet_text" id="nav_tabs_link_1723025517454_591" data-bs-toggle="tab"
+        href="#nav_tabs_content_1723025517454_591" role="tab" aria-controls="nav_tabs_content_1723025517454_591"
+        aria-selected="false" tabindex="-1">
+        Criteria for Filing Your Income Tax Return
+      </a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link o_default_snippet_text" id="nav_tabs_link_1723025517454_592" data-bs-toggle="tab"
+        href="#nav_tabs_content_1723025517454_592" role="tab" aria-controls="nav_tabs_content_1723025517454_592"
+        aria-selected="false" tabindex="-1">
+        Income Tax Return Forms in India
+      </a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link o_default_snippet_text" id="nav_tabs_link_1723025517454_593" data-bs-toggle="tab"
+        href="#nav_tabs_content_1723025517454_593" role="tab" aria-controls="nav_tabs_content_1723025517454_593"
+        aria-selected="false" tabindex="-1">
+        Benefits of Income Tax Filing
+      </a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link o_default_snippet_text" id="nav_tabs_link_1723025517454_594" data-bs-toggle="tab"
+        href="#nav_tabs_content_1723025517454_594" role="tab" aria-controls="nav_tabs_content_1723025517454_594"
+        aria-selected="false" tabindex="-1">
+        Essential Documents for Filing Your Income Tax Return
+      </a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link o_default_snippet_text" id="nav_tabs_link_1723025517454_595" data-bs-toggle="tab"
+        href="#nav_tabs_content_1723025517454_595" role="tab" aria-controls="nav_tabs_content_1723025517454_595"
+        aria-selected="false" tabindex="-1">
+        Avoiding Penalties for Delayed Income Tax Return Filings
+      </a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link o_default_snippet_text" id="nav_tabs_link_1723025517454_596" data-bs-toggle="tab"
+        href="#nav_tabs_content_1723025517454_596" role="tab" aria-controls="nav_tabs_content_1723025517454_596"
+        aria-selected="false" tabindex="-1">
+        What to Do If You Miss the Income Tax Return (ITR) Deadline
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-3">
+    <div class="tab-pane fade show active" id="nav_tabs_content_1723025517454_590" role="tabpanel"
+      aria-labelledby="nav_tabs_link_1723025517454_590">
+      <section class="s_text_block" data-name="Text">
+        <div class="container s_allow_columns">
+          <p>Filing an income tax return is both a legal obligation and a key aspect of financial management, applicable
+            to various groups depending on their <br> circumstances. Here’s a comprehensive guide to who needs to file
+            their
+            taxes:</p>
+          <p><strong>1. Employees with Salaries</strong></p>
+          <p>If your total income, before any deductions under Sections 80C to 80U, exceeds the basic exemption
+            threshold, you are required <br> to file an income tax return.</p>
+          <p><strong>2. Businesses and Companies</strong></p>
+          <p>All business entities, including private limited companies, LLPs (Limited Liability Partnerships), and
+            traditional partnerships, <br> must file their income tax returns annually, regardless of whether they are
+            profitable or not.</p>
+          <p><strong>3. Company Directors and LLP Partners</strong></p>
+          <p>Individuals serving as directors in private companies or as partners in LLPs need to file their tax returns
+            to reflect their <br> earnings and financial activities associated with their roles.</p>
+          <p><strong>4. Dividend Recipients</strong></p>
+          <p>If you receive dividends from investments such as mutual funds, bonds, stocks, fixed deposits, or interest,
+            you must file an income tax return. <br> This ensures that all income sources are accurately reported and
+            taxed
+            accordingly.</p>
+          <p><strong>5. Charitable and Religious Organizations</strong></p>
+          <p>Income from managing charitable funds, religious trusts, or voluntary donations also requires filing an
+            income tax return. <br> This process upholds transparency and compliance with tax regulations.</p>
+          <p><strong>6. Tax Refund Claimants</strong></p>
+          <p>Individuals and businesses eligible for tax refunds should file their returns online to reclaim any taxes
+            that have been overpaid.</p>
+          <p><strong>7. Non-Resident Indians (NRIs) and Tech Professionals</strong></p>
+          <p>NRIs and technology professionals must file a tax return if their income from India exceeds the exemption
+            limit or involves specific financial transactions.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-pane fade" id="nav_tabs_content_1723025517454_591" role="tabpanel"
+      aria-labelledby="nav_tabs_link_1723025517454_591">
+      <section class="s_text_block" data-name="Text">
+        <div class="container s_allow_columns">
+          <p>In India, filing an Income Tax Return (ITR) is mandatory under specific conditions. Here's a breakdown of
+            when you need to file:</p>
+          <h4>Income Thresholds</h4>
+          <p>Your obligation to file an ITR depends on your total income, which must be reported if it exceeds the
+            following basic exemption limits based on age:</p>
+          <ul>
+            <li><strong>Below 60 years:</strong> ₹2.5 lakh</li>
+            <li><strong>Between 60 and 80 years:</strong> ₹3 lakh</li>
+            <li><strong>Above 80 years:</strong> ₹5 lakh</li>
+          </ul>
+          <h4>Additional Filing Requirements</h4>
+          <p>Even if your income is below these thresholds, you are required to file an ITR under these circumstances:
+          </p>
+          <ul>
+            <li><strong>High-Value Transactions:</strong>
+              <ul>
+                <li>Deposits exceeding ₹1 crore in one or more current accounts.</li>
+                <li>Deposits over ₹50 lakh in one or more savings accounts.</li>
+                <li>Spending more than ₹2 lakh on international travel.</li>
+                <li>Electricity expenses surpassing ₹1 lakh during the financial year.</li>
+                <li>TDS (Tax Deducted at Source) or TCS (Tax Collected at Source) exceeding ₹25,000 (or ₹50,000 for
+                  senior citizens).</li>
+              </ul>
+            </li>
+            <li><strong>Business and Professional Income:</strong>
+              <ul>
+                <li><strong>For Businesses:</strong> Filing is mandatory if your total sales, turnover, or gross
+                  receipts exceed ₹60 lakh within the financial year.</li>
+                <li><strong>For Professionals:</strong> Required if gross receipts exceed ₹10 lakh during the financial
+                  year.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-pane fade" id="nav_tabs_content_1723025517454_592" role="tabpanel"
+      aria-labelledby="nav_tabs_link_1723025517454_592">
+      <section class="s_text_block" data-name="Text">
+        <div class="container s_allow_columns">
+          <p>In India, e-filing Income Tax Returns (ITRs) is made efficient through a range of forms, each tailored to
+            specific categories of taxpayers. Here’s a detailed breakdown of the various ITR forms:</p>
+          <p><strong>ITR-1: SAHAJ</strong></p>
+          <p>Designed for individuals with an annual income from salary or pension up to Rs. 50 lakhs and who own only
+            one residential property. This form simplifies the filing process for those with straightforward tax
+            situations.</p>
+          <p><strong>ITR-2: Beyond Business</strong></p>
+          <p>This form is suitable for Non-Resident Indians (NRIs), company directors, and private company shareholders.
+            Use ITR-2 if you have income from capital gains, foreign sources, or multiple residential properties, and if
+            your income exceeds Rs. 50 lakhs.</p>
+          <p><strong>ITR-3: For Professionals and Proprietorships</strong></p>
+          <p>Tailored for professionals and individuals managing a proprietorship business within India, ITR-3 addresses
+            the unique needs of this group.</p>
+          <p><strong>ITR-4: Presumptive Taxation Scheme</strong></p>
+          <p>For those opting for the presumptive taxation scheme, this form applies if your business income is below
+            Rs. 2 crores or professional income is under Rs. 50 lakhs.</p>
+          <p><strong>ITR-5: For Partnerships, LLPs, and Other Entities</strong></p>
+          <p>Partnership firms, Limited Liability Partnerships (LLPs), associations, and other similar entities must use
+            this form to comply with tax requirements.</p>
+          <p><strong>ITR-6: For Companies</strong></p>
+          <p>Applicable to all companies registered in India, this form is essential for corporate tax filing.</p>
+          <p><strong>ITR-7: For Special Entities</strong></p>
+          <p>Entities such as charitable and religious trusts, political parties, scientific research institutions, and
+            educational institutions must file this form.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-pane fade" id="nav_tabs_content_1723025517454_593" role="tabpanel"
+      aria-labelledby="nav_tabs_link_1723025517454_593">
+      <section class="s_text_block" data-name="Text">
+        <div class="container s_allow_columns">
+          <p><strong>Filing Deadlines for ITR</strong></p>
+          <p>For the Assessment Year (AY) 2024-25, the deadline for filing ITRs under section 139(1) is July 31, 2024,
+            unless extended by the authorities. It’s crucial to remember that paying taxes alone is not sufficient;
+            timely filing of ITRs is required to avoid penalties. Starting from the financial year 2017-18, a late
+            filing fee is applicable for returns submitted after the deadline.</p>
+          <p>Here’s a quick guide to the key ITR filing deadlines for different categories for the Financial Year (FY)
+            2023-24:</p>
+          <ul>
+            <li><strong>ITR Filing for Individuals and Entities Not Subject to Tax Audit:</strong> By July 31, 2024.
+            </li>
+            <li><strong>ITR Filing for Taxpayers Subject to Tax Audit (excluding those involved in transfer
+                pricing):</strong> By October 31, 2024.</li>
+            <li><strong>ITR Filing for Taxpayers Involved in Transfer Pricing:</strong> By November 30, 2024.</li>
+            <li><strong>Due Date for Revised/Belated Returns for FY 2023-24:</strong> December 31, 2024.</li>
+          </ul>
+          <p>Missing the deadline can lead to penalties, additional taxes, or denial of the benefits of tax-saving
+            investments.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-pane fade" id="nav_tabs_content_1723025517454_594" role="tabpanel"
+      aria-labelledby="nav_tabs_link_1723025517454_594">
+      <section class="s_text_block" data-name="Text">
+        <div class="container s_allow_columns">
+          <p>Filing your income tax returns (ITR) has many advantages, both financial and legal. Here are some of the
+            key benefits:</p>
+          <ul>
+            <li><strong>Ensuring Legal Compliance:</strong> Filing taxes on time is a legal requirement. Avoiding
+              penalties for non-filing protects you from legal trouble.</li>
+            <li><strong>Claiming Refunds:</strong> If you've paid excess tax during the year, filing your ITR ensures
+              that you get a refund.</li>
+            <li><strong>Access to Loans:</strong> A filed ITR is often required when applying for personal or home
+              loans, especially if you're a salaried individual.</li>
+            <li><strong>Building a Financial Record:</strong> Filing your ITR is a record of your financial health and
+              income. It’s useful when applying for loans or verifying financial status.</li>
+            <li><strong>Claiming Tax Deductions:</strong> By filing ITR, you can claim deductions for various
+              investments, saving you money.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-pane fade" id="nav_tabs_content_1723025517454_595" role="tabpanel"
+      aria-labelledby="nav_tabs_link_1723025517454_595">
+      <section class="s_text_block" data-name="Text">
+        <div class="container s_allow_columns">
+          <p><strong>Penalty for Late Filing</strong></p>
+          <p>If you miss the due date for filing your income tax return, you may incur penalties. Here's a breakdown:
+          </p>
+          <ul>
+            <li><strong>Late Filing Fee Under Section 234F:</strong> Penalty for filing after the due date, ranging from
+              ₹1,000 to ₹10,000 depending on the delay. However, for income below ₹5 lakh, the penalty is limited to
+              ₹1,000.</li>
+            <li><strong>Interest Under Section 234A:</strong> If you fail to pay your taxes on time, you will be charged
+              interest of 1% per month (or part of the month) on the unpaid amount.</li>
+            <li><strong>Other Penalties:</strong> Depending on the reason for the delay (such as inaccurate reporting),
+              further penalties may apply.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-pane fade" id="nav_tabs_content_1723025517454_596" role="tabpanel"
+      aria-labelledby="nav_tabs_link_1723025517454_596">
+      <section class="s_text_block" data-name="Text">
+        <div class="container s_allow_columns">
+          <p>If you miss the income tax return filing deadline, there are several options available to minimize
+            consequences:</p>
+          <ul>
+            <li><strong>Revised Returns:</strong> You can file a revised return before the end of the assessment year to
+              correct any errors in your original filing.</li>
+            <li><strong>Belated Returns:</strong> File a belated return after the deadline, but this comes with
+              penalties.</li>
+            <li><strong>Pay Penalties and Interest:</strong> Be prepared to pay penalties and interest for delayed
+              filings.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-pane fade" id="nav_tabs_content_1723025517454_594" role="tabpanel"
+      aria-labelledby="nav_tabs_link_1723025517454_594">
+      <section class="s_text_block" data-name="Text">
+        <div class="container s_allow_columns">
+          <p>When preparing for your Income Tax Return (ITR) eFiling, having the right documents is crucial for a smooth
+            and precise submission. Here’s a detailed list of the documents you’ll need to ensure everything goes
+            seamlessly:</p>
+          <p><strong>Basic Documents for ITR Filing</strong></p>
+          <ul>
+            <li><strong>PAN (Permanent Account Number):</strong> This is vital for all financial transactions and
+              tax-related processes.</li>
+            <li><strong>Aadhaar (Linked to PAN):</strong> Necessary for verification and linking with your tax records.
+            </li>
+            <li><strong>Bank Account Details:</strong> Required for processing refunds or verifying financial
+              information.</li>
+          </ul>
+          <p><strong>Income-Related Documents</strong></p>
+          <ul>
+            <li><strong>Salary Slips:</strong> Used to confirm your earnings from employment.</li>
+            <li><strong>Rent Receipts:</strong> Needed if you are claiming House Rent Allowance (HRA).</li>
+            <li><strong>Form 16:</strong> Issued by your employer, showing the tax deducted at source from your salary.
+            </li>
+            <li><strong>Form 16A:</strong> For TDS (Tax Deducted at Source) on income other than salary.</li>
+            <li><strong>Form 16B:</strong> For TDS on property sales.</li>
+            <li><strong>Form 16C:</strong> For TDS on rental income.</li>
+            <li><strong>Form 26AS:</strong> Your tax credit statement that displays all taxes deposited against your
+              PAN.</li>
+          </ul>
+          <p><strong>Documents for Deductions and Exemptions</strong></p>
+          <ul>
+            <li><strong>Interest Certificates:</strong> From banks and post offices for savings accounts and fixed
+              deposits.</li>
+            <li><strong>Home Loan Details:</strong> If claiming deductions on home loan interest.</li>
+            <li><strong>Proof of Tax-Saving Investments:</strong> Includes documents for life insurance, health
+              insurance, Public Provident Fund (PPF), National Savings Certificates (NSC), ELSS mutual funds, etc.</li>
+            <li><strong>Capital Gains Documents:</strong> Related to the sale of assets such as stocks or property.</li>
+            <li><strong>Rental Income Proofs:</strong> Lease agreements and rent receipts for rental property.</li>
+            <li><strong>Foreign Income and Dividend Proofs:</strong> Documents verifying income from international
+              sources and dividends.</li>
+          </ul>
+          <ul>
+            <li><strong>Interest Certificates:</strong> From banks and post offices for savings accounts and fixed
+              deposits.</li>
+            <li><strong>Home Loan Details:</strong> If claiming deductions on home loan interest.</li>
+            <li><strong>Proof of Tax-Saving Investments:</strong> Includes documents for life insurance, health
+              insurance, Public Provident Fund (PPF), National Savings Certificates (NSC), ELSS mutual funds, etc.</li>
+            <li><strong>Capital Gains Documents:</strong> Related to the sale of assets such as stocks or property.</li>
+            <li><strong>Rental Income Proofs:</strong> Lease agreements and rent receipts for rental property.</li>
+            <li><strong>Foreign Income and Dividend Proofs:</strong> Documents verifying income from international
+              sources and dividends.</li>
+          </ul>
+          <ul>
+            <li><strong>Interest Certificates:</strong> From banks and post offices for savings accounts and fixed
+              deposits.</li>
+            <li><strong>Home Loan Details:</strong> If claiming deductions on home loan interest.</li>
+            <li><strong>Proof of Tax-Saving Investments:</strong> Includes documents for life insurance, health
+              insurance, Public Provident Fund (PPF), National Savings Certificates (NSC), ELSS mutual funds, etc.</li>
+            <li><strong>Capital Gains Documents:</strong> Related to the sale of assets such as stocks or property.</li>
+            <li><strong>Rental Income Proofs:</strong> Lease agreements and rent receipts for rental property.</li>
+            <li><strong>Foreign Income and Dividend Proofs:</strong> Documents verifying income from international
+              sources and dividends.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 3rd section  -->
+
+
+
+<div class="latest-blogs-container">
+  <h2 class="latest-blogs-heading">Latest Blogs</h2>
+
+  <div class="gst-registration-images">
+    <div class="gst-image-container">
+      <img src="https://images.indianexpress.com/2024/05/sitharaman_8bdcd1.jpg?w=414" alt="GST Registration Process"
+        class="gst-image" />
+      <div class="image-overlay">Register for Income Tax</div>
+    </div>
+    <div class="gst-image-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPLrUH87mZZ_LsowlnVsTWo14MxXEzF8Aa6A&s"
+        alt="GST Benefits" class="gst-image" />
+      <div class="image-overlay">GST Benefits</div>
+    </div>
+    <div class="gst-image-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCCdYT0N3OE6d9FAG940wnjmG-EMYtqFCIjA&s"
+        alt="GST Documents" class="gst-image" />
+      <div class="image-overlay">Required Documents</div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 4rth section  -->
+
+
+<div class="tax-section-wrapper">
+  <h2>Income Tax Sections in India</h2>
+  <p>Here's a summary of key sections that help reduce your tax burden.</p>
+
+  <table class="tax-section-table">
+    <thead>
+      <tr>
+        <th>Section</th>
+        <th>Purpose</th>
+        <th>Eligible</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let section of taxSections">
+        <td><strong>Section {{ section.section }}</strong></td>
+        <td>{{ section.purpose }}</td>
+        <td>{{ section.eligible }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
