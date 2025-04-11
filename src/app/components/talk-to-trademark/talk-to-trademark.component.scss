@@ -742,32 +742,32 @@
 
 // button 
 
-/* example.component.css */
-.view-more-container {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center; /* Centers the button horizontally */
-    align-items: center;     /* Centers the button vertically */
-    // height: 100vh;           /* Ensures it takes full height of the viewport */
-    padding: 0;
-    margin: 0;
-  }
+// /* example.component.css */
+// .view-more-container {
+//     margin-top: 10px;
+//     display: flex;
+//     justify-content: center; /* Centers the button horizontally */
+//     align-items: center;     /* Centers the button vertically */
+//     // height: 100vh;           /* Ensures it takes full height of the viewport */
+//     padding: 0;
+//     margin: 0;
+//   }
   
-  .view-more-button {
-    // margin-top: -950px;
-    text-align: center;
-    border: 1px solid black;
-    padding: 8px 16px; /* Equivalent to py-2 px-4 in Tailwind */
-    white-space: nowrap;
-    border-radius: 4px; /* Equivalent to rounded in Tailwind */
-    background-color: transparent; /* Default background for button */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+//   .view-more-button {
+//     // margin-top: -950px;
+//     text-align: center;
+//     border: 1px solid black;
+//     padding: 8px 16px; /* Equivalent to py-2 px-4 in Tailwind */
+//     white-space: nowrap;
+//     border-radius: 4px; /* Equivalent to rounded in Tailwind */
+//     background-color: transparent; /* Default background for button */
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+//   }
   
-  .view-more-button:hover {
-    background-color: #f0f0f0; /* Optional hover effect */
-  }
+//   .view-more-button:hover {
+//     background-color: #f0f0f0; /* Optional hover effect */
+//   }
   
   
 //   button close 
@@ -788,7 +788,7 @@
 }
 
 .section-header {
-    // margin-top: -950px;
+  margin-top: 50px;
     padding: 20px 0;
 }
 

@@ -39,10 +39,11 @@
         <div class="expertise-section">
             <p class="title">Our Legal Expertise</p>
             <div class="slider-wrapper">
-                <div class="arrow">
-                    <img src="https://assets.vakilsearch.com/live-images/left-blue-icon.svg" alt="left arrow" />
+                <!-- Previous Arrow -->
+                <div class="arrow prev">
+                    <span>&lt;</span> <!-- This is the < icon -->
                 </div>
-
+        
                 <div class="slider">
                     <div *ngFor="let item of expertiseList" class="slider-item">
                         <div class="icon-container">
@@ -51,8 +52,14 @@
                         <h3>{{ item.label }}</h3>
                     </div>
                 </div>
-            </div>f
+        
+                <!-- Next Arrow -->
+                <div class="arrow next">
+                    <span>&gt;</span> <!-- This is the > icon -->
+                </div>
+            </div>
         </div>
+        
     </div>
 
     <!-- Right: Lead Form -->
@@ -629,11 +636,11 @@
 
 
 <!-- example.component.html -->
-<div class="view-more-container">
+<!-- <div class="view-more-container">
     <button class="view-more-button" type="button">
         View More
     </button>
-</div>
+</div> -->
 
 
 
@@ -651,14 +658,14 @@
 
     <div class="lawyer-links-grid">
         <div class="lawyer-link">
-            <a href="https://vakm/criminal-lawyer-services-in-india">
+            <!-- <a href="https://vakm/criminal-lawyer-services-in-india"> -->
                 <i class="fas fa-arrow-right"></i> Criminal lawyers
-            </a>
+            <!-- </a> -->
         </div>
         <div class="lawyer-link">
-            <a href="https://bour-lawyer-services-in-india">
+            <!-- <a href="https://bour-lawyer-services-in-india"> -->
                 <i class="fas fa-arrow-right"></i> Labour Lawyers
-            </a>
+            <!-- </a> -->
         </div>
         <div class="lawyer-link">
             <a href="https://nsumer-court-lawyer-services-in-india">

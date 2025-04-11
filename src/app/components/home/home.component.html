@@ -6,8 +6,8 @@
           <img alt="user-image" src="https://assets.vakilsearch.com/ic-user-grp.svg" class="user-img" />
           <img alt="rating-image" src="https://assets.vakilsearch.com/live-images/ic-rating-star.svg"
               class="rating-img" />
-          <p class="rating-text">4.5/5</p>
-          <p class="review-text">(18k+ Reviews)</p>
+              <a href="#" class="rating-text">4.5/5</a>
+              <a href="#" class="rating-text">(18k+ Reviews)</a>
       </div>
   </a>
 
@@ -345,46 +345,25 @@
   </div>
 </section> -->
 
+<div class="container">
+  <h2 class="reviews-heading">Reviews</h2> <!-- 🔥 Added heading here -->
 
-<div class="success-stories-container">
-  <h2 class="heading">Success Stories & Reviews</h2>
-  <div class="reviews-container">
-    <div class="slick-slider">
-      <div class="slick-list">
-        <div class="slick-track">
-          <!-- Review Item 1 -->
-          <div class="review-item">
-            <div class="quote-container">
-              <img class="quote-icon" src="https://assets.vakilsearch.com/live-images/ic-white-quote.svg" alt="quote">
-              <p class="review-text">Registered our company with Vakilsearch, the best online legal agency in India. Quick registration, highly recommend.</p>
-            </div>
-            <div class="customer-info">
-              <img class="customer-image" src="https://assets.vakilsearch.com/our-customer_5.svg" alt="customer">
-              <div class="customer-details">
-                <p class="customer-name">Mayukh Chatterjee</p>
-              </div>
-            </div>
-          </div>
-          <!-- Review Item 2 -->
-          <div class="review-item">
-            <div class="quote-container">
-              <img class="quote-icon" src="https://assets.vakilsearch.com/live-images/ic-white-quote.svg" alt="quote">
-              <p class="review-text">Prakash from Vakilsearch ensured seamless compliance handling for Kartisoft. Highly recommend their reliable services and expert support.</p>
-            </div>
-            <div class="customer-info">
-              <img class="customer-image" src="https://assets.vakilsearch.com/our-customer_1.svg" alt="customer">
-              <div class="customer-details">
-                <p class="customer-name">Sandeep Sangam</p>
-              </div>
-            </div>
-          </div>
-          <!-- Add more reviews here -->
-        </div>
+  <div *ngFor="let review of reviews" class="review-card">
+    <div class="review-header">
+      <i class="fa fa-user-circle"></i>
+      <div>
+        <h3>{{ review.name }}</h3>
+        <p class="date">{{ review.date }}</p>
       </div>
     </div>
+    <p class="review-text">{{ review.reviewText }}</p>
+    <div class="rating">
+      <span>⭐⭐⭐⭐⭐</span>
+      <span>{{ review.rating }}</span>
+    </div>
+    <p class="related-content">Related Content: {{ review.relatedContent }}</p>
   </div>
 </div>
-
 
 
 

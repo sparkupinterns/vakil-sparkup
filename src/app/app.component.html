@@ -14,3 +14,25 @@
 
 
 
+<aside class="login-container" [class.open]="isLoginVisible">
+    <div class="login-wrapper">
+      <p class="login-heading">Income Tax Registration</p>
+      <div class="input-section">
+        <p>Enter Mobile Number</p>
+        <div class="input-field">
+          <input type="tel" maxlength="10" placeholder="Mobile number" [(ngModel)]="mobileNumber">
+        </div>
+        <div class="button-section">
+          <div class="button-wrapper">
+            <button [disabled]="!mobileNumber" class="continue-button" (click)="continueRegistration()">Continue</button>
+          </div>
+        </div>
+      </div>
+      <div class="close-button" (click)="closeLogin()">
+        <img alt="close" title="close" width="18" height="18" src="https://assets.vakilsearch.com/live-images/close-icon.svg">
+      </div>
+    </div>
+  </aside>
+  
+  <!-- <button class="login-btn" (click)="toggleLoginModal()">Open Registration</button> -->
+  

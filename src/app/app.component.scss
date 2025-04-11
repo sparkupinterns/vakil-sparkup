@@ -1,14 +1,106 @@
-/* app.component.css */
+/* Optional: Add any styling for the login button */
 .login-btn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .login-btn:hover {
-    background-color: #0056b3;
-  }
-  
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #1c6f95;
+}
+
+/* Basic styles for the login container */
+.login-container {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Initially, the form is off-screen */
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  padding: 20px;
+  z-index: 9999; /* Ensure modal is on top of other content */
+}
+
+/* When the form is visible, slide it in */
+.login-container.open {
+  right: 0;
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.input-section {
+  width: 100%;
+  text-align: center;
+}
+
+.input-field {
+  margin-bottom: 20px;
+}
+
+input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+}
+
+input[type="tel"]:focus {
+  outline: none;
+  border-color: #2980b9;
+}
+
+.continue-button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.continue-button:hover {
+  background-color: #1c6f95;
+}
+
+.continue-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.close-button img {
+  transition: transform 0.3s ease;
+}
+
+.close-button:hover img {
+  transform: scale(1.2);
+}

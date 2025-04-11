@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { LoginComponent } from "../../login/login.component";
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, LoginComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -196,6 +197,12 @@ export class HeaderComponent {
     },
     // Add other menu items
   ];
+
+  showLogin = false;
+
+  toggleLoginModal() {
+    this.showLogin = !this.showLogin;
+  }
   
    onLoginClick() {
     // Simply call a method from the parent component via Input binding
@@ -264,5 +271,10 @@ export class HeaderComponent {
     },
   ];
   
+  isDropdownOpen = false;
+
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
 
 }

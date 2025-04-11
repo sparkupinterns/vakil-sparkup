@@ -54,8 +54,8 @@
         <div class="expertise-section">
             <p class="title">Our Legal Expertise</p>
             <div class="slider-wrapper">
-                <div class="arrow">
-                    <img src="https://assets.vakilsearch.com/live-images/left-blue-icon.svg" alt="left arrow" />
+               <div class="arrow prev">
+                    <span>&lt;</span> <!-- This is the < icon -->
                 </div>
 
                 <div class="slider">
@@ -65,6 +65,9 @@
                         </div>
                         <h3>{{ item.label }}</h3>
                     </div>
+                </div>
+                <div class="arrow next">
+                    <span>&gt;</span> <!-- This is the > icon -->
                 </div>
             </div>
         </div>
@@ -776,9 +779,9 @@
 
 
 
-<h2 class="text-center faq-heading">FAQs on Online CA Consultation</h2> <!-- Heading -->
+<h2 class="text-center faq-heading">FAQs on Online Lawyer Consultation</h2> <!-- Heading -->
 <h2 class="text-center faq-subheading">Explore answers to common questions about online legal consultations, including
-    privacy options, CA expertise, consultation languages, and follow-up procedures to ensure a secure and informed
+    privacy options, lawyer expertise, consultation languages, and follow-up procedures to ensure a secure and informed
     experience</h2> <!-- Subheading -->
 
 <section class="banner__area-two1 banner__bg-two faq-section" style="background-color: white;">
@@ -812,19 +815,20 @@
 
 
 
-  <!-- button  -->
+
+<!-- button  -->
 
 
 <!-- example.component.html -->
-<div class="view-more-container">
+<!-- <div class="view-more-container">
     <button class="view-more-button" type="button">
-      View More
+        View More
     </button>
-  </div>
-  
+</div>
+ -->
 
-  
-  <!-- button close  -->
+
+<!-- button close  -->
 
 
 
@@ -833,89 +837,96 @@
 
 <section class="recommended-lawyer-section">
     <div class="section-header">
-      <h3>Recommended Lawyer/Expert Pages to check</h3>
+        <h3>Recommended Lawyer/Expert Pages to check</h3>
     </div>
-  
+
     <div class="lawyer-links-grid">
-      <div class="lawyer-link">
-        <a href="https://vakilsearch.com/criminal-lawyer-services-in-india">
-          <i class="fas fa-arrow-right"></i> Criminal lawyers
-        </a>
-      </div>
-      <div class="lawyer-link">
-        <a href="https://vakilsearch.com/labour-lawyer-services-in-india">
-          <i class="fas fa-arrow-right"></i> Labour Lawyers
-        </a>
-      </div>
-      <div class="lawyer-link">
-        <a href="https://vakilsearch.com/consumer-court-lawyer-services-in-india">
-          <i class="fas fa-arrow-right"></i> Consumer court lawyers
-        </a>
-      </div>
-      <div class="lawyer-link">
-        <a href="https://vakilsearch.com/divorce-lawyer-services-in-india">
-          <i class="fas fa-arrow-right"></i> Divorce Lawyers
-        </a>
-      </div>
-      <div class="lawyer-link">
-        <a href="https://vakilsearch.com/banking-lawyer-services-in-india">
-          <i class="fas fa-arrow-right"></i> Banking lawyers
-        </a>
-      </div>
-      <div class="lawyer-link">
-        <a href="https://vakilsearch.com/immigration-lawyer-services-in-india">
-          <i class="fas fa-arrow-right"></i> Immigration Lawyers
-        </a>
-      </div>
-      <div class="lawyer-link">
-        <a href="https://vakilsearch.com/family-lawyer-services-in-india">
-          <i class="fas fa-arrow-right"></i> Family Lawyers
-        </a>
-      </div>
-      <div class="lawyer-link">
-        <a href="https://vakilsearch.com/litigation-lawyer-services-in-india">
-          <i class="fas fa-arrow-right"></i> Litigation lawyers
-        </a>
-      </div>
-      <div class="lawyer-link">
-        <a href="https://vakilsearch.com/intellectual-property-lawyer-services-in-india">
-          <i class="fas fa-arrow-right"></i> Intellectual property lawyer
-        </a>
-      </div>
-      <div class="lawyer-link">
-        <a href="https://vakilsearch.com/risk-management-and-regulatory-risk">
-          <i class="fas fa-arrow-right"></i> Risk and Regulatory
-        </a>
-      </div>
-    </div>
-  </section>
-  
-
-
-  <!-- 12th section  -->
-
-
-
-  <div class="author-flex">
-    <div class="author-flex-col author-gap-3 author-p-4 author-bg-lightblue author-rounded author-width-full md:author-width-60rem">
-      <p class="author-font-semibold">Authors</p>
-      <p>Written by Nilesh, Reviewed by Harshitha. Last updated on <b>Aprile 5 2025, 07:22 AM</b></p>
-      <div>
-        <div class="author-flex-col author-gap-3">
-          <p>
-            <a class="author-underline author-decoration-blue author-text-blue author-inline author-pr-2" href="https://vakilsearch.com/authors/harshitha">
-              Harshitha
+        <div class="lawyer-link">
+            <a href="https://vakilsearch.com/criminal-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Criminal lawyers
             </a>
-            <span>BBA.LLB. (Hons.), specializes in various legal disciplines including GST advice, tax-saving strategies, ITR filing, and LLP annual compliance. With her expertise, she provides valuable guidance to clients across diverse industries.</span>
-          </p>
-          <p>
-            <a class="author-underline author-decoration-blue author-text-blue author-inline author-pr-2" href="https://vakilsearch.com/blog/author/akash-varadarajvakilsearch-com/">
-                Nilesh G Pendare
-            </a>
-            <span>a legal content writer at Vakilsearch, brings over 3 years of experience in the legal niche. His mission is to simplify complex legal matters into understandable terms even for a layman. Collaborating closely with senior lawyers and SMEs, he ensures the delivery of top-notch content.</span>
-          </p>
         </div>
-      </div>
+        <div class="lawyer-link">
+            <a href="https://vakilsearch.com/labour-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Labour Lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://vakilsearch.com/consumer-court-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Consumer court lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://vakilsearch.com/divorce-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Divorce Lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://vakilsearch.com/banking-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Banking lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://vakilsearch.com/immigration-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Immigration Lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://vakilsearch.com/family-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Family Lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://vakilsearch.com/litigation-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Litigation lawyers
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://vakilsearch.com/intellectual-property-lawyer-services-in-india">
+                <i class="fas fa-arrow-right"></i> Intellectual property lawyer
+            </a>
+        </div>
+        <div class="lawyer-link">
+            <a href="https://vakilsearch.com/risk-management-and-regulatory-risk">
+                <i class="fas fa-arrow-right"></i> Risk and Regulatory
+            </a>
+        </div>
     </div>
-  </div>
-  
+</section>
+
+
+
+<!-- 12th section  -->
+
+
+
+<div class="author-flex">
+    <div
+        class="author-flex-col author-gap-3 author-p-4 author-bg-lightblue author-rounded author-width-full md:author-width-60rem">
+        <p class="author-font-semibold">Authors</p>
+        <p>Written by Nilesh, Reviewed by Harshitha. Last updated on <b>Aprile 5 2025, 07:22 AM</b></p>
+        <div>
+            <div class="author-flex-col author-gap-3">
+                <p>
+                    <a class="author-underline author-decoration-blue author-text-blue author-inline author-pr-2"
+                        href="https://vakilsearch.com/authors/harshitha">
+                        Harshitha
+                    </a>
+                    <span>BBA.LLB. (Hons.), specializes in various legal disciplines including GST advice, tax-saving
+                        strategies, ITR filing, and LLP annual compliance. With her expertise, she provides valuable
+                        guidance to clients across diverse industries.</span>
+                </p>
+                <p>
+                    <a class="author-underline author-decoration-blue author-text-blue author-inline author-pr-2"
+                        href="https://vakilsearch.com/blog/author/akash-varadarajvakilsearch-com/">
+                        Nilesh G Pendare
+                    </a>
+                    <span>a legal content writer at Vakilsearch, brings over 3 years of experience in the legal niche.
+                        His mission is to simplify complex legal matters into understandable terms even for a layman.
+                        Collaborating closely with senior lawyers and SMEs, he ensures the delivery of top-notch
+                        content.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

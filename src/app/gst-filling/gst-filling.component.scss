@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.5rem; /* Further reduce padding for smaller height */
-    background-color: #4bb8da;
+    background-color:  #c54108; ;
     height: auto; /* Allowing the container to auto adjust height */
     margin-bottom: 1rem; /* Optional: to control the spacing below the banner */
   }
@@ -41,12 +41,12 @@
   
   .content-description {
     font-size: 0.9rem; /* Reduced font size */
-    color: #7d7d7d;
+    color: white;
     margin-top: 0.5rem;
   }
   
   .m-web-button {
-    background-color: #ff6f00;
+    background-color: #000000;
     color: white;
     border: none;
     padding: 10px 20px; /* Further reduced padding */
@@ -120,23 +120,30 @@
   }
  
   .button {
-    width: 40%; /* Further reduced width to make the button even smaller */
-    padding: 10px 20px; /* Adjust padding for compactness */
-    background-color: #ff6f00;
+    margin-top: 20px; /* Moved button further down */
+    width: 40%; /* Increased width */
+    height: 45px; /* Increased height */
+    padding: 8px 16px; /* Adjusted padding for proportion */
+    
+    background-color: #c54108;
     border: none;
     border-radius: 5px;
-    color: white;
-    font-size: 1rem; /* Font size kept moderate */
-    cursor: pointer;
-    text-align: center;
     
-    /* Adding margin-top to push the button down */
-    margin-top: 8px; /* Adjust this value to move the button further down as needed */
-  
-    &:hover {
-      background-color: #e65c00;
-    }
-  }
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center;     /* Center text vertically */
+    
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e65c00;
+}
+
   
   
   .thankyou-section {

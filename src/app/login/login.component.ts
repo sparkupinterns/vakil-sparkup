@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Output } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EventEmitter } from 'stream';
+// import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-login',
@@ -12,26 +12,19 @@ import { EventEmitter } from 'stream';
 })
 export class LoginComponent {
 
+  @Input() visible: boolean = false;
+  @Output() visibleChange = new EventEmitter<boolean>();
 
-
-  isLoginVisible = true; // Define the visibility property
-  mobileNumber: string = ''; // Define the mobile number for ngModel
+  mobileNumber: string = '';
 
   closeLogin() {
-    this.isLoginVisible = false; // Close the login form when called
-  }
-  isModalOpen: boolean = false;
-
-
-  toggleLoginModal(): void {
-    this.isModalOpen = !this.isModalOpen;  // Toggle modal visibility
+    this.visible = false;
+    this.visibleChange.emit(false);
   }
 
-  continueRegistration(): void {
-    // Handle mobile number verification and registration logic here
-    console.log('Mobile Number Submitted:', this.mobileNumber);
-    // Reset input field
+  continueRegistration() {
+    console.log('Submitted Mobile Number:', this.mobileNumber);
     this.mobileNumber = '';
+    this.closeLogin();
   }
-
 }

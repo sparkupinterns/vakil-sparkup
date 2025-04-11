@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import AOS from 'aos';
 // declare var $: any;  
 
@@ -9,7 +9,7 @@ import AOS from 'aos';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
 
 
   sectionData = {
@@ -235,6 +235,30 @@ export class HomeComponent {
     //     }
     //   ]
     // }
+  ];
+
+  reviews = [
+    {
+      name: 'John Doe',
+      date: 'April 11, 2025',
+      reviewText: 'Excellent service! The lawyer helped me win my case with professionalism and expertise.',
+      rating: 5,
+      relatedContent: 'Personal Injury Law'
+    },
+    {
+      name: 'Jane Smith',
+      date: 'March 25, 2025',
+      reviewText: 'I had a wonderful experience. Highly recommend their family law services!',
+      rating: 4,
+      relatedContent: 'Family Law'
+    },
+    {
+      name: 'Mark Johnson',
+      date: 'February 15, 2025',
+      reviewText: 'The team was incredibly helpful in resolving my business dispute. Very professional and efficient.',
+      rating: 5,
+      relatedContent: 'Business Law'
+    }
   ];
 
 

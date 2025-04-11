@@ -6,12 +6,13 @@
 .home-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: #022B50;
+  background: #c43f05; /* Red to black gradient */
   position: relative;
   align-items: center;
   padding-top: 40px;
   padding-bottom: 280px;
   gap: 16px;
+  z-index: 10;
 
   @media (min-width: 768px) {
     padding-top: 70px;
@@ -23,17 +24,18 @@
   }
 }
 
+
 .rating-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: #022B50;
-  gap: 4px;
+  background-color: #c54108; /* Set background color */
+  gap: 4px; /* Space between cards or items */
 
   @media (min-width: 768px) {
-    flex-direction: row;
-    gap: 8px;
+    flex-direction: row; /* Align items in a row on large screens */
+    gap: 8px; /* Increase gap on larger screens */
   }
 }
 
@@ -56,31 +58,53 @@
     height: 35px;
   }
 }
+// .rating-text {
+//   color: white;
+//   color: inherit !important; /* Force inherit parent color */
+//   font-size: 16px;
+//   font-weight: 500;
+//   line-height: 2rem;
+//   text-decoration: none !important; /* Force remove underline */
+
+//   @media (min-width: 768px) {
+//     font-size: 28px;
+//   }
+// }
+
+// .review-text {
+//   color: white !important; /* Change to black or your desired color */
+//   font-size: 16px;
+//   font-weight: 300;
+//   line-height: 1.75rem;
+//   text-decoration: none !important;
+
+//   @media (min-width: 768px) {
+//     font-size: 20px;
+//   }
+// }
 
 
-.rating-text {
-  color: white;
+a.rating-text {
+  text-decoration: none !important;
+  color: white !important;
   font-size: 16px;
   font-weight: 500;
   line-height: 2rem;
-  text-decoration: none;
+  cursor: pointer;
+
+  display: inline;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
 
   @media (min-width: 768px) {
     font-size: 28px;
   }
 }
 
-.review-text {
-  color: white;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.75rem;
-  text-decoration: none;
-
-  @media (min-width: 768px) {
-    font-size: 20px;
-  }
-}
 
 .heading-wrapper {
   display: flex;
@@ -107,7 +131,7 @@
   }
 
   .highlight {
-    color: #FFC24F;
+    color: rgb(12, 10, 44);
   }
 }
 
@@ -181,7 +205,7 @@
   a {
     font-size: 0.75rem;
     background-color: #22384D;
-    border: 1px solid #5E6E7C;
+    border: 1px solid #7c5e68;
     border-radius: 12px;
     padding: 4px 16px;
     cursor: pointer;
@@ -227,6 +251,9 @@
 
 
 .horizontal-cards {
+  position: relative;
+  z-index: 20;              /* Make sure it's above the background */
+  margin-top: -140px;       /* Half of the bottom padding of .home-wrapper (280px / 2) */
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -321,7 +348,9 @@
   gap: 1.5rem;
   justify-content: center;
   padding: 2rem;
-
+  position: relative;
+  z-index: 20;
+  margin-top: -220px; /* Thoda aur upar shift */
   .service-card {
     width: 100%;
     max-width: 350px;
@@ -441,7 +470,7 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 21px;
-    color: #0b1355;
+    color: #080a1f;
 
     @media (min-width: 768px) {
       max-width: 984px;
@@ -605,15 +634,15 @@
 
 
 .customers-section {
-  margin-top: 50px;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 30px 0;
-  background-color: #022B50;
-  color: #ffffff;
-  margin-top: 0;
+  background: #c54108; /* Red → Black → Red */
+  color: #ffffff; 
+  
 
   @media (min-width: 768px) {
     padding: 50px 0;
@@ -683,7 +712,7 @@
   padding-bottom: 50px;
   width: 100%;
   max-width: 1350px;
-  margin: 40px auto 0;
+  margin: 100px auto 0; /* Increased top margin to 100px */
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -708,10 +737,11 @@
   }
 
   .product-suite-cards {
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-top: 30px;
+    // margin-top: 30px;
 
     @media (min-width: 1024px) {
       flex-direction: row;
@@ -761,45 +791,51 @@
       }
 
       .card-image {
-        padding-top: 40px;
+        padding-top: 70px;
         display: flex;
         justify-content: center;
-
-        img {
-          max-width: 100%;
-          height: auto;
-        }
-      }
+        position: relative; /* in case you want to use absolute positioning inside */
+    }
+    
+    .card-image img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 0px; /* pushes image up 5px from bottom */
+    }
+    
     }
 
     .card-zolvit {
-      background-color: #022B50;
-
+      background: #c54108; // Dark red → black → dark red
+    
       .white-text {
         color: white;
       }
-
+    
       .feature p {
         color: white;
       }
-
+    
       .explore-now {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #FED130;
-        padding: 16px 18px;
-        border-radius: 30px;
-        width: 161px;
+        align-items: center;         /* vertical center */
+        justify-content: center;     /* horizontal center */
+        background-color: #000000;
+        padding: 6px 24px;
+        border-radius: 20px;
+        width: 200px;
+        color: #ffffff;
         margin-top: 8px;
         cursor: pointer;
-
+        text-align: center;    
+        
         p {
-          color: #022B50;
+          margin-top: 8px;
+          color: white;
           font-size: 16px;
           font-weight: 500;
         }
-      }
+      }    
     }
   }
 }
@@ -927,127 +963,122 @@
 // 7th section 
 
 
-
-
-.success-stories-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 1300px;
+// Base styling for the container
+.container {
+  width: 95%;
   margin: 0 auto;
-  justify-content: center;
-  padding: 30px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; // To add space between cards
+}
 
-  .heading {
-    font-size: 22px;
-    font-weight: 600;
-    text-align: center;
-    padding: 0 20px;
+// Heading Styles
+.reviews-heading {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  width: 100%; // Ensure the heading spans the full width
+}
 
-    @media (min-width: 768px) {
-      font-size: 42px;
+// Review Card Styling
+.review-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 31%; // Adjust the width to fit multiple cards in a row
+  margin-right: 1.5%; // Add some space between the cards
+
+  // Ensure cards don't exceed container width
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  
+  // Nested review header styling
+  .review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    i {
+      font-size: 3em;
+      color: #aaa;
+      margin-right: 15px;
+    }
+
+    div {
+      h3 {
+        font-size: 1.2em;
+        margin: 0;
+        color: #444;
+      }
+
+      .date {
+        font-size: 0.9em;
+        color: #777;
+      }
     }
   }
 
-  .reviews-container {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  // Review Text
+  .review-text {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 15px;
+  }
 
-    .slick-slider {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      position: relative;
+  // Rating Styling
+  .rating {
+    font-size: 1.2em;
+    color: #FFD700; // Golden color for the stars
+    margin-bottom: 15px;
 
-      .slick-list {
-        display: flex;
-        justify-content: center;
-
-        .slick-track {
-          display: flex;
-          transition: transform 0.5s ease-in-out;
-        }
-
-        .review-item {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          background-color: #022b50;
-          border-radius: 10px;
-          padding: 20px;
-          min-height: 128px;
-          width: 300px;  /* Adjust width as per need */
-
-          .quote-container {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            padding-bottom: 10px;
-
-            .quote-icon {
-              width: 22px;
-              height: 22px;
-              object-fit: contain;
-            }
-
-            .review-text {
-              color: #ffffff;
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 24px;
-              text-align: left;
-            }
-          }
-
-          .customer-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            .customer-image {
-              width: 36px;
-              height: 36px;
-              border-radius: 50%;
-              object-fit: cover;
-            }
-
-            .customer-details {
-              .customer-name {
-                font-size: 14px;
-                font-weight: 400;
-                color: #ffffff;
-              }
-            }
-          }
-        }
-      }
-
-      .prev-btn, .next-btn {
-        background-color: #022b50;
-        color: white;
-        border: none;
-        padding: 10px;
-        border-radius: 50%;
-        font-size: 16px;
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        z-index: 10;
-        transform: translateY(-50%);
-      }
-
-      .prev-btn {
-        left: -50px;
-      }
-
-      .next-btn {
-        right: -50px;
-      }
+    span {
+      margin-right: 5px;
     }
+  }
+
+  // Related Content Section
+  .related-content {
+    font-size: 1em;
+    color: #333;
+    font-style: italic;
   }
 }
 
+// Responsive Design (Optional)
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    justify-content: center; // Center the cards on small screens
+  }
+
+  .review-card {
+    width: 45%; // 2 cards per row on medium screens
+    margin-right: 5%; // Space between cards
+  }
+
+  .review-card:nth-child(2n) {
+    margin-right: 0; // Remove margin on every second card for alignment
+  }
+
+  .reviews-heading {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-card {
+    width: 100%; // Stack cards in a single column on small screens
+    margin-right: 0; // Remove margin
+  }
+}
 
 
 
@@ -1181,9 +1212,8 @@
 
 
 
-
 .business-start-container {
-  background-color: #022B50;
+  background:  #000000; /* Red to Black gradient */
   margin-top: 80px;
 }
 
@@ -1220,24 +1250,28 @@
 }
 
 .get-started-button {
-  display: inline-flex;
+  display: flex;
+  align-items: center;               /* Vertical centering */
+  justify-content: center;           /* Horizontal centering */
   text-decoration: none;
-  color: #022B50;
   background-color: #FCD209;
-  padding: 8px 12px; /* Reduced padding */
+  padding: 8px 12px;
   border-radius: 8px;
   margin-top: 32px;
   margin-bottom: 50px;
-  width: 50px; /* Set a fixed width for the button */
-  text-align: center; /* Center the text inside the button */
+  width: 120px;                      /* Increased width for better text fit */
+  height: 50px;
+  text-align: center;
+  margin-left: 100px;                 /* 👈 Shift the button slightly to the right */
 }
 
 .button-text {
-  text-align: center;
   font-size: 1rem;
-  font-weight: medium;
+  font-weight: 500;
   color: #022B50;
+  margin-top: 10px;
 }
+
 
 .icon-image {
   position: absolute;
@@ -1284,6 +1318,7 @@
     height: 350px; /* Increased the image height further */
   }
 }
+
 
 
 

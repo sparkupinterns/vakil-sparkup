@@ -5,219 +5,225 @@
 
 /* SCSS for webinar banner */
 .webinar-banner-cta {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 1.5rem; /* Further reduce padding for smaller height */
-    background-color: #4bb8da;
-    height: auto; /* Allowing the container to auto adjust height */
-    margin-bottom: 1rem; /* Optional: to control the spacing below the banner */
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem; /* Further reduce padding for smaller height */
+  background-color:  #c54108; ;
+  height: auto; /* Allowing the container to auto adjust height */
+  margin-bottom: 1rem; /* Optional: to control the spacing below the banner */
+}
+
+.left-section {
+  width: 50%; /* Adjusted width for left section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-image img {
+  max-width: 100%;
+}
+
+.m-web img {
+  display: none;
+}
+
+.content {
+  margin-top: 0.5rem; /* Reduced spacing for content */
+}
+
+.content-heading {
+  font-size: 1.5rem; /* Slightly reduced font size */
+  font-weight: bold;
+  line-height: 1.2;
+  color: #020518;
+}
+
+.content-description {
+  font-size: 0.9rem; /* Reduced font size */
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.m-web-button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Further reduced padding */
+  margin-top: 0.75rem; /* Reduced margin */
+  cursor: pointer;
+  font-size: 0.75rem; /* Further reduced font size */
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #e65c00;
   }
+}
+
+.right-section {
+  width: 45%; /* Adjusted width for right section */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.form-container {
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem; /* Reduced padding */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.form-section {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  width: 48%; /* Ensuring the form fields are aligned side by side */
+}
+
+label {
+  font-size: 1rem;
+  color: #020518;
+}
+
+.input-box {
+  width: 100%;
+  padding: 8px; /* Reduced padding for smaller height */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.phone-group {
+  display: flex;
+  align-items: center;
+}
+
+.flag-box {
+  margin-right: 10px;
+}
+
+.input-box {
+  flex-grow: 1;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.button {
+  margin-top: 20px; /* Moved button further down */
+  width: 40%; /* Increased width */
+  height: 45px; /* Increased height */
+  padding: 8px 16px; /* Adjusted padding for proportion */
   
-  .left-section {
-    width: 50%; /* Adjusted width for left section */
-    display: flex;
+  background-color: #c54108;
+  border: none;
+  border-radius: 5px;
+  
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center;     /* Center text vertically */
+  
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e65c00;
+}
+
+
+
+.thankyou-section {
+  display: none;
+  text-align: center;
+}
+
+.thankyou-image img {
+  width: 105px;
+  height: auto;
+}
+
+.thankyou-description {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.thankyou-register {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #7d7d7d;
+}
+
+.thankyou-register a {
+  color: #ff6f00;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .webinar-banner-cta {
     flex-direction: column;
-    justify-content: center;
-  }
-  
-  .left-image img {
-    max-width: 100%;
-  }
-  
-  .m-web img {
-    display: none;
-  }
-  
-  .content {
-    margin-top: 0.5rem; /* Reduced spacing for content */
-  }
-  
-  .content-heading {
-    font-size: 1.5rem; /* Slightly reduced font size */
-    font-weight: bold;
-    line-height: 1.2;
-    color: #020518;
-  }
-  
-  .content-description {
-    font-size: 0.9rem; /* Reduced font size */
-    color: #7d7d7d;
-    margin-top: 0.5rem;
-  }
-  
-  .m-web-button {
-    background-color: #ff6f00;
-    color: white;
-    border: none;
-    padding: 10px 20px; /* Further reduced padding */
-    margin-top: 0.75rem; /* Reduced margin */
-    cursor: pointer;
-    font-size: 0.75rem; /* Further reduced font size */
-    border-radius: 5px;
-  
-    &:hover {
-      background-color: #e65c00;
-    }
-  }
-  
-  .right-section {
-    width: 45%; /* Adjusted width for right section */
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-  }
-  
-  .form-container {
-    width: 100%;
-    background-color: #fff;
-    padding: 1rem; /* Reduced padding */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  .form-section {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .form-group {
-    margin-bottom: 1rem;
-    width: 48%; /* Ensuring the form fields are aligned side by side */
-  }
-  
-  label {
-    font-size: 1rem;
-    color: #020518;
-  }
-  
-  .input-box {
-    width: 100%;
-    padding: 8px; /* Reduced padding for smaller height */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-  }
-  
-  .phone-group {
-    display: flex;
     align-items: center;
   }
-  
-  .flag-box {
-    margin-right: 10px;
-  }
-  
-  .input-box {
-    flex-grow: 1;
-  }
-  
-  .error-message {
-    color: red;
-    font-size: 0.875rem;
-    margin-top: 0.5rem;
-  }
- 
-  .button {
-    width: 40%; /* Further reduced width to make the button even smaller */
-    padding: 10px 20px; /* Adjust padding for compactness */
-    background-color: #ff6f00;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 1rem; /* Font size kept moderate */
-    cursor: pointer;
-    text-align: center;
-    
-    /* Adding margin-top to push the button down */
-    margin-top: 8px; /* Adjust this value to move the button further down as needed */
-  
-    &:hover {
-      background-color: #e65c00;
-    }
-  }
-  
-  
-  .thankyou-section {
-    display: none;
-    text-align: center;
-  }
-  
-  .thankyou-image img {
-    width: 105px;
-    height: auto;
-  }
-  
-  .thankyou-description {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-top: 1rem;
-  }
-  
-  .thankyou-register {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: #7d7d7d;
-  }
-  
-  .thankyou-register a {
-    color: #ff6f00;
-    cursor: pointer;
-  
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .webinar-banner-cta {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .left-section {
-      width: 100%;
-      text-align: center;
-    }
-  
-    .m-web {
-      display: block;
-    }
-  
-    .form-container {
-      width: 100%;
-      margin-top: 2rem;
-      box-shadow: none;
-      border-radius: 0;
-    }
-  
-    .thankyou-section {
-      width: 100%;
-      padding: 1.5rem;
-    }
-  
-    .left-section {
-      width: 100%;
-    }
-  
-    .right-section {
-      width: 100%;
-    }
-  
-    /* Adjust form layout for smaller screens */
-    .form-section {
-      flex-direction: column; /* Stack the fields vertically on mobile */
-    }
-  
-    .form-group {
-      width: 100%; /* Ensure full width for each field */
-      margin-bottom: 1rem; /* Add spacing between form fields */
-    }
-  }  
-    
 
+  .left-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .m-web {
+    display: block;
+  }
+
+  .form-container {
+    width: 100%;
+    margin-top: 2rem;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .thankyou-section {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .left-section {
+    width: 100%;
+  }
+
+  .right-section {
+    width: 100%;
+  }
+
+  /* Adjust form layout for smaller screens */
+  .form-section {
+    flex-direction: column; /* Stack the fields vertically on mobile */
+  }
+
+  .form-group {
+    width: 100%; /* Ensure full width for each field */
+    margin-bottom: 1rem; /* Add spacing between form fields */
+  }
+}  
+   
 
 // 1st section 
 
