@@ -2,59 +2,52 @@
 // marquee 
 
 
-/* Marquee Wrapper */
 .marquee-wrapper {
-    width: 100%;
-    overflow: hidden;
-    background-color: white;
-    // background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    color: black;
-    padding: 20px 0; /* Increased padding to increase the height */
-    position: fixed; /* Keep the wrapper fixed on the page while scrolling */
-    top: 60px; /* Adjust this value based on your navbar height */
-    left: 0;
-    z-index: 1; /* Lower z-index to ensure dropdowns appear above the marquee */
-    font-family: 'Segoe UI', sans-serif;
-    height: 80px; /* Set the height */
-    text-align: center; /* Ensure the text is centered */
-    -webkit-font-smoothing: antialiased; /* Font smoothing for better clarity on webkit browsers */
-    -moz-osx-font-smoothing: grayscale; /* Font smoothing for Firefox on macOS */
-    font-smoothing: antialiased; /* Enable font smoothing for all browsers */
-    text-rendering: optimizeLegibility; /* Ensure better text rendering */
-    letter-spacing: 1px; /* Improve clarity by slightly spacing out letters */
-    font-weight: 700; /* Bold text for better readability */
-    position: fixed; /* Keep the wrapper fixed on the page while scrolling */
-    top: 60px; /* Adjust this value based on your navbar height */
-    left: 0;
-    z-index: 1; /* Lower z-index to ensure dropdowns appear above the marquee */
-    font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  padding: 20px 30px; /* <-- Adds 30px padding left/right */
+  position: fixed;
+  top: 60px;
+  left: 0;
+  z-index: 1;
+  font-family: 'Segoe UI', sans-serif;
+  height: 80px;
+  text-align: center;
+  font-weight: 700;
+  box-sizing: border-box; /* ensures padding doesn't break layout */
+}
+
+.marquee {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 15s linear infinite;
+  font-size: 24px;
+  line-height: 80px;
+}
+
+.track span {
+  display: inline-block;
+  padding-right: 100px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
   }
-  
-  /* Marquee text animation */
-  .marquee {
-    display: inline-block;
-    white-space: nowrap; /* Prevents the text from wrapping */
-    font-size: 25px; /* Increased font size for larger text */
-    color: black;
-    animation: marquee 35s linear infinite; /* Make the content scroll */
-    line-height: 80px; /* Align text vertically within the increased height */
-    font-weight: 700; /* Ensures bold text for better clarity */
+  100% {
+    transform: translateX(-50%);
   }
-  
-  .marquee span {
-    display: inline-block;
-    padding-right: 100px; /* Space between the repeating content */
-  }
-  
-  @keyframes marquee {
-    0% {
-      transform: translateX(100%); /* Start from right */
-    }
-    100% {
-      transform: translateX(-100%); /* End at left */
-    }
-  }
-  
+}
+
 
 // 1st section 
 

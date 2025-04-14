@@ -634,7 +634,7 @@ a.rating-text {
 
 
 .customers-section {
-  margin-top: 0;
+  // margin-top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -651,7 +651,7 @@ a.rating-text {
   }
 
   .customers-heading {
-    margin-top: 70px;
+    margin-top: 20px;
     font-size: 24px;
     font-weight: bold;
     line-height: 41px;
@@ -1127,14 +1127,17 @@ a.rating-text {
     display: flex;
     flex-direction: column;
     text-align: left;  /* Ensure text starts from the left */
-
+    margin-right: 150px;  /* Add margin-right here */
+  
     .heading {
       font-size: 2rem;
       font-weight: 600;
+  
       @media(min-width: 768px) {
         font-size: 4rem;
       }
     }
+    
 
     .features {
       display: flex;
@@ -1212,30 +1215,30 @@ a.rating-text {
 
 
 
+
 .business-start-container {
-  background:  #000000; /* Red to Black gradient */
+  background: #000000; /* Black background */
   margin-top: 80px;
+  padding: 20px 0; /* Added padding to prevent content from touching the edges */
 }
 
 .content-wrapper {
-  position: relative;
-  margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between; /* Aligns text-content and image */
+  align-items: center; /* Center vertically */
   max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px; /* Added padding for better spacing */
 }
 
 .text-content {
   display: flex;
   flex-direction: column;
-  text-align: left;
   color: white;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  gap: 2px;
+  padding: 10px;
+  gap: 20px; /* Increased gap between the elements for better spacing */
   max-width: 550px;
+  flex: 1; /* Makes the text-content flexible, allowing it to take available space */
 }
 
 .heading {
@@ -1250,45 +1253,44 @@ a.rating-text {
 }
 
 .get-started-button {
+  margin-left: 85px;
   display: flex;
-  align-items: center;               /* Vertical centering */
-  justify-content: center;           /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
   text-decoration: none;
-  background-color: #FCD209;
-  padding: 8px 12px;
+  background-color: #FCD209; /* Button background color */
+  background-position: center; /* Centers the background */
+  background-repeat: no-repeat; /* Prevents background from repeating */
+  padding: 10px 20px; /* Improved padding */
   border-radius: 8px;
-  margin-top: 32px;
-  margin-bottom: 50px;
-  width: 120px;                      /* Increased width for better text fit */
+  width: 180px; /* Fixed width for consistency */
   height: 50px;
   text-align: center;
-  margin-left: 100px;                 /* 👈 Shift the button slightly to the right */
+  margin-top: 20px;
+  align-self: flex-start; /* Align button to the start (top) of its container */
 }
 
 .button-text {
+  margin-top: 10px;
   font-size: 1rem;
   font-weight: 500;
   color: #022B50;
-  margin-top: 10px;
 }
-
 
 .icon-image {
-  position: absolute;
   width: 160px;
-  height: 250px; /* Increased the height of the image */
-  right: 0;
-  bottom: -7px;
-  margin-top: 20px; /* Added top margin to move the image down a bit */
-  margin-bottom: 20px; /* Added bottom margin for more space */
+  height: 300px; /* Adjusted image size */
+  object-fit: contain; /* Ensures the image is not distorted */
+  margin-top: 20px; /* Margin to give space at the top */
+  margin-bottom: 20px; /* Margin for space at the bottom */
+  flex-shrink: 0; /* Prevents the image from shrinking */
 }
 
-/* Responsiveness for medium to large screens */
+/* Medium screens (>= 768px) */
 @media (min-width: 768px) {
   .text-content {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    gap: 5px;
+    padding: 15px;
+    gap: 20px; /* Increased gap for larger screens */
   }
 
   .heading {
@@ -1301,21 +1303,21 @@ a.rating-text {
   }
 
   .get-started-button {
-    padding: 16px 28px; /* Adjusted padding for medium screens */
-    width: 250px; /* Adjusted width for medium screens */
+    padding: 12px 24px; /* Adjusted for medium screens */
+    width: 220px; /* Adjusted width */
   }
 
   .icon-image {
-    width: 260px;
-    height: 300px; /* Increased the image height */
+    width: 250px;
+    height: 300px; /* Adjusted image size for medium screens */
   }
 }
 
-/* Large screens */
+/* Large screens (>= 1024px) */
 @media (min-width: 1024px) {
   .icon-image {
     width: 320px;
-    height: 350px; /* Increased the image height further */
+    height: 350px; /* Increased the image size for larger screens */
   }
 }
 
@@ -1348,6 +1350,7 @@ a.rating-text {
   font-weight: bold;
   text-align: center;
   max-width: 308px;
+  margin-right: 100PX;
   
   @media (min-width: 768px) {
     font-size: 40px;

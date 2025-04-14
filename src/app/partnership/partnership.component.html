@@ -1,0 +1,623 @@
+<!-- 1st section  -->
+
+
+
+<div class="webinar-banner-cta">
+    <!-- Left Section -->
+    <div class="left-section">
+        <div class="left-image">
+
+            <!-- <div class="elementor-widget-container">
+                <p style="font-family: 'AirTravelers', sans-serif; font-size: 52px; font-weight: bold;">
+                  CARPODDA
+                </p>
+              </div> -->
+              
+            <img alt="" src="https://assets.clear.in/cleartax/images/1734954559_group1814222066.png">
+        </div>
+        <div class="m-web">
+            <img alt="" src="https://assets.clear.in/cleartax/images/1735138708_group1814222069.png">
+        </div>
+        <div class="content">
+            <div class="content-heading">
+                Smarter Financial <br class="br-1">
+                Decisions <br class="br-2">
+                Made Easy
+            </div>
+            <div class="content-description">
+                Subscribe to Briefcase, your go-to email series for
+                <br class="content-br-1">
+                practical tips to stay ahead financially.
+            </div>
+            <button class="m-web-button" id="toggle-form-button" (click)="toggleForm()">Subscribe Now</button>
+        </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+        <div class="form-container" *ngIf="formVisible">
+            <div class="form-section">
+                <!-- Left Side: Name and Phone Number -->
+                <div class="form-grouppp">
+                    <label for="yourName">Your Name</label>
+                    <input class="input-box box1" id="yourName" placeholder="Enter your name" type="text"
+                        [(ngModel)]="user.name">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number <span class="required">*</span></label>
+                    <div class="phone-group">
+                        <div class="flag-box">
+                            <img alt="" src="https://assets.clear.in/cleartax/images/1735035067_flag_of_india1.png">
+                            <span style="color: #020518">+91</span>
+                        </div>
+                        <input class="input-box" id="phoneNumber" placeholder="Enter your phone number" type="number"
+                            [(ngModel)]="user.phoneNumber">
+                    </div>
+                    <div style="height: 4px">
+                        <p class="error-message" *ngIf="phoneError">{{ phoneError }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <!-- Right Side: Email ID and Subscribe Button -->
+                <div class="form-group">
+                    <label for="email">Email ID <span class="required">*</span></label>
+                    <input class="input-box box2" id="email" placeholder="Enter your e-mail" type="email"
+                        [(ngModel)]="user.email">
+                    <div>
+                        <p class="error-message" *ngIf="emailError">{{ emailError }}</p>
+                    </div>
+                </div>
+                <button class="button" id="subscribeButton" (click)="subscribe()">Subscribe Now</button>
+            </div>
+        </div>
+
+        <!-- Thank You Section -->
+        <div class="thankyou-section" *ngIf="thankYouVisible">
+            <div class="thankyou-image">
+                <img alt="" src="https://assets1.cleartax-cdn.com/cleartax/images/1674553598_completedicon.png"
+                    width="105px">
+            </div>
+            <div>
+                <div class="thankyou-description">Thank you for registering</div>
+                <div class="thankyou-register">
+                    Want to register for someone else
+                    <a id="clickhere" style="cursor: pointer" (click)="toggleForm()">Click Here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- 2nd section  -->
+
+
+
+<div class="main-container flex">
+
+
+    <div class="flex">
+        <!-- Left Menu -->
+        <div class="w-1/3 border-r p-4">
+            <h3 class="font-bold mb-2">Index</h3>
+            <ul>
+                <li *ngFor="let item of tocItems" [class.active]="selectedSectionId === item.id"
+                    (click)="selectSection(item.id)" style="cursor: pointer; padding: 6px;">
+                    {{ item.title }}
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Side: Dynamic Content -->
+        <div class="w-2/3 p-4 overflow-auto" style="max-height: 80vh;">
+            <ng-container [ngSwitch]="selectedSectionId">
+
+                <div *ngSwitchCase="'h0'">
+                    <!-- <h2>What is GST Registration?</h2>
+                    <p>Sole Proprietorship Registration in India – Procedure & Advantages</p> -->
+                </div>
+
+                <div *ngSwitchCase="'h1'">
+                    <h2>Who should obtain the GST registration?</h2>
+                    <p>GST registration is mandatory for businesses involved in the supply of goods and/or services...
+                    </p>
+                    <ul>
+                        <li>Businesses whose turnover exceeds the threshold...</li>
+                        <li>Inter-state suppliers</li>
+                        <li>E-commerce vendors</li>
+                    </ul>
+                </div>
+
+                <div *ngSwitchCase="'h2'">
+                    <!-- <h2>Benefits of GST Registration</h2>
+                    <ul>
+                        <li><strong>Legal Recognition:</strong> Issue GST invoices</li>
+                        <li><strong>ITC:</strong> Claim input tax credit</li>
+                        <li><strong>Expand:</strong> Inter-state trade</li>
+                    </ul> -->
+                </div>
+
+                <!-- Repeat the pattern for other sections -->
+                <div *ngSwitchCase="'h3'">
+                    <h2>All about the GST Registration Process</h2>
+                    <ol>
+                        <li><strong>Application:</strong> Apply on GST Portal</li>
+                        <li><strong>Verification:</strong> Details verified</li>
+                        <li><strong>GSTIN Issuance:</strong> Unique GSTIN issued</li>
+                    </ol>
+                </div>
+
+                <div *ngSwitchCase="'h4'">
+                    <h2>GST Registration Fees</h2>
+                    <p>Generally free; professional fees may apply</p>
+                </div>
+
+                <div *ngSwitchCase="'h5'">
+                    <h2>Documents Required for GST Registration</h2>
+                    <ul>
+                        <li>PAN card</li>
+                        <li>Address proof</li>
+                        <li>Bank details</li>
+                    </ul>
+                </div>
+
+                <div *ngSwitchCase="'h6'">
+                    <h2>GSTIN</h2>
+                    <p>GSTIN is a 15-digit unique number, like 11AAAAA0000A1Z5...</p>
+                </div>
+
+                <div *ngSwitchCase="'h7'">
+                    <h2>GST Registration Certificate</h2>
+                    <p>This is proof of GST registration...</p>
+                </div>
+
+                <div *ngSwitchCase="'h8'">
+                    <h2>Penalty for Not Obtaining GST Registration</h2>
+                    <ul>
+                        <li>Penalty ₹10,000 or 10% of tax due</li>
+                        <li>Additional fines if tax is unpaid</li>
+                    </ul>
+                </div>
+
+            </ng-container>
+        </div>
+    </div>
+
+
+    <!-- <div id="TOC_side" class="toc-container flex-shrink-0 w-1/4 p-4">
+        <div class="tocHeading pb-2 text-s-24 md:text-s-18 font-bold sm:hidden sticky top-0 bg-white">
+            Index
+        </div>
+        <div class="TOC_index_Desktop TOC_index max-h-[475px] overflow-auto pr-4">
+            <ul>
+                <li class="activeIndex" title="What is GST Registration">
+                    <a class="tocAnchorTag h0" href="#h0" data-toc-index="#h0">What is GST Registration</a>
+                </li>
+                <li title="Who should obtain the GST registration?">
+                    <a class="tocAnchorTag h1" href="#h1" data-toc-index="#h1">Who should obtain the GST
+                        registration?</a>
+                </li>
+                <li title="Benefits of GST registration">
+                    <a class="tocAnchorTag h2" href="#h2" data-toc-index="#h2">Benefits of GST registration</a>
+                </li>
+                <li title="All about the GST registration process">
+                    <a class="tocAnchorTag h3" href="#h3" data-toc-index="#h3">All about the GST registration
+                        process</a>
+                </li>
+                <li title="GST Registration Fees">
+                    <a class="tocAnchorTag h4" href="#h4" data-toc-index="#h4">GST Registration Fees</a>
+                </li>
+                <li title="Documents Required for GST Registration">
+                    <a class="tocAnchorTag h5" href="#h5" data-toc-index="#h5">Documents Required for GST
+                        Registration</a>
+                </li>
+                <li title="GSTIN">
+                    <a class="tocAnchorTag h6" href="#h6" data-toc-index="#h6">GSTIN</a>
+                </li>
+                <li title="GST Registration Certificate">
+                    <a class="tocAnchorTag h7" href="#h7" data-toc-index="#h7">GST Registration Certificate</a>
+                </li>
+                <li title="Penalty for not obtaining GST registration">
+                    <a class="tocAnchorTag h8" href="#h8" data-toc-index="#h8">Penalty for not obtaining GST
+                        registration</a>
+                </li>
+                <li title="Frequently Asked Questions">
+                    <a class="tocAnchorTag h9" href="#h9" data-toc-index="#h9">Frequently Asked Questions</a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+
+    <!-- Content Section between the two columns -->
+    <div class="content-betweenn flex-grow overflow-auto p-4">
+        <h2 id="h0">What is a Partnership Agreement?</h2>
+        <p>
+            A Partnership Agreement is a contract between two or more business partners. The partners use the agreement
+            to outline their rights, responsibilities, and profit and loss distribution. The agreement also sets general
+            partnership rules, like withdrawals, capital contributions, and financial reporting. LawDepot's template
+            allows you to create a general partnership agreement.
+
+            A general partnership involves two or more general partners who have formed a business for profit. Each
+            partner is equally liable for the debts and obligations of the company and the actions of the other
+            partner(s).
+
+            A partner doesn’t need to be an individual. They can also be a corporation or another business entity.
+            Specifying a partner’s legal status is important because it can have tax implications.
+        </p>
+
+        <h2 id="h1">Who needs a Partnership Agreement?</h2>
+
+        <h1> Less compliances </h1>
+
+        <ul>
+            <li>
+                Any two or more people who run a for-profit business together, including family, spouses, friends, or
+                colleagues, should have a Partnership Agreement.
+
+                A Partnership Agreement sets out guidelines and rules for business partners to follow to avoid
+                disagreements or issues in the future.</li>
+            <h1> Control of the business </h1>
+            <li>The sole proprietor will have complete control over the business. He will look after all the aspects of
+                the business. Since only one person is running the business, secrecy can be maintained.</li>
+            <h1>Quick decision making</h1>
+            <li>The sole proprietor takes all decisions of the business. The decision making rests with a single person.
+                Thus, the decisions can be taken quickly and immediately without the need for consulting anyone.</li>
+        </ul>
+
+        <h2 id="h2">Why is having a Partnership Agreement valuable?</h2>
+        <p>
+            Unlimited liability
+        </p>
+        <ul>
+            <li><strong>Unlimited liability
+                    :</strong>There is an unlimited liability on the sole proprietor. He is personally liable for all
+                the transactions he enters in the business. If any loss occurs, he will have to bear the whole loss out
+                of his personal estate.</li>
+            <li><strong>Difficult to raise funds:</strong> This contract is valuable because it sets out each partner's
+                rights and responsibilities. Further, it allows the partners to customize the law as it applies to their
+                partnership.
+
+                Although it's perfectly legal not to have a Partnership Agreement, they come with their advantages.
+                Without an agreement in place, your business is subject to the standard statutes on partnerships in your
+                state. In the United States, 37 states follow the Revised Uniform Partnership Act, and it might have
+                provisions that aren't suitable for your particular partnership or business. By creating your own
+                agreement, you take control of the specifics and customize the applicable law to suit your company
+                perfectly.
+
+                For example, a partner leaving the company will cause the dissolution (or end) of the partnership in
+                some states. With a customized Partnership Agreement, you can include clauses to ensure the default rule
+                doesn't apply to your partnership. Instead, you can make it possible for the remaining partners to buy
+                out the exiting partner's interest in the partnership.</li>
+            <li><strong>Expansion Opportunities:</strong> GST registration enables you to expand your business beyond
+                state borders, facilitating inter-state trade.</li>
+            <li><strong>Boosts Business Credibility:</strong> Registered businesses gain more trust among customers,
+                suppliers, and financial institutions.</li>
+        </ul>
+
+        <h2 id="h3">What should I include in a Partnership Agreement?</h2>
+        <p>
+        lawyer partnership 
+        </p>
+        <ol>
+            <li><strong>Capital contributions:</strong> Profit and loss distribution</li>
+            <li><strong>Verification:</strong> Before you begin creating your Partnership Agreement, there are some crucial details about the partnership to sort out with your partners.
+
+                Have details regarding the following topics on hand when creating your document:</li>
+            <li><strong>Management and voting:</strong> Partnership tax elections </li>
+            <li><strong>Partnership withdrawal:</strong> Partnership dissolution </li>
+        </ol>
+
+        <h2 id="h4">How do I create a Partnership Agreement?</h2>
+        <p>
+            The procedure for incorporating a sole proprietorship firm is-
+        </p>
+        <p>
+            Provide partnership details
+        </p>
+        <p>
+            Entertainment and recreation
+        </p>
+        <p>
+            Transportation and logistics
+        </p>
+        <p>
+            Farming and agriculture
+        </p>
+        <p>
+            Construction and repair
+        </p>
+        <p>
+            Professional services
+        </p>
+        <p>
+            Business relationships are complex and require meaningful consideration. In fact, you might draft several versions of a contract before the partners finally agree to sign.
+
+            To help you cover all the bases, we’ve broken down this process into five easily digestible sections so you can create your Partnership Agreement at your own pace. 
+            
+            While our questionnaire walks you through these sections step-by-step, here’s a rough outline of the information you’ll need to prepare.
+        </p>
+        <p>
+            The next step is to open a bank account in the name of the business. All the transactions of the business
+            will be through this bank account.
+        </p>
+        <p>
+            Though no specific registration is required for starting a sole proprietorship firm, certain basic
+            registrations are required to be obtained by a sole proprietorship firm for doing business. The basic
+            registrations required by a sole proprietorship are-
+        </p>
+        <p>
+            The proprietor needs to obtain the Registration Certificate under the Shops and Establishment Act of the
+            state in which the business is located.
+        </p>
+        <p>
+            The sole proprietorship should also register for GST if the business turnover exceeds Rs.20 lakh.
+        </p>
+
+        <h2 id="h5">Can I change or modify a Partnership Agreement?</h2>
+        <p>
+            Yes, it’s sometimes necessary to update the partnership agreement. A Partnership Agreement can be changed or modified at any time with the unanimous agreement of the partners.
+        </p>
+        <ul>
+            <li>Aadhaar card.</li>
+            <li>PAN card.</li>
+            <li>Bank account details and a canceled cheque.</li>
+            <li>Registered office proof.</li>
+            <li>Bank account.</li>
+        </ul>
+
+        <h2 id="h6">What are the Compliances required?</h2>
+        <p>
+            As a sole proprietor, you must file Income Tax Return annually. Also, you need to file your GST Return if
+            you are registered under GST. A sole proprietor should also deduct TDS and file TDS return if liable for Tax
+            Audit.
+        </p>
+        <p>
+            Timelines for Sole Proprietorship Registration: <strong>11AAAAA0000A1Z5</strong>, where:
+        </p>
+        <ul>
+            The Sole Proprietorship requires obtaining a PAN card for a proprietor, opening a bank account in the name
+            of the business, a Certificate of Registration under the Shop and Establishment Act of the respective state
+            and GST Registration. The registration process takes approximately 10 days, subject to departmental approval
+            and reverts from the respective department.
+        </ul>
+
+        <h2 id="h7">GST Registration Certificate</h2>
+        <p>
+            After successful registration, businesses receive a GST Registration Certificate, which contains the GSTIN
+            and other business details. This certificate must be displayed at the place of business.
+        </p>
+        <p>
+            The certificate is an official document proving that the business is registered under the Goods and Services
+            Tax Act and is authorized to collect tax from customers.
+        </p>
+
+        <h2 id="h8">Penalty for Not Obtaining GST Registration</h2>
+        <p>
+            If a business fails to obtain GST registration when required, it may face severe penalties:
+        </p>
+        <ul>
+            <li>A penalty ranging from ₹10,000 to ₹1,00,000.</li>
+            <li>Additional penalties can apply for failure to pay the tax owed under GST.</li>
+        </ul>
+
+        <!-- <h2 id="h9">Frequently Asked Questions (FAQs)</h2>
+    <p><strong>Q1: Is GST registration mandatory for all businesses?</strong></p>
+    <p>
+      No, GST registration is mandatory only if your business exceeds the prescribed turnover threshold limit or if you are involved in inter-state supply.
+    </p>
+  
+    <p><strong>Q2: Can I cancel my GST registration?</strong></p>
+    <p>
+      Yes, you can apply for GST cancellation if you no longer meet the requirements for registration or if you stop doing business. The cancellation process must be completed through the GST portal.
+    </p> -->
+    </div>
+
+
+    <!-- GST Registration Form Section (right side) -->
+    <!-- <div class="form-containerr w-1/3 p-4">
+        <h2>GST Registration Form</h2>
+        <form [formGroup]="gstForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="businessName">Business Name:</label>
+                <input id="businessName" formControlName="businessName" />
+                <div *ngIf="gstForm.get('businessName')?.touched && gstForm.get('businessName')?.invalid">
+                    <small class="error">Business Name is required.</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="businessType">Business Type:</label>
+                <input id="businessType" formControlName="businessType" />
+                <div *ngIf="gstForm.get('businessType')?.touched && gstForm.get('businessType')?.invalid">
+                    <small class="error">Business Type is required.</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="annualTurnover">Annual Turnover:</label>
+                <input id="annualTurnover" formControlName="annualTurnover" />
+                <div *ngIf="gstForm.get('annualTurnover')?.touched && gstForm.get('annualTurnover')?.invalid">
+                    <small class="error">Annual Turnover is required and must be a number.</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="gstin">GSTIN (Optional):</label>
+                <input id="gstin" formControlName="gstin" />
+                <div *ngIf="gstForm.get('gstin')?.touched && gstForm.get('gstin')?.invalid">
+                    <small class="error">GSTIN must be a 15-digit number.</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Business Address:</label>
+                <textarea id="address" formControlName="address"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="contactPerson">Contact Person:</label>
+                <input id="contactPerson" formControlName="contactPerson" />
+            </div>
+
+            <div class="form-group">
+                <label for="contactEmail">Contact Email:</label>
+                <input id="contactEmail" formControlName="contactEmail" />
+                <div *ngIf="gstForm.get('contactEmail')?.touched && gstForm.get('contactEmail')?.invalid">
+                    <small class="error">Please enter a valid email.</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="contactPhone">Contact Phone:</label>
+                <input id="contactPhone" formControlName="contactPhone" />
+                <div *ngIf="gstForm.get('contactPhone')?.touched && gstForm.get('contactPhone')?.invalid">
+                    <small class="error">Contact Phone is required and must be a 10-digit number.</small>
+                </div>
+            </div>
+
+            <button type="submit" [disabled]="gstForm.invalid">Submit</button>
+        </form>
+    </div> -->
+</div>
+
+
+
+
+<!-- 3rd section  -->
+
+
+
+
+<section class="how-it-works-section">
+    <div class="container text-xs-center">
+      <h2 class="section-title">Create an invoice and send it to your client.</h2>
+  
+      <!-- Flex container for horizontal layout -->
+      <div class="steps-wrapper">
+        <!-- Step 1 -->
+        <div class="step">
+          <div class="image-wrapper">
+            <img src="https://wise.com/imaginary-v2/images/04ab9b595f7b196aaafc843cc415c527-create-invoice.png" alt="Create your invoice">
+          </div>
+          <h3>Create your invoice</h3>
+          <p>If you handle your own invoicing as an entrepreneur or small business owner, you can create invoices simply, using our downloadable free invoice templates.</p>
+        </div>
+  
+        <!-- Step 2 -->
+        <div class="step">
+          <div class="image-wrapper">
+            <img src="https://wise.com/imaginary-v2/images/e5b2b811c38ecfaf7cf531f54c83b203-send-invoice.png" alt="Send your invoice">
+          </div>
+          <h3>Send your invoice</h3>
+          <p>Send your invoice online for faster payment, using your choice of Word, Google Docs, Excel, Google Sheets or PDF formats.</p>
+        </div>
+  
+        <!-- Step 3 -->
+        <div class="step">
+          <div class="image-wrapper">
+            <img src="https://wise.com/imaginary-v2/images/3b8bb31e8cff47daafb700f9214cbad9-get-paid.png" alt="Send money with Wise">
+          </div>
+          <h3>Send money with Wise</h3>
+          <p><a href="https://wise.com/register/">Open a Wise account</a> online and make international payments just like a local.</p>
+        </div>
+      </div>
+  
+      <div class="cta">
+        <a class="btn-primary" href="#download-template">Create my free invoice</a>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+  <!-- 4rth section  -->
+
+
+
+  <div class="elementor-section elementor-top-section elementor-element elementor-element-c33ba44 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+  data-id="c33ba44" data-element_type="section" data-settings='{"background_background":"classic"}'>
+  <div class="elementor-container elementor-column-gap-default">
+    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-07311eb"
+      data-id="07311eb" data-element_type="column">
+      <div class="elementor-widget-wrap elementor-element-populated">
+        <div class="elementor-element elementor-element-5d5192f elementor-widget elementor-widget-text-editor"
+          data-id="5d5192f" data-element_type="widget" data-widget_type="text-editor.default">
+          <div class="elementor-widget-container">
+            <p>Goods and Services Tax (GST) has revolutionized the taxation system in India, replacing multiple indirect
+              taxes with a unified tax structure. Under GST, businesses are required to issue invoices that comply with
+              GST regulations. A GST invoice contains specific details such as GSTIN (Goods and Services Tax
+              Identification Number), customer details, invoice number, GST rates, and more.</p>
+            <p><strong>Importance of GST Invoice Formats</strong></p>
+            <p>Compliance with GST invoice formats is crucial for businesses to claim Input Tax Credit (ITC) and ensure
+              smooth transactions with suppliers and customers. Using standardized GST invoice templates not only
+              simplifies invoicing but also helps in maintaining accurate records for tax purposes.</p>
+            <p><strong>Key Components of a GST Invoice</strong></p>
+            <ol>
+              <li><strong>GSTIN</strong>: Your business’s GST Identification Number is a unique identifier required on
+                all GST invoices.</li>
+              <li><strong>Invoice Number and Date</strong>: Each invoice should have a unique serial number and the
+                date of issue.</li>
+              <li><strong>Customer Details</strong>: Name, address, and GSTIN (if registered) of the customer.</li>
+              <li><strong>Supplier Details</strong>: Your business name, address, and GSTIN.</li>
+              <li><strong>Description of Goods/Services</strong>: Clear and detailed description of goods or services
+                supplied.</li>
+              <li><strong>HSN/SAC Codes</strong>: Harmonized System of Nomenclature (HSN) for goods and Services
+                Accounting Code (SAC) for services.</li>
+              <li><strong>Quantity, Unit Price, and Total Amount</strong>: Item-wise details including quantity, price
+                per unit, and total amount.</li>
+              <li><strong>GST Details</strong>: Taxable value, GST rate (CGST, SGST/UTGST, IGST), and total GST amount.
+              </li>
+              <li><strong>Place of Supply</strong>: Mention whether the supply is intra-state (within the same state) or
+                inter-state (across different states).</li>
+              <li><strong>Payment Terms</strong>: Terms of payment such as payment due date, discounts, etc.</li>
+            </ol>
+            <p><strong>Types of GST Invoice Formats</strong></p>
+            <ol>
+              <li><strong>Tax Invoice</strong>: Issued for taxable supplies of goods or services.</li>
+              <li><strong>Bill of Supply</strong>: Issued when GST is not applicable or when the supplier is under the
+                composition scheme.</li>
+              <li><strong>Debit Note and Credit Note</strong>: Issued for adjustments in invoices due to corrections,
+                returns, or discounts.</li>
+              <li><strong>Advance Receipt Voucher</strong>: Issued when advance payment is received for future
+                supplies.</li>
+            </ol>
+            <p><strong>GST Invoice Templates</strong></p>
+            <p>Download our GST invoice templates in Word and Excel formats to streamline your invoicing process:</p>
+            <ol>
+              <li><strong>Word GST Invoice Template</strong>: Download Here</li>
+              <li><strong>Excel GST Invoice Template</strong>: Download Here</li>
+            </ol>
+            <p>Our templates are GST-compliant and customizable to suit your business needs. Simply fill in the relevant
+              details and generate professional invoices hassle-free.</p>
+            <p><strong>Benefits of Using GST Invoice Templates</strong></p>
+            <ol>
+              <li><strong>Compliance</strong>: Ensure compliance with GST regulations and claim Input Tax Credit (ITC)
+                accurately.</li>
+              <li><strong>Time-Saving</strong>: Save time by using pre-designed templates with all required fields
+                included.</li>
+              <li><strong>Accuracy</strong>: Reduce errors in invoicing calculations and maintain accurate records.
+              </li>
+              <li><strong>Professionalism</strong>: Impress clients with well-formatted, GST-compliant invoices
+                showcasing your professionalism.</li>
+            </ol>
+            <p><strong>Tips for Using GST Invoice Templates</strong></p>
+            <ol>
+              <li><strong>Regular Updates</strong>: Update your templates regularly to align with any changes in GST
+                regulations.</li>
+              <li><strong>Backup and Security</strong>: Maintain backup copies of invoices securely for future reference
+                and audits.</li>
+              <li><strong>Training</strong>: Train your team on using GST invoice templates correctly to ensure
+                consistency and accuracy.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

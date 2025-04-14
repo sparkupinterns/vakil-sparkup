@@ -14,6 +14,12 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { GstFillingComponent } from './gst-filling/gst-filling.component';
 import { RodtepComponent } from './rodtep/rodtep.component';
+import { ProprietorshipComponent } from './proprietorship/proprietorship.component';
+import { PartnershipComponent } from './partnership/partnership.component';
+import { PvtLtd1CmpnyComponent } from './pvt-ltd1-cmpny/pvt-ltd1-cmpny.component';
+import { Llp1Component } from './llp1/llp1.component';
+import { Opc1Component } from './opc1/opc1.component';
+import { PriceComponent } from './price/price.component';
 
 export const routes: Routes = [
     {
@@ -80,6 +86,30 @@ export const routes: Routes = [
     {
         path: 'signup',
         component: SignupComponent
+    },
+    {
+        path: 'proprietorship',
+        component: ProprietorshipComponent
+    },
+    {
+        path: 'partnership',
+        component: PartnershipComponent
+    },
+    {
+        path: 'pvt-ltd1-company',
+        component: PvtLtd1CmpnyComponent
+    },
+    {
+        path: 'llp1',
+        component: Llp1Component
+    },
+    {
+        path: 'opc1',
+        component: Opc1Component
+    },
+    {
+        path: 'pricing',
+        component: PriceComponent
     }
 ];
 

@@ -1,0 +1,181 @@
+
+.main-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .header-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .header-section h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+  
+  .header-section h1 .highlight {
+    color: #007bff;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .money-back-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .more-info {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .plans-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .plan-card {
+    flex: 1 1 30%;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .plan-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .plan-subtitle {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .price-section {
+    margin-top: 15px;
+  }
+  
+  .cut-price {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .offer-text {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .final-price {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .final-price span {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .emi-note {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .gst-info {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 10px;
+  }
+  
+  .pay-button {
+    margin-top: 15px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .pay-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .benefits {
+    margin-top: 20px;
+  }
+  
+  .benefits-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .benefits ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .benefits li {
+    margin: 5px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .benefits li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: green;
+  }
+  
+  .free-badge {
+    color: #3eb837;
+    border: 1px solid #3eb837;
+    font-size: 13px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    margin-left: 5px;
+  }
+  
+  .popular-badge {
+    background: url('https://assets.vakilsearch.com/mostpopularoffer.svg') no-repeat center;
+    background-size: contain;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 10px;
+    top: -20px;
+  }
+  
+  .footer-note {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Responsive for mobile */
+  @media (max-width: 768px) {
+    .plans-container {
+      flex-direction: column;
+    }
+  
+    .plan-card {
+      flex: 1 1 100%;
+    }
+  
+    .header-section h1 {
+      font-size: 2rem;
+    }
+  }
+  

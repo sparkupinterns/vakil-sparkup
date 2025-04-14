@@ -87,15 +87,15 @@ export class HomeComponent implements OnInit {
   services = [
     {
       icon: 'https://assets.vakilsearch.com/ic-brief-case.svg',
-      title: 'GST Registration',
+      title: 'Start Your Bussiness',
       price: 'Starting at ₹999',
       categories: [
         {
           title: 'Company Registration',
           links: [
-            { name: 'Private Limited Company', link: '#' },
-            { name: 'LLP Registration', link: '#' },
-            { name: 'One Person Company', link: '#' },
+            { name: 'Private Limited Company', link: '/pvt-ltd1-company' },
+            { name: 'LLP Registration', link: '/llp1' },
+            { name: 'One Person Company', link: '/opc1' },
             { name: 'Nidhi Company', link: '#' }
           ]
         },
@@ -110,17 +110,42 @@ export class HomeComponent implements OnInit {
       ]
     },
     {
+      icon: 'https://assets.vakilsearch.com/ic-graph.svg',
+      title: 'GST Registration ',
+      price: 'Starting at ₹999',
+      categories: [
+        {
+          title: 'Legal Documents',
+          links: [
+            { name: 'GST Registration', link: '#' },
+            { name: 'GST Filling', link: '#' },
+            { name: 'GST Cancelation and Revocation', link: '#' },
+            { name: 'Reply to GST Notice', link: '#' },
+            { name: 'Indirect Tax', link: '#' }
+          ]
+        },
+        {
+          title: 'Contract Review',
+          links: [
+            { name: 'Vendor Contract Review', link: '#' },
+            { name: 'Investor Agreement Review', link: '#' }
+          ]
+        }
+      ]
+    },
+    {
       icon: 'https://assets.vakilsearch.com/ic-books.svg',
       title: 'Licences',
-      price: 'Starting at ₹4999',
+      price: 'Starting at ₹999',
       categories: [
         {
           title: 'Accounting & Tax',
           links: [
-            { name: 'GST Filing', link: '#' },
-            { name: 'Income Tax Filing', link: '#' },
-            { name: 'TDS Return', link: '#' },
-            { name: 'Bookkeeping', link: '#' }
+            { name: 'ISO Registration', link: '#' },
+            { name: 'IFSSAI Registration', link: '#' },
+            { name: 'IEC Registration', link: '#' },
+            { name: 'LIQUOR License Registration', link: '#' },
+            { name: 'PSARA Registration', link: '#' },
           ]
         },
         {
@@ -141,9 +166,11 @@ export class HomeComponent implements OnInit {
         {
           title: 'Intellectual Property',
           links: [
-            { name: 'Trademark Registration', link: '#' },
-            { name: 'Copyright', link: '#' },
-            { name: 'Patent Filing', link: '#' }
+            { name: 'Accounting and Book-keeping', link: '#' },
+            { name: 'Annual Compliance', link: '#' },
+            { name: 'TDS Return Filing', link: '#' },
+            { name: 'Income Tax Notice', link: '#' },
+            { name: 'Secretarial Audit', link: '#' }
           ]
         },
         {
@@ -156,28 +183,28 @@ export class HomeComponent implements OnInit {
         }
       ]
     },
-    {
-      icon: 'https://assets.vakilsearch.com/ic-graph.svg',
-      title: 'GST Fillings ',
-      price: 'Starting at ₹4999',
-      categories: [
-        {
-          title: 'Legal Documents',
-          links: [
-            { name: 'Founder’s Agreement', link: '#' },
-            { name: 'Shareholder Agreement', link: '#' },
-            { name: 'Employment Agreement', link: '#' }
-          ]
-        },
-        {
-          title: 'Contract Review',
-          links: [
-            { name: 'Vendor Contract Review', link: '#' },
-            { name: 'Investor Agreement Review', link: '#' }
-          ]
-        }
-      ]
-    },
+    // {
+    //   icon: 'https://assets.vakilsearch.com/ic-graph.svg',
+    //   title: 'GST Fillings ',
+    //   price: 'Starting at ₹4999',
+    //   categories: [
+    //     {
+    //       title: 'Legal Documents',
+    //       links: [
+    //         { name: 'Founder’s Agreement', link: '#' },
+    //         { name: 'Shareholder Agreement', link: '#' },
+    //         { name: 'Employment Agreement', link: '#' }
+    //       ]
+    //     },
+    //     {
+    //       title: 'Contract Review',
+    //       links: [
+    //         { name: 'Vendor Contract Review', link: '#' },
+    //         { name: 'Investor Agreement Review', link: '#' }
+    //       ]
+    //     }
+    //   ]
+    // },
     {
       icon: 'https://assets.vakilsearch.com/ic-license.svg',
       title: 'Web & Branding',
