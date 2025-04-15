@@ -57,7 +57,7 @@
 <div class="container">
   <!-- First Row - Manually provide items 1 to 3 -->
   <div class="row first-row">
-    <a *ngFor="let item of firstRow" [routerLink]="item.link" class="square-card"></a>
+    <a *ngFor="let item of firstRow" [routerLink]="item.link" class="square-cardvi"></a>
     <div class="card" *ngFor="let item of firstRow" [routerLink]="item.link">
       <div class="card-header">
         <h3>{{ item.title }}</h3>
@@ -393,8 +393,8 @@
   </div>
 </section> -->
 
-<div class="container">
-  <h2 class="reviews-heading">Reviews</h2> <!-- 🔥 Added heading here -->
+<div class="containerrs">
+  <h2 class="reviews-headingg">Reviews</h2> <!-- 🔥 Added heading here -->
 
   <div *ngFor="let review of reviews" class="review-card">
     <div class="review-header">
