@@ -1,49 +1,50 @@
 <!-- 1st section  -->
 
+<!-- <input [attr.placeholder]="placeholderText" disabled /> -->
+
+
 <div class="home-wrapper">
   <a target="_blank" href="https://g.co/kgs/Aro7t3m">
-      <div class="rating-section">
-          <img alt="user-image" src="https://assets.vakilsearch.com/ic-user-grp.svg" class="user-img" />
-          <img alt="rating-image" src="https://assets.vakilsearch.com/live-images/ic-rating-star.svg"
-              class="rating-img" />
-              <a href="#" class="rating-text">4.5/5</a>
-              <a href="#" class="rating-text">(18k+ Reviews)</a>
-      </div>
+    <div class="rating-section">
+      <img alt="user-image" src="https://assets.vakilsearch.com/ic-user-grp.svg" class="user-img" />
+      <img alt="rating-image" src="https://assets.vakilsearch.com/live-images/ic-rating-star.svg" class="rating-img" />
+      <a href="#" class="rating-text">4.5/5</a>
+      <a href="#" class="rating-text">(18k+ Reviews)</a>
+    </div>
   </a>
 
   <div class="heading-wrapper">
-      <h1 class="main-heading">
-          India's <span class="highlight">Top Rated </span>Professional Services Platform
-      </h1>
-      <p class="sub-heading">
-          Connecting you with experts to simplify your legal, tax & compliance.
-      </p>
+    <h1 class="main-heading">
+      India's <span class="highlight">Top Rated </span>Professional Services Platform
+    </h1>
+    <p class="sub-heading">
+      Connecting you with experts to simplify your legal, tax & compliance.
+    </p>
   </div>
 
   <div class="search-box-container">
-      <div class="search-box">
-          <input id="autosuggestfor" class="search-input" type="text" placeholder="Enter something here" />
-          <img alt="searchIcon" src="https://assets.vakilsearch.com/live-images/ic-search-blue.svg" />
-      </div>
+    <div class="search-box">
+      <input id="autosuggestfor" class="search-input" type="text" placeholder="Enter something here" />
+      <img alt="searchIcon" src="https://assets.vakilsearch.com/live-images/ic-search-blue.svg" />
+    </div>
   </div>
 
   <div class="service-links">
-      <a href="http/gst-registration">
-          <p>Register your company</p>
-      </a>
-      <a href="htt/company-registration">
-          <p>Company Registration</p>
-      </a>
-      <a href="http-accounting-compliance-service">
-          <p>Accounting & Business Compliance</p>
-      </a>
-      <a href="httptrademark-registration">
-          <p>Trademark</p>
-      </a>
+    <a href="http/gst-registration">
+      <p>Register your company</p>
+    </a>
+    <a href="htt/company-registration">
+      <p>Company Registration</p>
+    </a>
+    <a href="http-accounting-compliance-service">
+      <p>Accounting & Business Compliance</p>
+    </a>
+    <a href="httptrademark-registration">
+      <p>Trademark</p>
+    </a>
   </div>
 
-  <img alt="logo-banner" src="https://assets.vakilsearch.com/live-images/ic-zolvit-logo-gray.png"
-      class="logo-banner" />
+  <img alt="logo-banner" src="https://assets.vakilsearch.com/live-images/ic-zolvit-logo-gray.png" class="logo-banner" />
 </div>
 
 
@@ -53,8 +54,57 @@
 
 
 
+<div class="container">
+  <!-- First Row - Manually provide items 1 to 3 -->
+  <div class="row first-row">
+    <a *ngFor="let item of firstRow" [routerLink]="item.link" class="square-card"></a>
+    <div class="card" *ngFor="let item of firstRow" [routerLink]="item.link">
+      <div class="card-header">
+        <h3>{{ item.title }}</h3>
+      </div>
+      <img [src]="item.image" alt="{{ item.title }}" class="card-image" />
+      <div class="card-body">
+        <p class="name">{{ item.title }}</p>
+        <p class="price">Starting from ₹{{ item.price }}</p>
+      </div>
+    </div>
+  </div>
 
-<div class="services-container">
+  <!-- Second Row - Manually provide items 4 to 6 -->
+  <div class="row">
+    <div class="card" *ngFor="let item of secondRow" [routerLink]="item.link">
+      <div class="card-header">
+        <h3>{{ item.title }}</h3>
+      </div>
+      <img [src]="item.image" alt="{{ item.title }}" class="card-image" />
+      <div class="card-body">
+        <p class="name">{{ item.title }}</p>
+        <p class="price">Starting from ₹{{ item.price }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Third Row - Manually provide items 7 to 9 -->
+  <div class="row">
+    <div class="card" *ngFor="let item of thirdRow" [routerLink]="item.link">
+      <div class="card-header">
+        <h3>{{ item.title }}</h3>
+      </div>
+      <img [src]="item.image" alt="{{ item.title }}" class="card-image" />
+      <div class="card-body">
+        <p class="name">{{ item.title }}</p>
+        <p class="price">Starting from ₹{{ item.price }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <img src="../../../../public/assets/images/web.png" alt=""> -->
+
+
+<!-- <div class="services-container">
   <div class="service-card" *ngFor="let service of services">
       <div class="header">
           <div>
@@ -79,7 +129,7 @@
           </div>
       </div>
   </div>
-</div>
+</div> -->
 
 
 
@@ -94,15 +144,8 @@
   </h2>
 
   <div class="experts-content">
-    <img
-      alt="logo-banner"
-      loading="lazy"
-      width="500"
-      height="500"
-      decoding="async"
-      class="experts-image"
-      src="https://assets.vakilsearch.com/ic-experts_man.svg"
-    />
+    <img alt="logo-banner" loading="lazy" width="500" height="500" decoding="async" class="experts-image"
+      src="https://assets.vakilsearch.com/ic-experts_man.svg" />
 
     <div class="experts-cards">
       <!-- Talk to Lawyer -->
@@ -115,7 +158,8 @@
               Provide legal advice, draft contracts, handle litigation, and offer legal representation.
             </p>
           </div>
-          <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow" class="arrow-icon" />
+          <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow"
+            class="arrow-icon" />
         </div>
       </a>
 
@@ -129,7 +173,8 @@
               Provide financial auditing, taxation advice, and financial planning services.
             </p>
           </div>
-          <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow" class="arrow-icon" />
+          <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow"
+            class="arrow-icon" />
         </div>
       </a>
 
@@ -140,10 +185,12 @@
           <div class="expert-text">
             <p class="expert-title">Talk to Company Secretary</p>
             <p class="expert-desc">
-              Advisory on corporate governance, regulatory compliance, and secretarial services for businesses and enterprises.
+              Advisory on corporate governance, regulatory compliance, and secretarial services for businesses and
+              enterprises.
             </p>
           </div>
-          <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow" class="arrow-icon" />
+          <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow"
+            class="arrow-icon" />
         </div>
       </a>
 
@@ -157,7 +204,8 @@
               Assist with trademarks, copyrights, patents, and intellectual property rights enforcement and protection.
             </p>
           </div>
-          <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow" class="arrow-icon" />
+          <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow"
+            class="arrow-icon" />
         </div>
       </a>
     </div>
@@ -180,10 +228,12 @@
       <img src="https://assets.vakilsearch.com/live-images/ic-oyo.svg" alt="OYO Logo" width="78" height="27" />
     </div>
     <div class="logo-card">
-      <img src="https://assets.vakilsearch.com/live-images/ic-small-swiggy.svg" alt="Swiggy Logo" width="91" height="27" />
+      <img src="https://assets.vakilsearch.com/live-images/ic-small-swiggy.svg" alt="Swiggy Logo" width="91"
+        height="27" />
     </div>
     <div class="logo-card">
-      <img src="https://assets.vakilsearch.com/live-images/ic-bigbasket.svg" alt="BigBasket Logo" width="124" height="27" />
+      <img src="https://assets.vakilsearch.com/live-images/ic-bigbasket.svg" alt="BigBasket Logo" width="124"
+        height="27" />
     </div>
     <div class="logo-card">
       <img src="https://assets.vakilsearch.com/live-images/ic-hdfc.svg" alt="HDFC Logo" width="162" height="27" />
@@ -209,23 +259,31 @@
   <div class="product-suite-cards">
     <!-- Libra Card -->
     <div class="card card-libra">
-      <img src="https://assets.vakilsearch.com/live-images/ic-libra-logo.svg" alt="Libra Logo" width="148" height="26" />
+      <img src="https://assets.vakilsearch.com/live-images/ic-libra-logo.svg" alt="Libra Logo" width="148"
+        height="26" />
       <div class="card-title">AI-powered case alerts & research for your legal practice</div>
       <div class="feature">
-        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24" height="24" />
-        <p><b>Hearings:</b> Get instant court notifications, including case number and room details, with just one click.</p>
+        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24"
+          height="24" />
+        <p><b>Hearings:</b> Get instant court notifications, including case number and room details, with just one
+          click.</p>
       </div>
       <div class="feature">
-        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24" height="24" />
-        <p><b>Judgements:</b> Access over 5 million judgments quickly by searching keywords, citations, parties, or judges.</p>
+        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24"
+          height="24" />
+        <p><b>Judgements:</b> Access over 5 million judgments quickly by searching keywords, citations, parties, or
+          judges.</p>
       </div>
       <div class="feature">
-        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24" height="24" />
+        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24"
+          height="24" />
         <p><b>Display Board:</b> Stay updated on daily item numbers with our live display board.</p>
       </div>
       <div class="feature">
-        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24" height="24" />
-        <p><b>Case Alerts:</b> Stay ahead in your legal strategy with real-time case updates from India's largest case directory.</p>
+        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24"
+          height="24" />
+        <p><b>Case Alerts:</b> Stay ahead in your legal strategy with real-time case updates from India's largest case
+          directory.</p>
       </div>
       <div class="card-image">
         <img src="https://assets.vakilsearch.com/live-images/libra-demo-banner.png" alt="Libra Demo Banner" />
@@ -234,27 +292,33 @@
 
     <!-- Zolvit Card -->
     <div class="card card-zolvit">
-      <img src="https://assets.vakilsearch.com/live-images/ic-zolvit-logo.svg" alt="Zolvit Logo" width="148" height="26" />
+      <img src="https://assets.vakilsearch.com/live-images/ic-zolvit-logo.svg" alt="Zolvit Logo" width="148"
+        height="26" />
       <div class="card-title white-text">A complete overview of your business</div>
       <div class="feature">
-        <img src="https://assets.vakilsearch.com/live-images/ic-white-round-tick.svg" alt="tick" width="24" height="24" />
+        <img src="https://assets.vakilsearch.com/live-images/ic-white-round-tick.svg" alt="tick" width="24"
+          height="24" />
         <p><b>Unified Dashboard:</b> Compliance to legal, all in one place.</p>
       </div>
       <div class="feature">
-        <img src="https://assets.vakilsearch.com/live-images/ic-white-round-tick.svg" alt="tick" width="24" height="24" />
+        <img src="https://assets.vakilsearch.com/live-images/ic-white-round-tick.svg" alt="tick" width="24"
+          height="24" />
         <p>Expert lawyer + CA + CS in your pocket!</p>
       </div>
       <div class="feature">
-        <img src="https://assets.vakilsearch.com/live-images/ic-white-round-tick.svg" alt="tick" width="24" height="24" />
+        <img src="https://assets.vakilsearch.com/live-images/ic-white-round-tick.svg" alt="tick" width="24"
+          height="24" />
         <p><b>Automatic Compliance Reminder:</b> Stay aligned with regulations.</p>
       </div>
       <div class="feature">
-        <img src="https://assets.vakilsearch.com/live-images/ic-white-round-tick.svg" alt="tick" width="24" height="24" />
+        <img src="https://assets.vakilsearch.com/live-images/ic-white-round-tick.svg" alt="tick" width="24"
+          height="24" />
         <p><b>Efficient Compliance Tracking:</b> Automated monitoring and reminders for regulatory alignment.</p>
       </div>
       <div class="explore-now">
         <p>EXPLORE NOW</p>
-        <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow" width="8" height="4" />
+        <img src="https://assets.vakilsearch.com/live-images/ic-right-arrow-black.svg" alt="arrow" width="8"
+          height="4" />
       </div>
       <div class="card-image">
         <img src="https://assets.vakilsearch.com/live-images/zolvit-demo-banner.png" alt="Zolvit Demo Banner" />
@@ -276,39 +340,23 @@
         Security, Confidentiality &amp; Results
       </p>
       <div class="security-icon">
-        <img
-          src="https://assets.vakilsearch.com/ic-security-shield.svg"
-          alt="Security, Confidentiality & Results"
-          width="151"
-          height="157"
-        />
+        <img src="https://assets.vakilsearch.com/ic-security-shield.svg" alt="Security, Confidentiality & Results"
+          width="151" height="157" />
       </div>
       <div class="security-features">
         <div class="feature-item">
-          <img
-            src="https://assets.vakilsearch.com/live-images/ic-yellow-round-tick.svg"
-            alt="tick"
-            width="26"
-            height="26"
-          />
+          <img src="https://assets.vakilsearch.com/live-images/ic-yellow-round-tick.svg" alt="tick" width="26"
+            height="26" />
           <p>Operate with discretion and professionalism.</p>
         </div>
         <div class="feature-item">
-          <img
-            src="https://assets.vakilsearch.com/live-images/ic-yellow-round-tick.svg"
-            alt="tick"
-            width="26"
-            height="26"
-          />
+          <img src="https://assets.vakilsearch.com/live-images/ic-yellow-round-tick.svg" alt="tick" width="26"
+            height="26" />
           <p>Ensure timely delivery with quick turnaround.</p>
         </div>
         <div class="feature-item">
-          <img
-            src="https://assets.vakilsearch.com/live-images/ic-yellow-round-tick.svg"
-            alt="tick"
-            width="26"
-            height="26"
-          />
+          <img src="https://assets.vakilsearch.com/live-images/ic-yellow-round-tick.svg" alt="tick" width="26"
+            height="26" />
           <p>Deliver accurate and reliable results consistently.</p>
         </div>
       </div>
@@ -373,7 +421,8 @@
 
 <div class="feature-section">
   <div class="image-container">
-    <img alt="feature_image" class="image-large" src="https://assets.vakilsearch.com/mob_metrics.svg" loading="lazy" width="600" height="600" decoding="async">
+    <img alt="feature_image" class="image-large" src="https://assets.vakilsearch.com/mob_metrics.svg" loading="lazy"
+      width="600" height="600" decoding="async">
     <!-- <img alt="feature_image" class="image-small" src="https://assets.vakilsearch.com/live-images/web-metrics.svg" loading="lazy" width="300" height="300" decoding="async"> -->
   </div>
 
@@ -383,7 +432,9 @@
     <div class="features">
       <div class="feature-item">
         <div class="icon">
-          <img alt="feature_image" class="feature-icon" src="https://assets.vakilsearch.com/live-images/ic-feature-2.svg" loading="lazy" width="30" height="30" decoding="async">
+          <img alt="feature_image" class="feature-icon"
+            src="https://assets.vakilsearch.com/live-images/ic-feature-2.svg" loading="lazy" width="30" height="30"
+            decoding="async">
         </div>
         <div class="feature-text">
           <p class="feature-title">Affordable Professional Services</p>
@@ -393,17 +444,22 @@
 
       <div class="feature-item">
         <div class="icon">
-          <img alt="feature_image" class="feature-icon" src="https://assets.vakilsearch.com/live-images/ic-feature-1.svg" loading="lazy" width="30" height="30" decoding="async">
+          <img alt="feature_image" class="feature-icon"
+            src="https://assets.vakilsearch.com/live-images/ic-feature-1.svg" loading="lazy" width="30" height="30"
+            decoding="async">
         </div>
         <div class="feature-text">
           <p class="feature-title">Diverse Expert Network</p>
-          <p class="feature-description">Talk to lawyers, chartered accountants (CAs), and company secretaries (CSs) to meet your legal and financial needs.</p>
+          <p class="feature-description">Talk to lawyers, chartered accountants (CAs), and company secretaries (CSs) to
+            meet your legal and financial needs.</p>
         </div>
       </div>
 
       <div class="feature-item">
         <div class="icon">
-          <img alt="feature_image" class="feature-icon" src="https://assets.vakilsearch.com/live-images/ic-feature-3.svg" loading="lazy" width="30" height="30" decoding="async">
+          <img alt="feature_image" class="feature-icon"
+            src="https://assets.vakilsearch.com/live-images/ic-feature-3.svg" loading="lazy" width="30" height="30"
+            decoding="async">
         </div>
         <div class="feature-text">
           <p class="feature-title">Easy-to-use dashboard</p>
@@ -413,7 +469,9 @@
 
       <div class="feature-item">
         <div class="icon">
-          <img alt="feature_image" class="feature-icon" src="https://assets.vakilsearch.com/live-images/ic-feature-4.svg" loading="lazy" width="30" height="30" decoding="async">
+          <img alt="feature_image" class="feature-icon"
+            src="https://assets.vakilsearch.com/live-images/ic-feature-4.svg" loading="lazy" width="30" height="30"
+            decoding="async">
         </div>
         <div class="feature-text">
           <p class="feature-title">Quick Customer Support</p>
@@ -434,9 +492,10 @@
   <div class="content-wrapper">
     <div class="text-content">
       <p class="heading">Starting a Business and Confused Where to Begin?</p>
-      <p class="sub-heading">At Vakilsearch, we take care of <b>A</b>ccounting, <b>B</b>usiness, <b>C</b>ompliance, and handle end-to-end solutions.</p>
+      <p class="sub-heading">At Vakilsearch, we take care of <b>A</b>ccounting, <b>B</b>usiness, <b>C</b>ompliance, and
+        handle end-to-end solutions.</p>
       <a class="get-started-button" href="https://vakilsearch.com/company-registration/private-limited">
-        <p class="button-text">Get Started</p>
+        <p class="button-text" routerlink="/contact-us">Get Started</p>
       </a>
     </div>
     <img alt="icon" class="icon-image" src="https://assets.vakilsearch.com/ic-women.svg" />
@@ -452,23 +511,30 @@
 <div class="vision-container">
   <p class="heading">Validated Vision, Exceptional Results</p>
   <p class="subheading">
-    Pioneering the industry for over a decade, we equip businesses with affordable resources and expert guidance to meet their goals. Backed by visionary investors, we have the foundation to continuously innovate and deliver exactly what businesses need to succeed.
+    Pioneering the industry for over a decade, we equip businesses with affordable resources and expert guidance to meet
+    their goals. Backed by visionary investors, we have the foundation to continuously innovate and deliver exactly what
+    businesses need to succeed.
   </p>
   <div class="image-wrapper">
     <div class="image-item">
-      <img alt="vision icon" loading="lazy" width="72" height="36" src="https://assets.vakilsearch.com/live-images/ic-incorpp.svg">
+      <img alt="vision icon" loading="lazy" width="72" height="36"
+        src="https://assets.vakilsearch.com/live-images/ic-incorpp.svg">
     </div>
     <div class="image-item">
-      <img alt="vision icon" loading="lazy" width="70" height="36" src="https://assets.vakilsearch.com/live-images/ic-m2.svg">
+      <img alt="vision icon" loading="lazy" width="70" height="36"
+        src="https://assets.vakilsearch.com/live-images/ic-m2.svg">
     </div>
     <div class="image-item">
-      <img alt="vision icon" loading="lazy" width="77" height="42" src="https://assets.vakilsearch.com/live-images/ic-kalaari-capital.svg">
+      <img alt="vision icon" loading="lazy" width="77" height="42"
+        src="https://assets.vakilsearch.com/live-images/ic-kalaari-capital.svg">
     </div>
     <div class="image-item">
-      <img alt="vision icon" loading="lazy" width="143" height="36" src="https://assets.vakilsearch.com/live-images/ic-maatrum.svg">
+      <img alt="vision icon" loading="lazy" width="143" height="36"
+        src="https://assets.vakilsearch.com/live-images/ic-maatrum.svg">
     </div>
     <div class="image-item">
-      <img alt="vision icon" loading="lazy" width="98" height="36" src="https://assets.vakilsearch.com/live-images/ic-chugh.svg">
+      <img alt="vision icon" loading="lazy" width="98" height="36"
+        src="https://assets.vakilsearch.com/live-images/ic-chugh.svg">
     </div>
   </div>
 </div>
@@ -487,7 +553,8 @@
     <div><img alt="vision icon" src="https://assets.vakilsearch.com/ic-forbes.svg" width="100" height="36"></div>
     <div><img alt="vision icon" src="https://assets.vakilsearch.com/ic-the-financial.svg" width="98" height="42"></div>
     <div><img alt="vision icon" src="https://assets.vakilsearch.com/ic-business-line.svg" width="143" height="36"></div>
-    <div><img alt="vision icon" src="https://assets.vakilsearch.com/live-images/ic-your-story.svg" width="98" height="36"></div>
+    <div><img alt="vision icon" src="https://assets.vakilsearch.com/live-images/ic-your-story.svg" width="98"
+        height="36"></div>
   </div>
 </div>
 
@@ -501,27 +568,29 @@
 <div class="blog-list-container">
   <div class="blog-item">
     <div class="blog-image-container">
-      <img src="https://vakilsearch.com/blog/wp-content/uploads/2024/03/impact-of-gst-on-e-commerce.webp" loading="lazy" alt="blogs icon">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNMTlIVsUPtZ3k_7OocCHrh7S_MJnMIqhWJQ&s"
+        loading="lazy" alt="blogs icon">
     </div>
     <div class="blog-content">
       <p class="blog-title">GST Impact on E-Commerce Marketplace Sellers</p>
       <div class="blog-description">
         <p>In the dynamic world of e-commerce, GST (Goods and Services Tax) has …</p>
       </div>
-      <a class="read-more-link" href="https://vakilsearch.com/blog/impact-of-gst-on-e-commerce-marketplace-sellers/">Read More</a>
+      <a class="read-more-link" href="https://tplace-sellers/">Read More</a>
     </div>
   </div>
 
   <div class="blog-item">
     <div class="blog-image-container">
-      <img src="https://vakilsearch.com/blog/wp-content/uploads/2025/03/gst-on-used-cars-electic-commercial-vehicles.webp" loading="lazy" alt="blogs icon">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_rPxoSnMx7X3lAsY5ey_7MemMyYxi6L72xg&s"
+        loading="lazy" alt="blogs icon">
     </div>
     <div class="blog-content">
       <p class="blog-title">GST on Used Cars & Electric Vehicles (EVs), Commercial Vehicles in India</p>
       <div class="blog-description">
         <p>Navigating the Goods and Services Tax (GST) landscape can be daunting, especially …</p>
       </div>
-      <a class="read-more-link" href="https://vakilsearch.com/blog/gst-on-cars-electric-commercial-vehicles/">Read More</a>
+      <a class="read-more-link" href="https:cles/">Read More</a>
     </div>
   </div>
 </div>

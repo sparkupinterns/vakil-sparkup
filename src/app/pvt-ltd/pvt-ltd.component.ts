@@ -81,4 +81,6 @@ export class PvtLtdComponent {
 
     requestAnimationFrame(moveSlider);
   }
+
+  
 }

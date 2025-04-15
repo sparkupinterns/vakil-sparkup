@@ -1,0 +1,8 @@
+<div class="card-grid">
+    <a *ngFor="let item of items" [routerLink]="item.link" class="square-card">
+      <img [src]="item.image" alt="{{ item.title }}" class="card-image" />
+      <h3 class="card-title">{{ item.title }}</h3>
+      <p class="card-price">₹{{ item.price }}</p>
+    </a>
+  </div>
+  

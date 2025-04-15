@@ -20,6 +20,8 @@ import { PvtLtd1CmpnyComponent } from './pvt-ltd1-cmpny/pvt-ltd1-cmpny.component
 import { Llp1Component } from './llp1/llp1.component';
 import { Opc1Component } from './opc1/opc1.component';
 import { PriceComponent } from './price/price.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CardComponent } from './card/card.component';
 
 export const routes: Routes = [
     {
@@ -110,6 +112,14 @@ export const routes: Routes = [
     {
         path: 'pricing',
         component: PriceComponent
+    },
+    {
+        path: 'contact-us',
+        component: ContactUsComponent
+    },
+    {
+        path: 'cards',
+        component: CardComponent
     }
 ];
 

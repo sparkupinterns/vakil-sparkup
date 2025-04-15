@@ -1,0 +1,41 @@
+
+
+<div class="background-container">
+    <!-- Your content here -->
+    <h1>Welcome to Our Customer Care</h1>
+    <!-- <p>Feel free to reach out to us for any inquiries!</p> -->
+  </div>
+  
+
+  
+
+  <div class="contact-wrapper">
+    <div class="image-side">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgs9z9EBZKV0IpULxPzBIbCPOxdhRf3Ak1lQ&s" alt="Call Lawyer">
+    </div>
+    <div class="form-side">
+      <h2>Speak to a Lawyer</h2>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="input-group" *ngFor="let field of [
+          { name: 'fullName', label: 'Full Name', type: 'text' },
+          { name: 'email', label: 'Email Address', type: 'email' },
+          { name: 'phone', label: 'Phone Number', type: 'tel' }
+        ]">
+          <input 
+            [type]="field.type" 
+            [formControlName]="field.name" 
+            required
+          />
+          <label>{{ field.label }}</label>
+        </div>
+  
+        <div class="input-group">
+          <textarea formControlName="message" required></textarea>
+          <label>Your Message</label>
+        </div>
+  
+        <button type="submit" [disabled]="!contactForm.valid">Send Message</button>
+      </form>
+    </div>
+  </div>
+  

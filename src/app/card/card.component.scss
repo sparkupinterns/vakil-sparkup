@@ -1,0 +1,61 @@
+/* Ensuring a neat 3x3 grid with equal gaps */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px; /* 20px gap between all cards */
+    padding: 20px; /* Padding around the grid */
+  }
+  
+  /* Styling for each individual card */
+  .square-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-decoration: none; /* Remove underline from links */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    height: 350px; /* Set fixed height for uniformity */
+    max-width: 280px; /* Set maximum width of cards */
+    margin: 0 auto; /* Centering the cards */
+    overflow: hidden;
+  }
+  
+  .square-card:hover {
+    transform: translateY(-5px); /* Hover effect: lift the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Ensuring image takes full width of the card */
+  .card-image {
+    width: 100%;
+    height: 180px; /* Set fixed height for images */
+    object-fit: cover; /* Ensure images are cropped properly */
+    border-radius: 8px;
+  }
+  
+  /* Styling for card title */
+  .card-title {
+    font-size: 1.1rem; /* Slightly larger title */
+    font-weight: bold;
+    margin: 10px 0; /* Space between title and price */
+    color: #333; /* Dark color for better readability */
+  }
+  
+  /* Styling for card price */
+  .card-price {
+    font-size: 1rem;
+    color: #e67e22; /* Attractive color for price */
+    font-weight: 600;
+  }
+  
+  /* Make sure links have no underline */
+  .card-grid a {
+    color: inherit; /* Inherit color from card */
+    text-decoration: none; /* No underline on links */
+  }
+  
