@@ -1,111 +1,130 @@
-
 <div class="main-container">
-    <div class="header-section">
-      <h1><span class="highlight">Right</span> Plan for <span class="highlight">Your Business</span></h1>
-      <p class="money-back-text">
-        Guaranteed Application Submission within 7 Days or Your Money Back. 
-        <span class="more-info">More Info</span>
-      </p>
-    </div>
-  
-    <div class="plans-container">
-      <!-- Starter Plan -->
-      <div class="plan-card starter">
-        <div class="plan-header">
-          <p class="plan-title">Starter</p>
-          <p class="plan-subtitle">
-            Perfect for submitting your company application with expert assistance in 14 days.
-          </p>
-        </div>
-        <div class="price-section">
-          <p class="cut-price">₹1499</p>
-          <p class="offer-text">₹500 off</p>
-          <p class="final-price">₹999 <span>+ Govt. Fee</span></p>
-        </div>
-        <p class="gst-info">GST(18%) will be added during checkout</p>
-        <button class="pay-button">Proceed to pay</button>
-        <div class="benefits">
-          <p class="benefits-title">What you'll get</p>
-          <ul>
-            <li>Expert assisted process</li>
-            <li>Your company name is filed in just <b>2 - 4 days</b></li>
-            <li>DSC in just <b>4 - 7 days</b></li>
-            <li>SPICe+ form filing in <b>14 days*</b></li>
-            <li>Incorporation Certificate in <b>28 - 35 days</b></li>
-            <li>Company <b>PAN+TAN</b></li>
-            <li><b>DIN</b> for directors</li>
-          </ul>
-        </div>
+  <div class="header-section">
+    <h1><span class="highlight">Right</span> Plan for <span class="highlight">Your Business</span></h1>
+    <p class="money-back-text">
+      Guaranteed Application Submission within 7 Days or Your Money Back.
+      <span class="more-info">More Info</span>
+    </p>
+  </div>
+
+  <div class="plans-container">
+    <!-- Starter Plan -->
+    <div class="plan-card starter">
+      <div class="plan-header">
+        <p class="plan-title">Starter</p>
+        <p class="plan-subtitle">
+          Perfect for submitting your company application with expert assistance in 14 days.
+        </p>
       </div>
-  
-      <!-- Standard Plan -->
-      <div class="plan-card standard">
-        <div class="popular-badge"></div>
-        <div class="plan-header">
-          <p class="plan-title">Standard</p>
-          <p class="plan-subtitle">
-            <b>Faster application submission with expert assistance in just 7 days.</b>
-          </p>
-        </div>
-        <div class="price-section">
-          <p class="cut-price">₹2999</p>
-          <p class="offer-text">50% off</p>
-          <p class="final-price">₹1499 <span>+ Govt. Fee</span></p>
-        </div>
-        <p class="gst-info">GST(18%) will be added during checkout</p>
-        <button class="pay-button">Proceed to pay</button>
-        <div class="benefits">
-          <p class="benefits-title">What you'll get</p>
-          <ul>
-            <li>Expert assisted process</li>
-            <li>Your company name is filed in just <b>1 - 2 days*</b></li>
-            <li>DSC in just <b>3 - 4 days</b></li>
-            <li>SPICe+ form filing in <b>7 days*</b></li>
-            <li>Incorporation Certificate in <b>14 - 21 days</b></li>
-            <li>Company <b>PAN+TAN</b></li>
-            <li><b>DIN</b> for directors</li>
-            <li>Digital welcome kit with compliance checklist</li>
-          </ul>
-        </div>
+      <div class="price-section">
+        <p class="cut-price">₹1499</p>
+        <p class="offer-text">₹500 off</p>
+        <p class="final-price">₹999 <span>+ Govt. Fee</span></p>
       </div>
-  
-      <!-- Pro Plan -->
-      <div class="plan-card pro">
-        <div class="plan-header">
-          <p class="plan-title">Pro</p>
-          <p class="plan-subtitle">
-            Includes fast application submission and trademark filing in 7 days.
-          </p>
-        </div>
-        <div class="price-section">
-          <p class="cut-price">₹4999</p>
-          <p class="offer-text">30% off</p>
-          <p class="final-price">₹3499 <span>+ Govt. Fee</span></p>
-          <p class="emi-note">EMI option available</p>
-        </div>
-        <p class="gst-info">GST(18%) will be added during checkout</p>
-        <button class="pay-button">Proceed to pay</button>
-        <div class="benefits">
-          <p class="benefits-title">What you'll get</p>
-          <ul>
-            <li>Expert assisted process</li>
-            <li>Your company name is filed in just <b>1 - 2 days*</b></li>
-            <li>DSC in just <b>3 - 4 days</b></li>
-            <li>SPICe+ form filing in <b>7 days*</b></li>
-            <li>Incorporation Certificate in <b>14 - 21 days</b></li>
-            <li>Company <b>PAN+TAN</b></li>
-            <li><b>DIN</b> for directors</li>
-            <li>Digital welcome kit with compliance checklist</li>
-            <li>MSME registration <span class="free-badge">Free 🎉</span></li>
-            <li>Expedited Trademark application filing</li>
-          </ul>
-        </div>
+      <p class="gst-info">GST(18%) will be added during checkout</p>
+      <button class="pay-button" (click)="toggleUPI('starter')">Proceed to pay</button>
+
+      <div class="upi-section" *ngIf="selectedPlan === 'starter'" style="margin-top: 15px;">
+        <p><strong>Scan to Pay:</strong></p>
+        <img [src]="planPaymentInfo['starter'].qrImage" alt="QR Code" style="width:150px; height:auto;">
+  <p>Or pay via UPI ID: <strong>{{ planPaymentInfo['starter'].upiId }}</strong></p>
+      </div>
+
+      <div class="benefits">
+        <p class="benefits-title">What you'll get</p>
+        <ul>
+          <li>Expert assisted process</li>
+          <li>Your company name is filed in just <b>2 - 4 days</b></li>
+          <li>DSC in just <b>4 - 7 days</b></li>
+          <li>SPICe+ form filing in <b>14 days*</b></li>
+          <li>Incorporation Certificate in <b>28 - 35 days</b></li>
+          <li>Company <b>PAN+TAN</b></li>
+          <li><b>DIN</b> for directors</li>
+        </ul>
       </div>
     </div>
-  
-    <div class="footer-note">
-      <p><b>Please note:</b> GST will be added during checkout</p>
-      <p>Government charges are additional to the above fee.</p>
+
+    <!-- Standard Plan -->
+    <div class="plan-card standard">
+      <div class="popular-badge"></div>
+      <div class="plan-header">
+        <p class="plan-title">Standard</p>
+        <p class="plan-subtitle">
+          <b>Faster application submission with expert assistance in just 7 days.</b>
+        </p>
+      </div>
+      <div class="price-section">
+        <p class="cut-price">₹2999</p>
+        <p class="offer-text">50% off</p>
+        <p class="final-price">₹1499 <span>+ Govt. Fee</span></p>
+      </div>
+      <p class="gst-info">GST(18%) will be added during checkout</p>
+      <button class="pay-button" (click)="toggleUPI('standard')">Proceed to pay</button>
+
+      <div class="upi-section" *ngIf="selectedPlan === 'standard'" style="margin-top: 15px;">
+        <p><strong>Scan to Pay:</strong></p>
+        <img [src]="planPaymentInfo['standard'].qrImage" alt="QR Code" style="width:150px; height:auto;">
+        <p>Or pay via UPI ID: <strong>{{ planPaymentInfo['standard'].upiId }}</strong></p>
+      </div>
+
+      <div class="benefits">
+        <p class="benefits-title">What you'll get</p>
+        <ul>
+          <li>Expert assisted process</li>
+          <li>Your company name is filed in just <b>1 - 2 days*</b></li>
+          <li>DSC in just <b>3 - 4 days</b></li>
+          <li>SPICe+ form filing in <b>7 days*</b></li>
+          <li>Incorporation Certificate in <b>14 - 21 days</b></li>
+          <li>Company <b>PAN+TAN</b></li>
+          <li><b>DIN</b> for directors</li>
+          <li>Digital welcome kit with compliance checklist</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="plan-card pro">
+      <div class="plan-header">
+        <p class="plan-title">Pro</p>
+        <p class="plan-subtitle">
+          Includes fast application submission and trademark filing in 7 days.
+        </p>
+      </div>
+      <div class="price-section">
+        <p class="cut-price">₹4999</p>
+        <p class="offer-text">30% off</p>
+        <p class="final-price">₹3499 <span>+ Govt. Fee</span></p>
+        <p class="emi-note">EMI option available</p>
+      </div>
+      <p class="gst-info">GST(18%) will be added during checkout</p>
+      <button class="pay-button" (click)="toggleUPI('pro')">Proceed to pay</button>
+
+      <div class="upi-section" *ngIf="selectedPlan === 'pro'" style="margin-top: 15px;">
+        <p><strong>Scan to Pay:</strong></p>
+        <img [src]="planPaymentInfo['pro'].qrImage" alt="QR Code" style="width:150px; height:auto;">
+  <p>Or pay via UPI ID: <strong>{{ planPaymentInfo['pro'].upiId }}</strong></p>
+      </div>
+
+      <div class="benefits">
+        <p class="benefits-title">What you'll get</p>
+        <ul>
+          <li>Expert assisted process</li>
+          <li>Your company name is filed in just <b>1 - 2 days*</b></li>
+          <li>DSC in just <b>3 - 4 days</b></li>
+          <li>SPICe+ form filing in <b>7 days*</b></li>
+          <li>Incorporation Certificate in <b>14 - 21 days</b></li>
+          <li>Company <b>PAN+TAN</b></li>
+          <li><b>DIN</b> for directors</li>
+          <li>Digital welcome kit with compliance checklist</li>
+          <li>MSME registration <span class="free-badge">Free 🎉</span></li>
+          <li>Expedited Trademark application filing</li>
+        </ul>
+      </div>
     </div>
   </div>
-  
+
+  <div class="footer-note">
+    <p><b>Please note:</b> GST will be added during checkout</p>
+    <p>Government charges are additional to the above fee.</p>
+  </div>
+</div>

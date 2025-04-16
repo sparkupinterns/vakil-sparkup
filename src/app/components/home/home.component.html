@@ -1,3 +1,4 @@
+
 <!-- 1st section  -->
 
 <!-- <input [attr.placeholder]="placeholderText" disabled /> -->
@@ -55,51 +56,12 @@
 
 
 <div class="container">
-  <!-- First Row - Manually provide items 1 to 3 -->
-  <div class="row first-row">
-    <a *ngFor="let item of firstRow" [routerLink]="item.link" class="square-cardvi"></a>
-    <div class="card" *ngFor="let item of firstRow" [routerLink]="item.link">
-      <div class="card-header">
-        <h3>{{ item.title }}</h3>
-      </div>
-      <img [src]="item.image" alt="{{ item.title }}" class="card-image" />
-      <div class="card-body">
-        <p class="name">{{ item.title }}</p>
-        <p class="price">Starting from ₹{{ item.price }}</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- Second Row - Manually provide items 4 to 6 -->
-  <div class="row">
-    <div class="card" *ngFor="let item of secondRow" [routerLink]="item.link">
-      <div class="card-header">
-        <h3>{{ item.title }}</h3>
-      </div>
-      <img [src]="item.image" alt="{{ item.title }}" class="card-image" />
-      <div class="card-body">
-        <p class="name">{{ item.title }}</p>
-        <p class="price">Starting from ₹{{ item.price }}</p>
-      </div>
-    </div>
-  </div>
+ <app-card> </app-card>
 
-  <!-- Third Row - Manually provide items 7 to 9 -->
-  <div class="row">
-    <div class="card" *ngFor="let item of thirdRow" [routerLink]="item.link">
-      <div class="card-header">
-        <h3>{{ item.title }}</h3>
-      </div>
-      <img [src]="item.image" alt="{{ item.title }}" class="card-image" />
-      <div class="card-body">
-        <p class="name">{{ item.title }}</p>
-        <p class="price">Starting from ₹{{ item.price }}</p>
-      </div>
-    </div>
-  </div>
 </div>
 
-
+<!-- <app-card> </app-card> -->
 
 <!-- <img src="../../../../public/assets/images/web.png" alt=""> -->
 

@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import AOS from 'aos';
+import { CardComponent } from "../../card/card.component";
 // declare var $: any;  
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, CardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

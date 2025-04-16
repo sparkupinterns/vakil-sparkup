@@ -22,6 +22,8 @@ import { Opc1Component } from './opc1/opc1.component';
 import { PriceComponent } from './price/price.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CardComponent } from './card/card.component';
+import { MsmeComponent } from './msme/msme.component';
+import { WebBrandingComponent } from './web-branding/web-branding.component';
 
 export const routes: Routes = [
     {
@@ -120,6 +122,14 @@ export const routes: Routes = [
     {
         path: 'cards',
         component: CardComponent
+    },
+    {
+        path: 'msme',
+        component: MsmeComponent
+    },
+    {
+        path: 'web-branding',
+        component: WebBrandingComponent
     }
 ];
 
