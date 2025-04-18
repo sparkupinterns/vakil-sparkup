@@ -89,7 +89,7 @@ export class PartnershipComponent {
     { id: 'h7', title: 'Timelines for Sole Proprietorship Registration' },
     { id: 'h8', title: 'Penalty for not obtaining GST registration' }
   ];
-  selectedSectionId = 'h0'; // default content shown
+  selectedSectionId = 'h0'; 
   
   selectSection(id: string) {
     this.selectedSectionId = id;

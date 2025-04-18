@@ -1,0 +1,417 @@
+
+<!-- 1st section  -->
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+
+<div class="container">
+    <div class="left-content">
+        <h2>Welcome to Our Platform</h2>
+        <div class="info-icon-container">
+            <i class="fas fa-check-circle info-icon"></i>
+            <p>Learn new skills</p>
+        </div>
+        <div class="info-icon-container">
+            <i class="fas fa-check-circle info-icon"></i>
+            <p>Connect with experts</p>
+        </div>
+        <div class="info-icon-container">
+            <i class="fas fa-check-circle info-icon"></i>
+            <p>Stay updated with trends</p>
+        </div>
+        <div class="info-icon-container">
+            <i class="fas fa-check-circle info-icon"></i>
+            <p>Easy-to-use interface</p>
+        </div>
+        <div class="info-icon-container">
+            <i class="fas fa-check-circle info-icon"></i>
+            <p>Secure and reliable</p>
+        </div>
+        <div class="info-icon-container">
+            <i class="fas fa-check-circle info-icon"></i>
+            <p>Available 24/7</p>
+        </div>
+        <div class="info-icon-container">
+            <i class="fas fa-check-circle info-icon"></i>
+            <p>Join our community</p>
+        </div>
+    </div>
+    
+
+
+    <div class="right-form">
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" ngModel required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" ngModel required />
+
+            <label for="email">Mobile Number</label>
+            <input type="mobileNumber" id="mobileNumber" name="mobileNumber" ngModel required />
+
+            <label for="email">City/Pincode</label>
+            <input type="email" id="email" name="email" ngModel required />
+
+            <select id="language" name="language" [(ngModel)]="selectedLanguage" (change)="onLanguageChange()">
+                <option value="en">English</option>
+                <option value="fr">Hindi</option>
+                <option value="es">Spanish</option>
+              </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" ngModel></textarea>
+
+            <button type="submit" [disabled]="!userForm.valid">{{ submitButtonText() }}</button>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- 2nd section  -->
+
+
+<!-- company-structures.component.html -->
+<div class="section">
+    <p class="title">Company structures in <span class="highlight">India</span></p>
+    
+    <!-- Tabs to switch between sections -->
+    <div class="tabs">
+      <span 
+        class="tab" 
+        [class.active]="activeTab === 'Business Registration'"
+        (click)="setActiveTab('Business Registration')">
+        Business Registration
+      </span>
+      <span 
+        class="tab" 
+        [class.active]="activeTab === 'International Business Setup'"
+        (click)="setActiveTab('International Business Setup')">
+        International Business Setup
+      </span>
+      <span 
+        class="tab" 
+        [class.active]="activeTab === 'Compliance Services'"
+        (click)="setActiveTab('Compliance Services')">
+        Compliance Services
+      </span>
+      <span 
+        class="tab" 
+        [class.active]="activeTab === 'Other Services'"
+        (click)="setActiveTab('Other Services')">
+        Other Services
+      </span>
+    </div>
+    
+    <!-- Conditional rendering of content based on active tab -->
+    <div class="tabs-content">
+      <!-- Business Registration Tab Content -->
+      <div *ngIf="activeTab === 'Business Registration'">
+        <p>Start your business seamlessly with expert guidance. Whether you're forming a private limited company, LLP, or any other entity, we ensure a hassle-free process by managing everything from documentation to government approvals.</p>
+        <div class="cards">
+          <!-- <a href="https://vakilsearch.com/company-registration/private-limited"> -->
+            <div class="card">
+              <h3 class="card-title">Private Limited Company Registration</h3>
+              <p class="card-description">Ideal for startups, offering limited liability and simplified venture capital raising. Secure investor funding effortlessly and protect your personal assets.</p>
+              <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_1.svg" alt="Private Limited">
+            </div>
+          <!-- </a> -->
+          <a href="data:image/jpeg;base64,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">
+            <div class="card">
+              <h3 class="card-title">One Person Company (OPC) Registration</h3>
+              <p class="card-description">OPC is the ideal choice for solo entrepreneurs, offering limited liability and a corporate structure without the need for partners.</p>
+              <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+            </div>
+          </a>
+          <a href="https://vakilsearch.com/company-registration/llp-registration">
+            <div class="card">
+              <h3 class="card-title">Sole Proprietorship Registration</h3>
+              <p class="card-description">A sole proprietorship is the simplest business structure, ideal for small businesses. Enjoy full control, minimal compliance, and easy setup.</p>
+              <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+            </div>
+          </a>
+          <a href="https://vakilsearch.com/company-registration/llp-registration">
+            <div class="card">
+              <h3 class="card-title">Nidhi Company Registration</h3>
+              <p class="card-description">Nidhi Company is perfect for promoting savings and lending among members. Experience simplified registration and full compliance with government regulations.</p>
+              <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+            </div>
+          </a>
+          <a href="https://vakilsearch.com/company-registration/llp-registration">
+            <div class="card">
+              <h3 class="card-title">Producer Company Registration</h3>
+              <p class="card-description">Tailored for agriculture-based businesses, Producer Company supports farmers and rural producers. Gain legal recognition with an easy setup and operational benefits.<</p>
+              <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+            </div>
+          </a>
+
+          <a href="https://vakilsearch.com/company-registration/llp-registration">
+            <div class="card">
+              <h3 class="card-title">Partnership Firm Registration</h3>
+              <p class="card-description">Simple and flexible, a Partnership Firm is ideal for small businesses. Easily formed with minimal compliance, allowing shared responsibility. Register your firm quickly and start operating!</p>
+              <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+            </div>
+          </a>
+          <!-- Repeat for more cards as needed -->
+        </div>
+      </div>
+      
+      <!-- International Business Setup Tab Content -->
+      <div *ngIf="activeTab === 'International Business Setup'">
+        <p>Content for International Business Setup goes here.</p>
+        <div class="cards">
+            <a href="https://vakilsearch.com/company-registration/private-limited">
+              <div class="card">
+                <h3 class="card-title">Private Limited Company Registration</h3>
+                <p class="card-description">Ideal for startups, offering limited liability and simplified venture capital raising. Secure investor funding effortlessly and protect your personal assets.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_1.svg" alt="Private Limited">
+              </div>
+            </a>
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+  
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+            <!-- Repeat for more cards as needed -->
+          </div>
+      </div>
+      
+      <!-- Compliance Services Tab Content -->
+      <div *ngIf="activeTab === 'Compliance Services'">
+        <p>Content for Compliance Services goes here.</p>
+        <div class="cards">
+            <a href="https://vakilsearch.com/company-registration/private-limited">
+              <div class="card">
+                <h3 class="card-title">Private Limited Company Registration</h3>
+                <p class="card-description">Ideal for startups, offering limited liability and simplified venture capital raising. Secure investor funding effortlessly and protect your personal assets.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_1.svg" alt="Private Limited">
+              </div>
+            </a>
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+  
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+            <!-- Repeat for more cards as needed -->
+          </div>
+      </div>
+      
+      <!-- Other Services Tab Content -->
+      <div *ngIf="activeTab === 'Other Services'">
+        <p>Content for Other Services goes here.</p>
+        <div class="cards">
+            <a href="https://vakilsearch.com/company-registration/private-limited">
+              <div class="card">
+                <h3 class="card-title">Private Limited Company Registration</h3>
+                <p class="card-description">Ideal for startups, offering limited liability and simplified venture capital raising. Secure investor funding effortlessly and protect your personal assets.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_1.svg" alt="Private Limited">
+              </div>
+            </a>
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+  
+            <a href="https://vakilsearch.com/company-registration/llp-registration">
+              <div class="card">
+                <h3 class="card-title">Limited Liability Partnership (LLP) Registration</h3>
+                <p class="card-description">LLP combines limited liability with operational flexibility. Perfect for small businesses and professionals seeking liability protection without the rigid corporate structure.</p>
+                <img class="card-img" src="https://assets.vakilsearch.com/live-images/companyStructures/companyStructures_2.svg" alt="LLP">
+              </div>
+            </a>
+            <!-- Repeat for more cards as needed -->
+          </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+  <!-- 3rd section  -->
+
+  
+
+<div class="how-it-works-container">
+    <h2>How it Works</h2>
+    <div class="steps">
+      <div class="step">
+        <i class="fas fa-clipboard-list step-icon"></i>
+        <h3>Step 1: Fill out the Registration Form</h3>
+        <p>Provide all the required personal and professional information to start your journey.</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-building step-icon"></i>
+        <h3>Step 2: Verify Your Law Firm</h3>
+        <p>We will verify your law firm’s details to make sure we provide the best opportunities for you.</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-handshake step-icon"></i>
+        <h3>Step 3: Get Matched with Clients</h3>
+        <p>Once verified, you will start receiving client leads based on your expertise and location.</p>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <!-- 4rth secction  -->
+
+
+
+
+<!-- company-registration-lawyer.component.html -->
+<div class="company-registration-lawyer">
+    <div class="hero-section">
+      <h1 class="main-heading">Expert Legal Assistance for Company Registration in India</h1>
+      <p class="sub-heading">Register your company hassle-free with the best legal guidance in India.</p>
+    </div>
+  
+    <div class="content-section">
+      <h2>Why Choose Us for Your Company Registration?</h2>
+      <p>
+        At [Law Firm Name], we specialize in assisting startups, entrepreneurs, and businesses in registering their companies
+        in India. Whether you are looking to incorporate a Private Limited Company, Limited Liability Partnership (LLP),
+        or a Sole Proprietorship, we provide comprehensive legal support throughout the registration process.
+      </p>
+  
+      <h3>Our Company Registration Services Include:</h3>
+      <ul>
+        <li>Consultation and Legal Guidance on Company Structure</li>
+        <li>Drafting and Filing of Incorporation Documents</li>
+        <li>Obtaining Director Identification Numbers (DIN) and Digital Signature Certificates (DSC)</li>
+        <li>Registration of Company Name with the Ministry of Corporate Affairs (MCA)</li>
+        <li>Filing of Articles of Association (AoA) and Memorandum of Association (MoA)</li>
+        <li>Providing Corporate Tax and GST Registration Assistance</li>
+        <li>Post-Incorporation Compliance and Advisory</li>
+      </ul>
+  
+      <h2>Why is Company Registration Important?</h2>
+      <p>
+        Registering your company provides legal recognition, builds credibility, and enables you to access funding and
+        tax benefits. It establishes a strong legal framework for your business operations, protecting you from personal
+        liabilities and ensuring compliance with Indian laws.
+      </p>
+  
+      <h3>Types of Companies We Help Register:</h3>
+      <ul>
+        <li>Private Limited Company (PLC)</li>
+        <li>Limited Liability Partnership (LLP)</li>
+        <li>Sole Proprietorship</li>
+        <li>Public Limited Company (PLC)</li>
+      </ul>
+  
+      <h2>How We Make the Registration Process Easy</h2>
+      <p>
+        Company registration can often be a time-consuming and complex process. We simplify it by providing step-by-step
+        legal assistance, handling all the paperwork and documentation, and ensuring that you meet all regulatory
+        requirements. Our legal experts ensure that your registration is completed smoothly and efficiently.
+      </p>
+  
+      <h3>Our Expertise in Company Law:</h3>
+      <p>
+        With years of experience in Indian corporate law, we offer legal services that cater to your specific business
+        needs. From drafting legal documents to filing necessary applications, we ensure your business is compliant with
+        all regulatory requirements right from the start.
+      </p>
+  
+      <h2>Start Your Company Registration Today</h2>
+      <p>
+        Are you ready to get your business officially registered in India? Contact us today for a consultation and let us
+        help you with the smooth registration of your company. Our experienced legal team will guide you through every step
+        of the way.
+      </p>
+
+    </div>
+  </div>
+  

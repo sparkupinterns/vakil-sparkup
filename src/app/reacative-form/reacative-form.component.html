@@ -1,0 +1,44 @@
+
+
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <input type="username" formControlName="username" placeholder="enter your name "/> <br> <br>
+    <div *ngIf="signupForm.get('username')?.touched && signupForm.get('username')?.invalid" class="error">
+        <small *ngIf="signupForm.get('username')?.errors?.['required']">username is required.</small>
+      </div>
+    <input type="mobileNumber" formControlName="mobileNumber" placeholder="enter your mobileNumber "> <br> <br>
+    <input type="password" formControlName="password" placeholder="enter your password "> <br> <br>
+   <select formControlName="Role">
+    <option value="disabled selected"> select a role</option>
+    <option *ngFor="let r of roles" [value]="r"> {{ r }}</option>
+   </select> <br> <br>
+   <select formControlName="City">
+    <option value="disabled selected"> select a city</option>
+    <option *ngFor="let c of city" [value]="c"> {{ c }}</option>
+   </select> <br> <br>
+    <input type="meassage" formControlName="meassage" placeholder="enter your meassage "> <br> <br>
+    <input type="textarea" formControlName="textarea" placeholder="enter your address"> <br> <br>
+
+    <button type="submit"> Signup </button>
+</form>
+
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name </th>
+            <th>Email </th>
+            <th>Phone Number </th>
+            <th>City </th>
+            <th>Address </th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let person of data">
+        <td>{{person.name}}</td>
+        <td>{{person.email}}</td>
+        <td>{{person.phoneNumber}}</td>
+        <td>{{person.city}}</td>
+        <td>{{person.address}}</td>
+    </tbody>
+</table>
+  

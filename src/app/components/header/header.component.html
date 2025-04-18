@@ -265,8 +265,8 @@
 
   <!-- Right: Login and Hamburger Toggle -->
   <div class="navbar-right">
-   <!-- Login Button -->
-<button (click)="toggleLoginModal()">Login</button>
+
+<!-- <button (click)="toggleLoginModal()">Login</button> -->
 
 <!-- Login Modal -->
 <app-login [(visible)]="showLogin"></app-login>
@@ -274,7 +274,7 @@
 
     <button class="hamburger" (click)="toggleMobileMenu()">☰</button>
   </div>
-  <!-- </nav> -->
+
 
   <!-- MOBILE MENU (shows on toggle click) -->
   <div class="mobile-menu" [class.open]="isMobileMenuOpen">

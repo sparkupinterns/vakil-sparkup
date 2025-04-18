@@ -11,7 +11,6 @@ import { FormsModule } from '@angular/forms';
 export class LlpComponent {
 
 
-   // Define the FAQ array with question, answer, and isOpen property to control the accordion state
    faqs = [
     {
       question: 'Who should consult a chartered accountant for tax planning?',

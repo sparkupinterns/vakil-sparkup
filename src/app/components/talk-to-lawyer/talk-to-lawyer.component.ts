@@ -36,7 +36,7 @@ export class TalkToLawyerComponent {
       label: 'Consumer Lawyer',
       icon: 'https://assets.vakilsearch.com/consult_consumer.svg'
     }
-    // Add more as needed
+
   ];
 
   lawyers = [

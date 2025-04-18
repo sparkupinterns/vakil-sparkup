@@ -26,11 +26,11 @@
       </div>
     </div>
   
-    <!-- Right Section -->
+
     <div class="right-section">
       <div class="form-container" *ngIf="formVisible">
         <div class="form-section">
-          <!-- Left Side: Name and Phone Number -->
+         
           <div class="form-group">
             <label for="yourName">Your Name</label>
             <input class="input-box box1" id="yourName" placeholder="Enter your name" type="text" [(ngModel)]="user.name">
@@ -51,7 +51,7 @@
         </div>
   
         <div class="form-section">
-          <!-- Right Side: Email ID and Subscribe Button -->
+        
           <div class="form-group">
             <label for="email">Email ID <span class="required">*</span></label>
             <input class="input-box box2" id="email" placeholder="Enter your e-mail" type="email" [(ngModel)]="user.email">
@@ -63,7 +63,7 @@
         </div>
       </div>
   
-      <!-- Thank You Section -->
+   
       <div class="thankyou-section" *ngIf="thankYouVisible">
         <div class="thankyou-image">
           <img alt="" src="https://assets1.cleartax-cdn.com/cleartax/images/1674553598_completedicon.png" width="105px">

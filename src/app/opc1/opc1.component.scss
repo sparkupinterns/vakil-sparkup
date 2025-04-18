@@ -108,6 +108,13 @@
       }
     }
   }
+  .info-icon {
+    font-size: 20px;  /* Smaller size of the icon */
+    color: #007bff;   /* Blue color */
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -5px; /* Shift the icon slightly to the left */
+  }
 
   .buttons {
     margin-top: 30px;

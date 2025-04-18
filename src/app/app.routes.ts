@@ -24,6 +24,11 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CardComponent } from './card/card.component';
 import { MsmeComponent } from './msme/msme.component';
 import { WebBrandingComponent } from './web-branding/web-branding.component';
+import { Starup1Component } from './starup1/starup1.component';
+import { ComapanyRegistrationComponent } from './comapany-registration/comapany-registration.component';
+import { AccountingComponent } from './accounting/accounting.component';
+import { TrademarkComponent } from './trademark/trademark.component';
+import { ReacativeFormComponent } from './reacative-form/reacative-form.component';
 
 export const routes: Routes = [
     {
@@ -130,6 +135,22 @@ export const routes: Routes = [
     {
         path: 'web-branding',
         component: WebBrandingComponent
+    },
+    {
+        path: 'starup1-india',
+        component: Starup1Component
+    },
+    {
+        path: 'company-registration',
+        component: ComapanyRegistrationComponent
+    },
+    {
+        path: 'accounting',
+        component: AccountingComponent
+    },
+    {
+        path: 'trademark',
+        component: TrademarkComponent
     }
 ];
 

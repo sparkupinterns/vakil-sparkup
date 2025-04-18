@@ -1,20 +1,26 @@
+/* Half background section */
 .half-bg-section {
-  // background: #f7f7f7;
   min-height: 50vh;
-  padding: 50px 0;
+  padding: 50px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 10; /* Position this row above */
-  margin-top: -250px; /* Removed the margin-top to prevent excessive spacing */
-  transform: translateY(0%); /* Removed the translateY to fix the spacing issue */
+  z-index: 10;
+  margin-top: -250px;
+  transform: translateY(0%);
+  flex-direction: column;
+  text-align: center;
 }
 
+/* Card styles */
 .card {
   transition: transform 0.3s ease;
   border: none;
   border-radius: 8px;
+  padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .card:hover {
@@ -22,40 +28,99 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Card Title */
 .card-title {
   font-weight: 600;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
-/* Thin gray divider */
+/* Divider */
 .divider {
   height: 1px;
   background-color: #ccc;
   width: 70%;
+  margin: 1rem auto;
 }
 
+/* Price Text */
 .price-text {
-  color: #28a745; /* Green for price */
+  color: #28a745;
   font-weight: bold;
   font-size: 1.1rem;
 }
 
 .price-text .starting-text {
-  color: #000; /* Black for 'Starting from' */
-  font-weight: normal; /* Optional: make 'Starting from' less bold */
+  color: #000;
+  font-weight: normal;
   margin-right: 4px;
 }
 
+/* Card Image */
 .card img {
-  margin-bottom: 1rem; /* or more if you want */
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
 
 img {
-  margin: auto;
-  max-width: 100%; /* Ensures it scales within the container */
-  height: auto;    /* Maintain aspect ratio */
-  width: 100px;    /* Example fixed width */
-  height: 100px;   /* Example fixed height */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+  .half-bg-section {
+    padding: 40px 15px;
+    margin-top: -150px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .price-text {
+    font-size: 1rem;
+  }
+
+  .divider {
+    width: 90%;
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .half-bg-section {
+    margin-top: -100px;
+    padding: 30px 10px;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+
+  .price-text {
+    font-size: 0.95rem;
+  }
+
+  .card img {
+    width: 70px;
+    height: 70px;
+  }
 }

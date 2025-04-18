@@ -170,7 +170,6 @@ export class MsmeComponent {
     }
   }
 
-  // constructor(private router: Router) {}
 
 goToPricing() {
   this.router.navigate(['/pricing']);
@@ -229,7 +228,7 @@ selectPlan() {
       title: 'CEO, EcoPack Solutions',
       image: 'fa-solid fa-user-tie'
     },
-    // duplicate to create seamless scrolling
+
     {
       quote: 'Thanks to the support provided, I was able to digitize my business and increase sales by 70% in just 3 months!',
       name: 'Priya Sharma',

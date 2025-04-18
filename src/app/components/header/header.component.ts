@@ -32,7 +32,7 @@ export class HeaderComponent {
   toggleBusinessDropdown() {
     this.isBusinessDropdownOpen = !this.isBusinessDropdownOpen;
   }
-   // selectedItem: any;
+
 
    items = [
     {

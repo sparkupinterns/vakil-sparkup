@@ -23,12 +23,12 @@ export class RodtepComponent {
   // Toggle form visibility
   toggleForm() {
     this.formVisible = !this.formVisible;
-    this.thankYouVisible = false; // Hide the thank you message when toggling the form
+    this.thankYouVisible = false; 
   }
 
   // Subscribe function
   subscribe() {
-    // Validate phone number and email
+
     if (!this.user.name || !this.user.phoneNumber || !this.user.email) {
       if (!this.user.phoneNumber) {
         this.phoneError = 'Phone number is required';
@@ -43,7 +43,7 @@ export class RodtepComponent {
       return;
     }
 
-    // Hide form and show the thank you message after subscription
+ 
     this.formVisible = false;
     this.thankYouVisible = true;
   }

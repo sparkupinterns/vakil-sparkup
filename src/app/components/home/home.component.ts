@@ -1,17 +1,61 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import AOS from 'aos';
 import { CardComponent } from "../../card/card.component";
+import { Router } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // declare var $: any;  
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, CardComponent],
+  imports: [ReactiveFormsModule, CommonModule, CardComponent, RouterLink, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
+
+
+  query: string = '';  // Bind to the input
+  filteredData: any[] = [];  // Holds filtered suggestions based on query
+
+  // Dummy data to simulate the lawyer/company names
+  data = [
+    { name: 'Advocate Rajeev Sharma', type: 'Lawyer' },
+    { name: 'LegalEase Associates', type: 'Company' },
+    { name: 'Startup Law Co.', type: 'Company' },
+    { name: 'Priya Desai', type: 'Lawyer' },
+    { name: 'TaxBuddy Solutions', type: 'Company' },
+    { name: 'Kumar & Partners', type: 'Lawyer' },
+    { name: 'Advocate Anjali Mehta', type: 'Lawyer' }
+  ];
+
+  // This method runs every time a key is pressed in the search input
+  onSearch() {
+    const queryLower = this.query.trim().toLowerCase();
+
+    // Filter the data array based on the query input
+    if (queryLower === '') {
+      this.filteredData = []; // Clear suggestions if the query is empty
+    } else {
+      // Filter data by checking if the query is present in the name (case insensitive)
+      this.filteredData = this.data.filter(item =>
+        item.name.toLowerCase().includes(queryLower)
+      );
+    }
+  }
+
+
+  selectItem(item: any) {
+    this.query = item.name; // Fill the input with the selected suggestion
+    this.filteredData = [];  // Clear the suggestion list
+  }
+
+  // Search function (Optional) to handle click on the magnifying glass icon
+  searchFunction() {
+    alert('Searching for: ' + this.query);
+    // You can add any logic here for search like calling an API
+  }
 
   
   // items = [

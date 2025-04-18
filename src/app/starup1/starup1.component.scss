@@ -1,0 +1,515 @@
+
+// 1st section 
+
+
+
+
+
+.company-registration-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px;
+    width: 80%;
+    margin: 0 auto;
+  
+    .content-left {
+      flex: 1;
+      min-width: 48%;
+      padding-right: 30px;
+    }
+  
+    .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+  
+      .breadcrumb-item {
+        display: inline-block;
+        margin-right: 5px;
+  
+        .breadcrumb-link {
+          text-decoration: none;
+          color: #007bff;
+        }
+  
+        .breadcrumb-separator {
+          margin: 0 5px;
+        }
+      }
+  
+      .breadcrumb-text {
+        font-weight: bold;
+      }
+    }
+  
+    .title {
+      font-size: 28px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+  
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+  
+      .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+  
+        .info-icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+  
+        p {
+          margin: 0;
+        }
+      }
+    }
+  
+    .premium-assistance {
+      display: flex;
+      margin-top: 30px;
+      align-items: center;
+  
+      .premium-container {
+        display: flex;
+        align-items: center;
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        width: fit-content;
+        margin: 10px 0;
+      }
+  
+      .premium-img img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin-right: 15px;
+      }
+  
+      .premium-text p {
+        margin: 0;
+        font-size: 14px;
+        color: #333;
+      }
+
+      .info-icon {
+        font-size: 20px;  
+        color: #007bff;   
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: -5px; 
+      }
+  
+      .premium-link {
+        color: #007bff;
+        text-decoration: none;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  
+    .buttons {
+      margin-top: 30px;
+  
+      .video-btn,
+      .view-package-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 12px;
+        border: 1px solid #007bff;
+        background-color: transparent;
+        color: #007bff;
+        font-weight: 500;
+        margin-right: 15px;
+        cursor: pointer;
+        border-radius: 5px;
+  
+        img {
+          width: 16px;
+          height: 16px;
+          margin-right: 8px;
+        }
+  
+        &:hover {
+          background-color: #007bff;
+          color: white;
+        }
+      }
+    }
+  
+    .lead-form {
+      flex: 1;
+      min-width: 48%;
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+      margin-top: 30px;
+  
+      .form-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+  
+      .form-group {
+        margin-bottom: 20px;
+  
+        .form-label {
+          font-weight: 600;
+          margin-bottom: 8px;
+        }
+  
+        .form-input {
+          width: 100%;
+          padding: 12px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-sizing: border-box;
+  
+          &::placeholder {
+            color: #888;
+          }
+        }
+  
+        .submit-btn {
+          padding: 12px 20px;
+          background-color: #000000;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-weight: 600;
+          width: 100%;
+          margin-top: 20px;
+  
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
+    }
+  }
+
+
+  
+//   second form 
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 1000px;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .modal-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .left-section,
+  .form-section {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .steps {
+    display: flex;
+    gap: 10px;
+  
+    .step {
+      width: 12px;
+      height: 12px;
+      background: #ccc;
+      border-radius: 50%;
+  
+      &.active {
+        background-color: #1b2266;
+      }
+    }
+  }
+  
+  .footer-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+  
+    .btn {
+      padding: 10px 25px;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      background: #000000;
+      cursor: pointer;
+  
+      &:disabled {
+        background: #aaa;
+      }
+    }
+  
+    .back-btn {
+      background-color: #ccc;
+      color: #000;
+    }
+  }
+  
+  .submit-btn {
+    background: #000000;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 40px;
+  }
+  
+
+
+//   2nd section 
+
+
+
+.startup-container {
+    background: linear-gradient(135deg, #c43f05, #f7971e);
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 3em;
+    color: #003366;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  
+    .feature-card {
+      background: white;
+      padding: 20px;
+      width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-10px);
+      }
+  
+      img {
+        width: 50px;
+        margin-bottom: 15px;
+      }
+  
+      h3 {
+        font-size: 1.2em;
+        color: #222;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 0.95em;
+        color: #666;
+      }
+    }
+  }
+  
+  .learn-more-btn {
+    padding: 12px 30px;
+    font-size: 1em;
+    border: none;
+    background: #000000;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  
+    &:hover {
+      background: #0055a5;
+    }
+  }
+  
+
+
+// 3rd section 
+
+
+.stats-showcase {
+    background: #ffffff; // Changed from gradient to white
+    color: #000000; // Primary theme color for text
+    padding: 80px 20px;
+    text-align: center;
+  
+    .section-heading {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+  
+    .section-subtext {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 50px;
+      color: #444;
+    }
+  
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+  
+      .stat-box {
+        background: #fff6f2; // subtle warm tone to make it pop on white
+        border-radius: 12px;
+        padding: 30px 20px;
+        width: 220px;
+        border: 1px solid #f5c6a5;
+        box-shadow: 0 8px 20px rgba(196, 63, 5, 0.1); // soft orange glow
+  
+        .stat-number {
+          font-size: 2.5em;
+          font-weight: bold;
+          color: #000000;
+          margin-bottom: 10px;
+        }
+  
+        .stat-label {
+          font-size: 1em;
+          color: #c76c38;
+        }
+      }
+    }
+  }
+
+
+
+//   4rth section 
+
+
+
+.lawyer-startup {
+    background: #ffffff;
+    padding: 70px 20px;
+    text-align: center;
+    color: #333;
+  
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+  
+    .section-title {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+  
+    .section-subtitle {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 40px;
+    }
+  
+    .features-list {
+      text-align: left;
+      display: inline-block;
+      font-size: 1.05em;
+      color: #444;
+      line-height: 1.8;
+  
+      li {
+        margin-bottom: 10px;
+        list-style: none;
+        padding-left: 1.5em;
+        position: relative;
+  
+        // &::before {
+        //   content: '✔️';
+        //   position: absolute;
+        //   left: 0;
+        //   color: #c43f05;
+        // }
+      }
+    }
+  
+    .cta-box {
+      margin-top: 50px;
+      font-size: 1.2em;
+  
+      .cta-button {
+        margin-top: 15px;
+        background-color: #000000;
+        color: #fff;
+        border: none;
+        padding: 12px 30px;
+        font-size: 1em;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+  
+        &:hover {
+          background-color: #a53704;
+        }
+      }
+    }
+  }
+  

@@ -25,7 +25,7 @@ export class ContactUsComponent {
   onSubmit() {
     if (this.contactForm.valid) {
       console.log('Form Submitted:', this.contactForm.value);
-      // Add logic to send the form data to your backend
+     
     }
   }
 }

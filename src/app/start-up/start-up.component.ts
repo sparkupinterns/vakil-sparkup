@@ -19,7 +19,7 @@ export class StartUpComponent {
   }
 
   startupInfo = {
-    image: 'https://ksandk.com/wp-content/uploads/594090-1.jpg',  // Replace with your image URL
+    image: 'https://ksandk.com/wp-content/uploads/594090-1.jpg',  
     title: 'Start-Up India Initiative',
     description: 'Start-Up India is a flagship initiative of the Government of India to build a strong ecosystem for nurturing innovation and Startups in the country.',
     benefits: [
@@ -36,7 +36,7 @@ export class StartUpComponent {
   constructor() { }
 
   ngOnInit(): void {
-    // You can fetch data here if needed from an API
+    
   }
 
   lawyerInfo = {
@@ -51,7 +51,7 @@ export class StartUpComponent {
       'Networking with Industry Leaders and Investors'
     ],
     ctaText: 'Join Start-Up for Lawyers',
-    ctaLink: 'https://www.startupindia.gov.in/'  // Link to Start-Up India website or relevant page
+    ctaLink: 'https://www.startupindia.gov.in/' 
   };
 
   caseTitle: string = '';

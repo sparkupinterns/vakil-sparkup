@@ -1,0 +1,191 @@
+<!-- 1st section  -->
+
+
+<div class="company-registration-container">
+    <div class="content-left">
+        <div class="breadcrumb">
+            <div class="breadcrumb-item">
+                <a href="http://localhost:4200/" class="breink">Home</a><span class="breadcrumb-separator">&gt;</span>
+            </div>
+            <div class="breadcrumb-item">
+                <a href="http://localhost:4200/" class="breadcrumb-link">Company Registration</a><span
+                    class="breadcrumb-separator">&gt;</span>
+            </div>
+            <div class="breadcrumb-item">
+                <p class="breadcrumb-text">Startup in India</p> <!-- Changed here -->
+            </div>
+        </div>
+        <h1 class="title">Startup in India</h1> <!-- Changed here -->
+        <ul class="info-list">
+            <li class="info-item">
+                <i class="fas fa-check-circle info-icon"></i>
+                <p><b>Affordable & Transparent:</b> Registration starting at <b>₹999 +</b> Govt Fee with no hidden
+                    charges.</p>
+            </li>
+            <li class="info-item">
+                <i class="fas fa-check-circle info-icon"></i>
+                <p><b>Comprehensive Compliance:</b> SPICe-INC-32, eMoA-INC-33, eAOA-INC-34 filings, DSC, PAN, and
+                    TAN—all handled seamlessly.</p>
+            </li>
+            <li class="info-item">
+                <i class="fas fa-check-circle info-icon"></i>
+                <p><b>Post-Incorporation Benefits:</b> Includes free MSME registration, GST filing support, and banking
+                    setup.</p>
+            </li>
+            <li class="info-item">
+                <i class="fas fa-check-circle info-icon"></i>
+                <p><b>Trusted by Startups:</b> Rated #1 for Pvt Ltd Registration, with 100% MCA-compliant filings.</p>
+            </li>
+            <!-- New Item for Startup India Lawyer -->
+            <li class="info-item">
+                <i class="fas fa-check-circle info-icon"></i>
+                <p><b>Startup India Lawyer:</b> Expert legal assistance and guidance for your startup's legal compliance
+                    and documentation.</p>
+            </li>
+        </ul>
+
+        <div class="premium-assistance">
+            <div class="premium-container">
+                <div class="premium-container">
+                    <div class="premium-img">
+                        <img alt="refund-guaranteed"
+                            src="https://assets.vakilsearch.com/assets/images/home/deposit.gif">
+                    </div>
+                    <div class="premium-text">
+                        <p><a href="#zolvit_premium" class="premium-link">Corpadda Premium</a>: Complete expert
+                            assistance and filing in 2 days for your growing business &nbsp;<span
+                                class="terms-conditions">T&amp;C</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="video-btn">
+                <img alt="video" src="https://assets.vakilsearch.com/live-images/newlanding_video_play.svg">
+                <p>Know about Startup Registration in 60 sec</p>
+            </button>
+            <button class="view-package-btn">
+                <img alt="certificate" src="https://assets.vakilsearch.com/do.svg">View Package
+            </button>
+        </div>
+    </div>
+
+    <div id="leadForm" class="lead-form">
+        <h2 class="form-title">Get Started with Startup in India</h2> <!-- Changed here -->
+        <form action="/submit-form" method="POST">
+            <div class="form-group">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="companyName" class="form-label">Company Name</label>
+                <input type="text" id="companyName" name="companyName" class="form-input"
+                    placeholder="Enter your company name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="form-label">Additional Information</label>
+                <textarea id="message" name="message" class="form-input" placeholder="Enter any additional details"
+                    rows="4"></textarea>
+            </div>
+
+            <!-- Trigger Button -->
+            <div class="form-groupp">
+                <button type="button" class="submit-btn" (click)="openPopup()">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+
+<!-- 2nd section  -->
+
+
+
+<div class="startup-container">
+    <div class="content">
+        <h1 class="title">Startup India</h1>
+        <p class="description">
+            Empowering entrepreneurs to innovate and grow through support, funding, and simplified regulations.
+        </p>
+
+        <div class="features">
+            <div class="feature-card" *ngFor="let feature of features">
+                <img [src]="feature.icon" alt="{{ feature.title }} Icon" />
+                <h3>{{ feature.title }}</h3>
+                <p>{{ feature.desc }}</p>
+            </div>
+        </div>
+
+        <button class="learn-more-btn">Learn More</button>
+    </div>
+</div>
+
+
+
+
+<!-- 3rd section  -->
+
+
+
+
+<section class="stats-showcase">
+    <div class="stats-content">
+        <h2 class="section-heading">Startup India in Numbers</h2>
+        <p class="section-subtext">
+            A glimpse of how far the movement has come — driving innovation and employment.
+        </p>
+
+        <div class="stats-grid">
+            <div class="stat-box" *ngFor="let stat of statsData">
+                <div class="stat-number">{{ stat.value }}</div>
+                <div class="stat-label">{{ stat.label }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 4rth section  -->
+
+
+
+<section class="lawyer-startup">
+    <div class="container">
+        <h2 class="section-title">Empowering Legal Innovators: Lawyer Startup India</h2>
+        <p class="section-subtitle">
+            Startup India isn't just for tech and commerce — it's a platform for legal minds to build the future of law.
+        </p>
+
+        <ul class="features-list">
+            <li>✔️ Startup Recognition for Legal Ventures</li>
+            <li>✔️ Simplified Legal Structures (LLP, Pvt Ltd, etc.)</li>
+            <li>✔️ Access to Government Schemes & Tax Benefits</li>
+            <li>✔️ Legaltech Innovation & Digital Services Support</li>
+            <li>✔️ Mentorship from Senior Legal Professionals</li>
+            <li>✔️ Networking with Legal Startups & Corporates</li>
+        </ul>
+
+        <div class="cta-box">
+            <p><strong>Ready to launch your legal venture?</strong></p>
+            <button class="cta-button">Join Now</button>
+        </div>
+    </div>
+</section>

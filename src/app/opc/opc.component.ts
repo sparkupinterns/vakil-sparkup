@@ -39,9 +39,9 @@ export class OpcComponent implements OnInit{
       if (this.currentIndex >= this.totalSlides - 1) {
         this.currentIndex = 0; // Reset to first slide
       } else {
-        this.currentIndex++; // Move to next slide
+        this.currentIndex++; 
       }
-    }, 3000); // Change slide every 3 seconds
+    }, 3000); 
   }
   
   ngOnDestroy() {
@@ -55,7 +55,7 @@ export class OpcComponent implements OnInit{
     if (this.currentIndex > 0) {
       this.currentIndex--;
     } else {
-      this.currentIndex = this.posts.length - 1; // Last slide pe jump kare
+      this.currentIndex = this.posts.length - 1;
     }
   }
   
@@ -63,7 +63,7 @@ export class OpcComponent implements OnInit{
     if (this.currentIndex < this.posts.length - 1) {
       this.currentIndex++;
     } else {
-      this.currentIndex = 0; // First slide pe jump kare
+      this.currentIndex = 0; 
     }
   }
 

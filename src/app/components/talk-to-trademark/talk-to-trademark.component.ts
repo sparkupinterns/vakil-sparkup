@@ -30,7 +30,7 @@ export class TalkToTrademarkComponent implements OnInit, OnDestroy {
   
   submitForm() {
     console.log('Form Data:', this.form);
-    // Add your API call or logic here
+    
   }
 
   features = [

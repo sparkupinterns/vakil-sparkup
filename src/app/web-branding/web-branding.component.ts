@@ -110,7 +110,7 @@ export class WebBrandingComponent {
   onSubmit() {
     if (this.registrationForm.valid) {
       console.log(this.registrationForm.value);
-      this.closeModal(); // Close the modal after submission
+      this.closeModal(); 
     }
   }
   showModal: boolean = false;

@@ -1,15 +1,11 @@
-
-
-
 <!-- 1st section  -->
 
 
-<!-- cta-banner.component.html -->
+
 <div class="styles__CTContainer-sc-aoq1me-4 bnfCgI">
     <div data-testid="topCta">
         <title></title>
         <div>
-            <!-- <a style="text-decoration: none;color: #fff;" href="https://assets1.cleartax-cdn.com/finfo/wg-utils/retool/e04258fc-ad5f-4140-a2fd-d132a7b6c335.png"> -->
             <div data-cta="maxITC" data-label="Switch to Clear Max ITC" id="CTA">
                 <div style="background: #000931">
                     <div class="topCTA">
@@ -25,11 +21,11 @@
                             <div>
                                 <a [routerLink]="'/pricing'" style="text-decoration: none;">
                                     <div
-                                      style="padding: 17px 27.5px; color: #fff; background-color: #fbb216; width: 250px; text-align: center; border-radius: 8px; font-weight: 700;">
-                                      Book a demo to find out
+                                        style="padding: 17px 27.5px; color: #fff; background-color: #fbb216; width: 250px; text-align: center; border-radius: 8px; font-weight: 700;">
+                                        Book a demo to find out
                                     </div>
-                                  </a>
-                                  
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -48,140 +44,97 @@
 
 
 <div class="main-container flex">
-   
+
 
     <div class="flex">
         <!-- Left Menu -->
         <div class="w-1/3 border-r p-4">
-          <h3 class="font-bold mb-2">Index</h3>
-          <ul>
-            <li *ngFor="let item of tocItems" 
-                [class.active]="selectedSectionId === item.id"
-                (click)="selectSection(item.id)"
-                style="cursor: pointer; padding: 6px;">
-              {{ item.title }}
-            </li>
-          </ul>
-        </div>
-      
-        <!-- Right Side: Dynamic Content -->
-        <div class="w-2/3 p-4 overflow-auto" style="max-height: 80vh;">
-          <ng-container [ngSwitch]="selectedSectionId">
-            
-            <div *ngSwitchCase="'h0'">
-              <h2>What is GST Registration?</h2>
-              <p>GST (Goods and Services Tax) registration is the process of obtaining a unique GST identification number (GSTIN)...</p>
-            </div>
-      
-            <div *ngSwitchCase="'h1'">
-              <h2>Who should obtain the GST registration?</h2>
-              <p>GST registration is mandatory for businesses involved in the supply of goods and/or services...</p>
-              <ul>
-                <li>Businesses whose turnover exceeds the threshold...</li>
-                <li>Inter-state suppliers</li>
-                <li>E-commerce vendors</li>
-              </ul>
-            </div>
-      
-            <div *ngSwitchCase="'h2'">
-              <h2>Benefits of GST Registration</h2>
-              <ul>
-                <li><strong>Legal Recognition:</strong> Issue GST invoices</li>
-                <li><strong>ITC:</strong> Claim input tax credit</li>
-                <li><strong>Expand:</strong> Inter-state trade</li>
-              </ul>
-            </div>
-      
-            <!-- Repeat the pattern for other sections -->
-            <div *ngSwitchCase="'h3'">
-              <h2>All about the GST Registration Process</h2>
-              <ol>
-                <li><strong>Application:</strong> Apply on GST Portal</li>
-                <li><strong>Verification:</strong> Details verified</li>
-                <li><strong>GSTIN Issuance:</strong> Unique GSTIN issued</li>
-              </ol>
-            </div>
-      
-            <div *ngSwitchCase="'h4'">
-              <h2>GST Registration Fees</h2>
-              <p>Generally free; professional fees may apply</p>
-            </div>
-      
-            <div *ngSwitchCase="'h5'">
-              <h2>Documents Required for GST Registration</h2>
-              <ul>
-                <li>PAN card</li>
-                <li>Address proof</li>
-                <li>Bank details</li>
-              </ul>
-            </div>
-      
-            <div *ngSwitchCase="'h6'">
-              <h2>GSTIN</h2>
-              <p>GSTIN is a 15-digit unique number, like 11AAAAA0000A1Z5...</p>
-            </div>
-      
-            <div *ngSwitchCase="'h7'">
-              <h2>GST Registration Certificate</h2>
-              <p>This is proof of GST registration...</p>
-            </div>
-      
-            <div *ngSwitchCase="'h8'">
-              <h2>Penalty for Not Obtaining GST Registration</h2>
-              <ul>
-                <li>Penalty ₹10,000 or 10% of tax due</li>
-                <li>Additional fines if tax is unpaid</li>
-              </ul>
-            </div>
-      
-          </ng-container>
-        </div>
-      </div>
-      
-  
-    <!-- <div id="TOC_side" class="toc-container flex-shrink-0 w-1/4 p-4">
-        <div class="tocHeading pb-2 text-s-24 md:text-s-18 font-bold sm:hidden sticky top-0 bg-white">
-            Index
-        </div>
-        <div class="TOC_index_Desktop TOC_index max-h-[475px] overflow-auto pr-4">
+            <h3 class="font-bold mb-2">Index</h3>
             <ul>
-                <li class="activeIndex" title="What is GST Registration">
-                    <a class="tocAnchorTag h0" href="#h0" data-toc-index="#h0">What is GST Registration</a>
-                </li>
-                <li title="Who should obtain the GST registration?">
-                    <a class="tocAnchorTag h1" href="#h1" data-toc-index="#h1">Who should obtain the GST
-                        registration?</a>
-                </li>
-                <li title="Benefits of GST registration">
-                    <a class="tocAnchorTag h2" href="#h2" data-toc-index="#h2">Benefits of GST registration</a>
-                </li>
-                <li title="All about the GST registration process">
-                    <a class="tocAnchorTag h3" href="#h3" data-toc-index="#h3">All about the GST registration
-                        process</a>
-                </li>
-                <li title="GST Registration Fees">
-                    <a class="tocAnchorTag h4" href="#h4" data-toc-index="#h4">GST Registration Fees</a>
-                </li>
-                <li title="Documents Required for GST Registration">
-                    <a class="tocAnchorTag h5" href="#h5" data-toc-index="#h5">Documents Required for GST
-                        Registration</a>
-                </li>
-                <li title="GSTIN">
-                    <a class="tocAnchorTag h6" href="#h6" data-toc-index="#h6">GSTIN</a>
-                </li>
-                <li title="GST Registration Certificate">
-                    <a class="tocAnchorTag h7" href="#h7" data-toc-index="#h7">GST Registration Certificate</a>
-                </li>
-                <li title="Penalty for not obtaining GST registration">
-                    <a class="tocAnchorTag h8" href="#h8" data-toc-index="#h8">Penalty for not obtaining GST
-                        registration</a>
-                </li>
-                <li title="Frequently Asked Questions">
-                    <a class="tocAnchorTag h9" href="#h9" data-toc-index="#h9">Frequently Asked Questions</a>
+                <li *ngFor="let item of tocItems" [class.active]="selectedSectionId === item.id"
+                    (click)="selectSection(item.id)" style="cursor: pointer; padding: 6px;">
+                    {{ item.title }}
                 </li>
             </ul>
         </div>
-    </div> -->
+
+        <!-- Right Side: Dynamic Content -->
+        <div class="w-2/3 p-4 overflow-auto" style="max-height: 80vh;">
+            <ng-container [ngSwitch]="selectedSectionId">
+
+                <div *ngSwitchCase="'h0'">
+                    <h2>What is GST Registration?</h2>
+                    <p>GST (Goods and Services Tax) registration is the process of obtaining a unique GST identification
+                        number (GSTIN)...</p>
+                </div>
+
+                <div *ngSwitchCase="'h1'">
+                    <h2>Who should obtain the GST registration?</h2>
+                    <p>GST registration is mandatory for businesses involved in the supply of goods and/or services...
+                    </p>
+                    <ul>
+                        <li>Businesses whose turnover exceeds the threshold...</li>
+                        <li>Inter-state suppliers</li>
+                        <li>E-commerce vendors</li>
+                    </ul>
+                </div>
+
+                <div *ngSwitchCase="'h2'">
+                    <h2>Benefits of GST Registration</h2>
+                    <ul>
+                        <li><strong>Legal Recognition:</strong> Issue GST invoices</li>
+                        <li><strong>ITC:</strong> Claim input tax credit</li>
+                        <li><strong>Expand:</strong> Inter-state trade</li>
+                    </ul>
+                </div>
+
+                <!-- Repeat the pattern for other sections -->
+                <div *ngSwitchCase="'h3'">
+                    <h2>All about the GST Registration Process</h2>
+                    <ol>
+                        <li><strong>Application:</strong> Apply on GST Portal</li>
+                        <li><strong>Verification:</strong> Details verified</li>
+                        <li><strong>GSTIN Issuance:</strong> Unique GSTIN issued</li>
+                    </ol>
+                </div>
+
+                <div *ngSwitchCase="'h4'">
+                    <h2>GST Registration Fees</h2>
+                    <p>Generally free; professional fees may apply</p>
+                </div>
+
+                <div *ngSwitchCase="'h5'">
+                    <h2>Documents Required for GST Registration</h2>
+                    <ul>
+                        <li>PAN card</li>
+                        <li>Address proof</li>
+                        <li>Bank details</li>
+                    </ul>
+                </div>
+
+                <div *ngSwitchCase="'h6'">
+                    <h2>GSTIN</h2>
+                    <p>GSTIN is a 15-digit unique number, like 11AAAAA0000A1Z5...</p>
+                </div>
+
+                <div *ngSwitchCase="'h7'">
+                    <h2>GST Registration Certificate</h2>
+                    <p>This is proof of GST registration...</p>
+                </div>
+
+                <div *ngSwitchCase="'h8'">
+                    <h2>Penalty for Not Obtaining GST Registration</h2>
+                    <ul>
+                        <li>Penalty ₹10,000 or 10% of tax due</li>
+                        <li>Additional fines if tax is unpaid</li>
+                    </ul>
+                </div>
+
+            </ng-container>
+        </div>
+    </div>
+
+
 
     <!-- Content Section between the two columns -->
     <div class="content-betweenn flex-grow overflow-auto p-4">
@@ -489,7 +442,7 @@
             <div class="col-lg-8">
                 <div class="section-title text-center mb-50 tg-heading-subheading animation-style3">
 
-                    <h2 class="text-center faq-heading">Frequently Asked Questions</h2> 
+                    <h2 class="text-center faq-heading">Frequently Asked Questions</h2>
                     <!-- <h2 class="text-center faq-subheading">Explore answers to common questions about online legal
                         consultations, including
                         privacy options, CA expertise, consultation languages, and follow-up procedures to ensure a

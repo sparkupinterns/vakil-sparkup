@@ -261,14 +261,18 @@ export class IndrectTaxComponent {
     }
     ]
     
-    selectedLink: any = null;
+ 
+
+  selectedLink: any = null;
   formVisible: boolean = false;
 
-  selectLink(link: any): void {
-    this.selectedLink = link;
-    this.formVisible = false; // Reset form visibility when a new link is selected
+  ngOnInit() {
+    this.selectedLink = this.quickLinks[0]; 
   }
 
+  selectLink(link: any) {
+    this.selectedLink = link;
+  }
   openForm(): void {
     this.formVisible = true; // Show the form modal
   }

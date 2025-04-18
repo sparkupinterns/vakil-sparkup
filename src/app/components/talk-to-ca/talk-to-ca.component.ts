@@ -106,7 +106,7 @@ export class TalkToCaComponent {
     }
   ];
 
-  // Function to toggle the isOpen property for a FAQ item
+
   toggleFaq(index: number) {
     this.faqs[index].isOpen = !this.faqs[index].isOpen;
   }

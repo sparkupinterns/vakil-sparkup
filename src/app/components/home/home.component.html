@@ -1,4 +1,3 @@
-
 <!-- 1st section  -->
 
 <!-- <input [attr.placeholder]="placeholderText" disabled /> -->
@@ -16,31 +15,48 @@
 
   <div class="heading-wrapper">
     <h1 class="main-heading">
-      India's <span class="highlight">Top Rated </span>Professional Services Platform
+      India's Go-To <span class="highlight"> Platform </span>for Legal, Tax & Compliance Experts
     </h1>
     <p class="sub-heading">
-      Connecting you with experts to simplify your legal, tax & compliance.
+      Simplify the complex—legal, tax, and compliance help from real experts.
     </p>
   </div>
 
   <div class="search-box-container">
     <div class="search-box">
-      <input id="autosuggestfor" class="search-input" type="text" placeholder="Enter something here" />
-      <img alt="searchIcon" src="https://assets.vakilsearch.com/live-images/ic-search-blue.svg" />
+      <input
+        class="search-input"
+        type="text"
+        placeholder="Search for lawyers or companies"
+        [(ngModel)]="query"  
+        (keyup)="onSearch()" 
+      />
+      <i class="fa-solid fa-magnifying-glass" (click)="searchFunction()"></i>
     </div>
+  
+ 
+    <div class="suggestion-list" *ngIf="filteredData.length > 0">
+      <ul>
+        <li *ngFor="let item of filteredData" (click)="selectItem(item)">
+          {{ item.name }}
+        </li>
+      </ul>
+    </div>
+
   </div>
 
   <div class="service-links">
-    <a href="http/gst-registration">
-      <p>Register your company</p>
+    <a [routerLink]="['/gst-registration']">
+      <p>GST Registration</p>
     </a>
-    <a href="htt/company-registration">
+
+    <a [routerLink]="['/company-registration']">
       <p>Company Registration</p>
     </a>
-    <a href="http-accounting-compliance-service">
+    <a [routerLink]="['/accounting']">
       <p>Accounting & Business Compliance</p>
     </a>
-    <a href="httptrademark-registration">
+    <a [routerLink]="['/trademark']">
       <p>Trademark</p>
     </a>
   </div>
@@ -57,7 +73,7 @@
 
 <div class="container">
 
- <app-card> </app-card>
+  <app-card> </app-card>
 
 </div>
 
@@ -187,21 +203,19 @@
 
   <div class="customers-logos">
     <div class="logo-card">
-      <img src="https://assets.vakilsearch.com/live-images/ic-oyo.svg" alt="OYO Logo" width="78" height="27" />
+      <img src="http://corpadda1.odoo.com/web/image/411-0b7767d5/1.webp" alt="OYO Logo" />
     </div>
     <div class="logo-card">
-      <img src="https://assets.vakilsearch.com/live-images/ic-small-swiggy.svg" alt="Swiggy Logo" width="91"
-        height="27" />
+      <img src="https://corpadda1.odoo.com/web/image/414-fa0dd9b7/4.webp" alt="Swiggy Logo" />
     </div>
     <div class="logo-card">
-      <img src="https://assets.vakilsearch.com/live-images/ic-bigbasket.svg" alt="BigBasket Logo" width="124"
-        height="27" />
+      <img src="https://corpadda1.odoo.com/web/image/416-76414cd7/5.webp" alt="BigBasket Logo" />
     </div>
     <div class="logo-card">
-      <img src="https://assets.vakilsearch.com/live-images/ic-hdfc.svg" alt="HDFC Logo" width="162" height="27" />
+      <img src="https://corpadda1.odoo.com/web/image/415-134f756d/2.webp" alt="HDFC Logo" />
     </div>
     <div class="logo-card">
-      <img src="https://assets.vakilsearch.com/live-images/ic-amazon.svg" alt="Amazon Logo" width="90" height="27" />
+      <img src="https://corpadda1.odoo.com/web/image/417-92af2d93/7.webp" alt="Amazon Logo" />
     </div>
   </div>
 </div>
@@ -221,41 +235,40 @@
   <div class="product-suite-cards">
     <!-- Libra Card -->
     <div class="card card-libra">
-      <img src="https://assets.vakilsearch.com/live-images/ic-libra-logo.svg" alt="Libra Logo" width="148"
-        height="26" />
-      <div class="card-title">AI-powered case alerts & research for your legal practice</div>
+      <h1> Compliance on the go </h1>
+      <div class="card-title">Your business. Our experts. Zero paperwork hassle</div>
       <div class="feature">
-        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24"
-          height="24" />
-        <p><b>Hearings:</b> Get instant court notifications, including case number and room details, with just one
-          click.</p>
+        <i class="fas fa-check-circle info-icon"></i>
+        <p><b>Real-Time Compliance Alerts:</b> Get instant updates on due dates, filings, and regulatory changes across
+          GST, ROC, PF, ESI, and more.</p>
       </div>
       <div class="feature">
-        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24"
-          height="24" />
-        <p><b>Judgements:</b> Access over 5 million judgments quickly by searching keywords, citations, parties, or
-          judges.</p>
+        <i class="fas fa-check-circle info-icon"></i>
+        <p><b>Smart Document Vault:</b> Access and manage all your compliance documents—MOA, AOA, filings,
+          certificates—securely from your mobile.</p>
       </div>
       <div class="feature">
-        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24"
-          height="24" />
-        <p><b>Display Board:</b> Stay updated on daily item numbers with our live display board.</p>
+        <i class="fas fa-check-circle info-icon"></i>
+        <p><b>Automated Filing Reminders:</b> Never miss a deadline again. Receive intelligent reminders for GST, TDS,
+          ITR, and more, tailored to your business profile.</p>
       </div>
       <div class="feature">
-        <img src="https://assets.vakilsearch.com/live-images/ic-blue-round-tick.svg" alt="tick" width="24"
-          height="24" />
-        <p><b>Case Alerts:</b> Stay ahead in your legal strategy with real-time case updates from India's largest case
-          directory.</p>
+        <i class="fas fa-check-circle info-icon"></i>
+        <p><b>One-Tap Filing:</b> Submit compliance forms and returns with just a tap—no paperwork, no hassle, fully
+          digital.</p>
       </div>
       <div class="card-image">
-        <img src="https://assets.vakilsearch.com/live-images/libra-demo-banner.png" alt="Libra Demo Banner" />
+        <i class="fas fa-check-circle info-icon"></i>
       </div>
+
     </div>
 
     <!-- Zolvit Card -->
     <div class="card card-zolvit">
-      <img src="https://assets.vakilsearch.com/live-images/ic-zolvit-logo.svg" alt="Zolvit Logo" width="148"
-        height="26" />
+      <h1
+        style="font-size: 72px; font-weight: bold; color: #dfe7f0; text-align: left; text-transform: uppercase; letter-spacing: 5px; margin-left: 20px;">
+        Corpadda
+      </h1>
       <div class="card-title white-text">A complete overview of your business</div>
       <div class="feature">
         <img src="https://assets.vakilsearch.com/live-images/ic-white-round-tick.svg" alt="tick" width="24"
@@ -508,15 +521,25 @@
 
 
 
-<div class="vakilsearch-container">
-  <h2 class="vakilsearch-title">Vakilsearch in News</h2>
-  <div class="vakilsearch-logos">
-    <div><img alt="vision icon" src="https://assets.vakilsearch.com/ic-et.svg" width="72" height="36"></div>
-    <div><img alt="vision icon" src="https://assets.vakilsearch.com/ic-forbes.svg" width="100" height="36"></div>
-    <div><img alt="vision icon" src="https://assets.vakilsearch.com/ic-the-financial.svg" width="98" height="42"></div>
-    <div><img alt="vision icon" src="https://assets.vakilsearch.com/ic-business-line.svg" width="143" height="36"></div>
-    <div><img alt="vision icon" src="https://assets.vakilsearch.com/live-images/ic-your-story.svg" width="98"
-        height="36"></div>
+<div class="customerss-sectionn">
+  <h2 class="customers-heading">Our Customers</h2>
+
+  <div class="customers-logos">
+    <div class="logo-card">
+      <img src="http://corpadda1.odoo.com/web/image/411-0b7767d5/1.webp" alt="OYO Logo" />
+    </div>
+    <div class="logo-card">
+      <img src="https://corpadda1.odoo.com/web/image/414-fa0dd9b7/4.webp" alt="Swiggy Logo" />
+    </div>
+    <div class="logo-card">
+      <img src="https://corpadda1.odoo.com/web/image/416-76414cd7/5.webp" alt="BigBasket Logo" />
+    </div>
+    <div class="logo-card">
+      <img src="https://corpadda1.odoo.com/web/image/415-134f756d/2.webp" alt="HDFC Logo" />
+    </div>
+    <div class="logo-card">
+      <img src="https://corpadda1.odoo.com/web/image/417-92af2d93/7.webp" alt="Amazon Logo" />
+    </div>
   </div>
 </div>
 

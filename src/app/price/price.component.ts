@@ -11,7 +11,7 @@ export class PriceComponent {
 
   selectedPlan: string | null = null;
 
-  // Your plan-wise UPI info
+  
   planPaymentInfo: Record<string, { upiId: string; qrImage: string }> = {
     starter: {
       upiId: 'merchant1572208.augp@aubank',

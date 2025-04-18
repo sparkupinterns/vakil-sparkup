@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class GstRegistrationComponent {
 
-  fyYear: string = '2024-25'; // Dynamic value
+  fyYear: string = '2024-25'; 
   buttonStyle = {
     padding: '17px 27.5px',
     color: '#fff',
@@ -22,7 +22,7 @@ export class GstRegistrationComponent {
     fontWeight: '700'
   };
 
-  gstForm!: FormGroup; // Notice the '!' indicating definite assignment
+  gstForm!: FormGroup; 
 
   constructor(private fb: FormBuilder) { }
 

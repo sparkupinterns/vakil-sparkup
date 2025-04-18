@@ -109,14 +109,14 @@
   </div>
 
   <div class="processing-line">
-    <div class="progress-bar" style="width: 50%"></div> <!-- Set width dynamically as per progress -->
+    <div class="progress-bar" style="width: 50%"></div> 
   </div>
 
   <div class="content-area">
-    <!-- Title and Open Form Button Section -->
+  
     <div class="title-container">
       <h2 [innerHTML]="selectedLink?.title"></h2>
-      <!-- Button for opening the form -->
+  
       <button *ngIf="selectedLink" class="open-form-btn" (click)="openForm()">
         Open Form
       </button>

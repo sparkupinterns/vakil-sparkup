@@ -18,16 +18,12 @@ export class NavbarComponent {
     this.isMobile = window.innerWidth <= 768;
   }
 
-  // Initialize the mobile detection on component load
+
   ngOnInit() {
     this.isMobile = window.innerWidth <= 768;
   }
 
-  // Toggle menu visibility on hamburger click
-  // toggleMenu() {
-  //   this.isMenuOpen = !this.isMenuOpen;
-  // }
-
+ 
 
   menuOpened: boolean = false;
 
@@ -43,7 +39,7 @@ export class NavbarComponent {
       links: [
         { label: 'All Legal Documents', url: 'https://vakilsearch.com/documents' },
         { label: 'Rental Agreement', url: 'https://vakilsearch.com/documents/rental-agreement-download-format' },
-        // Add more links as needed
+  
       ],
     },
     {
@@ -54,11 +50,11 @@ export class NavbarComponent {
         { label: 'Patent Filing', url: 'https://vakilsearch.com/patent' },
       ],
     },
-    // Add other menu items
+
   ];
   
   
-  selectedItem: any = this.items[0]; // Default selected item
+  selectedItem: any = this.items[0]; 
   
   selectItem(item: any) {
     this.selectedItem = item;

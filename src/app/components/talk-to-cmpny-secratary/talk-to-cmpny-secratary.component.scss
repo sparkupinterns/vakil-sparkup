@@ -1222,8 +1222,8 @@ button[type='submit'] {
     flex-direction: column; /* Stack the heading and carousel vertically */
     justify-content: center; /* Horizontally center the carousel */
     align-items: center;     /* Vertically center the carousel */
-    height: 100vh;           /* Ensure it takes full height of the screen */
-    width: 100%;             /* Ensure it takes full width */
+    height: 100vh;          
+    width: 100%;             
 }
 
 .review-heading {

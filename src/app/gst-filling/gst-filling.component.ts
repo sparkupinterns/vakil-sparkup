@@ -22,11 +22,11 @@ export class GstFillingComponent {
 
   onSubmit() {
     console.log('Form Submitted:', this.formData);
-    // You can send the form data to a server here.
+ 
   }
 
-  formVisible: boolean = true; // Form section is always visible now
-  thankYouVisible: boolean = false; // Initially, the thank you section is hidden
+  formVisible: boolean = true; 
+  thankYouVisible: boolean = false; 
   user = {
     name: '',
     phoneNumber: '',

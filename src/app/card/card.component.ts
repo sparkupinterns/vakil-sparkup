@@ -11,7 +11,6 @@ import { RouterLink } from '@angular/router';
 })
 export class CardComponent {
  
-
   items = [
     { title: 'Company Registration', image: 'https://cdn.iconscout.com/icon/premium/png-256-thumb/private-limited-company-4852104-4026600.png?f=webp&w=256', price: 4999, link: '/pvt-ltd1-company' },
     { title: 'LLP Registration', image: '/assets/lr_img.png', price: 2999, link: '/llp1' },
@@ -19,7 +18,7 @@ export class CardComponent {
     { title: 'GST Registration', image: '/assets/images/gst.png', price: 999, link: '/gst-registration' },
     { title: 'GST Filing', image: '/assets/images/filling.png', price: 499, link: '/gst-filling' },
     { title: 'MSME Registration', image: '/assets/images/msme.png', price: 999, link: '/msme' },
-    { title: 'Start-up India', image: '/assets/images/strup.png', price: 600, link: '/startup-india' },
+    { title: 'Start-up India', image: '/assets/images/strup.png', price: 600, link: '/starup1-india' },
     { title: 'Virtual Accountant', image: '/assets/images/account.png', price: 4999, link: '/virtual-accountant' },
     { title: 'Web & Branding', image: '/assets/images/web.png', price: 4999, link: '/web-branding' }
   ];
